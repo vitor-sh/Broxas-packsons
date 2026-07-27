@@ -25,6 +25,7 @@ from tkinter import filedialog, messagebox, ttk
 from detector import analyze_folder, detect_instances, normalizar_pasta
 from forge_setup import install_forge, is_forge_installed, parse_forge_info
 from launchers import detectar_launchers
+import interface as UI
 
 # =====================================================================
 # CONFIGURACAO
@@ -50,15 +51,7 @@ APP_DIR = Path(os.getenv("APPDATA") or Path.home()) / ".broxas_updater"
 SETTINGS_FILE = APP_DIR / "settings.json"
 STATE_FILE = APP_DIR / "state.json"
 
-BG = "#1b1b1f"
-BG2 = "#26262c"
-BG3 = "#141418"
-FG = "#e8e8ea"
-MUTED = "#9a9aa5"
-GOLD = "#d4a53a"
-RED = "#a83232"
-GREEN = "#3a8f4a"
-ORANGE = "#c9772f"
+# As cores e os componentes visuais ficam no modulo interface.py
 
 
 def load_json(path, default):
@@ -198,9 +191,9 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title(f"{SERVER_NAME} - Updater")
-        self.geometry("760x640")
-        self.configure(bg=BG)
-        self.minsize(760, 640)
+        self.geometry("900x760")
+        self.minsize(900, 700)
+        self.configure(bg=UI.FUNDO)
 
         self.settings = load_json(SETTINGS_FILE, {})
         self.state_data = load_json(STATE_FILE, {"folders": {}})
@@ -210,152 +203,302 @@ class App(tk.Tk):
         self.pending = ([], [], 0)
         self.forge_needed = False
         self.label_to_path = {}
+        self.rotulo_para_launcher = {}
+        self._pontinhos = 0
+        self._log_aberto = False
 
+        UI.aplicar_estilo_combobox(self)
         self._build_ui()
-        self.after(300, self.check_updates)
+        UI.aparecer(self)
+        self._animar_pontinhos()
+        self.after(350, self.check_updates)
 
+    # =================================================================
+    # Montagem da tela
+    # =================================================================
     def _build_ui(self):
-        header = tk.Frame(self, bg=BG2, height=84)
-        header.pack(fill="x")
-        tk.Label(header, text=SERVER_NAME, bg=BG2, fg=GOLD,
-                 font=("Segoe UI", 22, "bold")).pack(pady=(12, 0))
-        tk.Label(header, text=f"IP: {SERVER_IP}", bg=BG2, fg=MUTED,
-                 font=("Segoe UI", 9)).pack()
+        UI.Cabecalho(self, SERVER_NAME, f"IP   {SERVER_IP}").pack(fill="x")
 
-        main = tk.Frame(self, bg=BG)
-        main.pack(fill="both", expand=True, padx=16, pady=10)
+        # O rodape entra ANTES do conteudo: com o pack, quem tem expand=True
+        # ocupa todo o espaco restante e empurraria o botao para fora da tela.
+        rodape = tk.Frame(self, bg=UI.FUNDO)
+        rodape.pack(fill="x", side="bottom", padx=20, pady=(6, 18))
+        self.botao = UI.Botao(rodape, texto="VERIFICANDO...", comando=self.on_action,
+                              cor=UI.OURO, altura=54, bg=UI.FUNDO)
+        self.botao.pack(fill="x")
+        self.botao.configurar(ativo=False)
 
-        # ---- Coluna esquerda: configuracao e log ----
-        left = tk.Frame(main, bg=BG)
-        left.pack(side="left", fill="both", expand=True)
+        corpo = tk.Frame(self, bg=UI.FUNDO)
+        corpo.pack(fill="both", expand=True, padx=20, pady=(16, 0))
 
-        tk.Label(left, text="Onde voce joga o BroxasSMP?", bg=BG, fg=FG,
-                 font=("Segoe UI", 9, "bold")).pack(anchor="w")
-        row1 = tk.Frame(left, bg=BG)
-        row1.pack(fill="x", pady=(2, 2))
+        esquerda = tk.Frame(corpo, bg=UI.FUNDO)
+        esquerda.pack(side="left", fill="both", expand=True)
+
+        direita = tk.Frame(corpo, bg=UI.FUNDO, width=262)
+        direita.pack(side="right", fill="y", padx=(16, 0))
+        direita.pack_propagate(False)
+
+        self._montar_configuracao(esquerda)
+        self._montar_estado(esquerda)
+        self._montar_log(esquerda)
+        self._montar_noticias(direita)
+
+    def _montar_configuracao(self, pai):
+        cartao = UI.Cartao(pai, titulo="ONDE VOCE JOGA")
+        cartao.pack(fill="x")
+
+        interno = tk.Frame(cartao, bg=UI.FUNDO_CARTAO)
+        interno.pack(fill="x", padx=14, pady=(10, 13))
+
+        linha1 = tk.Frame(interno, bg=UI.FUNDO_CARTAO)
+        linha1.pack(fill="x")
         self.game_var = tk.StringVar()
-        self.game_box = ttk.Combobox(row1, textvariable=self.game_var, state="readonly")
-        self.game_box.pack(side="left", fill="x", expand=True, ipady=2)
+        self.game_box = ttk.Combobox(linha1, textvariable=self.game_var,
+                                     state="readonly", style="Broxas.TCombobox")
+        self.game_box.pack(side="left", fill="x", expand=True)
         self.game_box.bind("<<ComboboxSelected>>", lambda e: self.on_folder_change())
-        tk.Button(row1, text="Outra", command=self.pick_game_dir, bg=BG2, fg=FG,
-                  relief="flat", padx=8).pack(side="left", padx=(5, 0))
+        UI.Botao(linha1, texto="Outra pasta", comando=self.pick_game_dir,
+                 cor=UI.BORDA_CLARA, cor_texto=UI.TEXTO, altura=30, raio=8,
+                 fonte=(UI.FONTE, 9), width=104,
+                 bg=UI.FUNDO_CARTAO).pack(side="left", padx=(8, 0))
 
         self.path_var = tk.StringVar()
-        tk.Label(left, textvariable=self.path_var, bg=BG, fg=MUTED,
-                 font=("Consolas", 8), anchor="w", wraplength=420,
-                 justify="left").pack(fill="x")
+        tk.Label(interno, textvariable=self.path_var, bg=UI.FUNDO_CARTAO,
+                 fg=UI.TEXTO_FRACO, font=("Consolas", 8), anchor="w",
+                 wraplength=470, justify="left").pack(fill="x", pady=(7, 0))
 
         self.warn_var = tk.StringVar()
-        self.warn_lbl = tk.Label(left, textvariable=self.warn_var, bg=BG, fg=ORANGE,
-                                 font=("Segoe UI", 8), anchor="w", justify="left",
-                                 wraplength=420)
-        self.warn_lbl.pack(fill="x", pady=(2, 6))
+        self.warn_lbl = tk.Label(interno, textvariable=self.warn_var,
+                                 bg=UI.FUNDO_CARTAO, fg=UI.LARANJA,
+                                 font=(UI.FONTE, 8), anchor="w", justify="left",
+                                 wraplength=470)
+        self.warn_lbl.pack(fill="x", pady=(4, 0))
 
-        tk.Label(left, text="Seu launcher", bg=BG, fg=FG,
-                 font=("Segoe UI", 9, "bold")).pack(anchor="w")
-        row2 = tk.Frame(left, bg=BG)
-        row2.pack(fill="x", pady=(2, 6))
-        self.launcher_var = tk.StringVar(value="Procurando launchers instalados...")
-        self.launcher_box = ttk.Combobox(row2, textvariable=self.launcher_var,
-                                         state="readonly")
-        self.launcher_box.pack(side="left", fill="x", expand=True, ipady=2)
-        tk.Button(row2, text="Procurar", command=self.pick_launcher, bg=BG2, fg=FG,
-                  relief="flat", padx=8).pack(side="left", padx=(5, 0))
-        self.rotulo_para_launcher = {}
+        cartao2 = UI.Cartao(pai, titulo="SEU LAUNCHER")
+        cartao2.pack(fill="x", pady=(12, 0))
+        interno2 = tk.Frame(cartao2, bg=UI.FUNDO_CARTAO)
+        interno2.pack(fill="x", padx=14, pady=(10, 13))
+        linha2 = tk.Frame(interno2, bg=UI.FUNDO_CARTAO)
+        linha2.pack(fill="x")
+        self.launcher_var = tk.StringVar(value="Procurando launchers")
+        self.launcher_box = ttk.Combobox(linha2, textvariable=self.launcher_var,
+                                         state="readonly", style="Broxas.TCombobox")
+        self.launcher_box.pack(side="left", fill="x", expand=True)
+        UI.Botao(linha2, texto="Procurar", comando=self.pick_launcher,
+                 cor=UI.BORDA_CLARA, cor_texto=UI.TEXTO, altura=30, raio=8,
+                 fonte=(UI.FONTE, 9), width=104,
+                 bg=UI.FUNDO_CARTAO).pack(side="left", padx=(8, 0))
 
-        self.status_var = tk.StringVar(value="Verificando...")
-        tk.Label(left, textvariable=self.status_var, bg=BG, fg=MUTED,
-                 font=("Segoe UI", 9), anchor="w", wraplength=420,
-                 justify="left").pack(fill="x", pady=(4, 2))
+    def _montar_estado(self, pai):
+        cartao = UI.Cartao(pai)
+        cartao.pack(fill="x", pady=(12, 0))
+        interno = tk.Frame(cartao, bg=UI.FUNDO_CARTAO)
+        interno.pack(fill="x", padx=14, pady=13)
 
-        self.bar = ttk.Progressbar(left, mode="determinate", maximum=100)
-        self.bar.pack(fill="x", pady=(0, 6))
+        topo = tk.Frame(interno, bg=UI.FUNDO_CARTAO)
+        topo.pack(fill="x")
+        self.girador = UI.Girador(topo, tamanho=16, bg=UI.FUNDO_CARTAO)
+        self.girador.pack(side="left", padx=(0, 8))
+        self.status_var = tk.StringVar(value="Verificando atualizacoes")
+        tk.Label(topo, textvariable=self.status_var, bg=UI.FUNDO_CARTAO,
+                 fg=UI.TEXTO_SUAVE, font=(UI.FONTE, 10), anchor="w",
+                 justify="left", wraplength=420).pack(side="left", fill="x",
+                                                      expand=True)
 
-        self.log_box = tk.Text(left, height=10, bg=BG3, fg=MUTED, relief="flat",
-                               font=("Consolas", 8), wrap="word")
+        self.barra = UI.Barra(interno, altura=12, bg=UI.FUNDO_CARTAO)
+        self.barra.pack(fill="x", pady=(11, 0))
+
+        selos = tk.Frame(interno, bg=UI.FUNDO_CARTAO)
+        selos.pack(fill="x", pady=(11, 0))
+        self.selo_pack = UI.Selo(selos, texto="", cor=UI.OURO, width=118,
+                                 bg=UI.FUNDO_CARTAO)
+        self.selo_pack.pack(side="left")
+        self.selo_mods = UI.Selo(selos, texto="", cor=UI.BORDA_CLARA, width=100,
+                                 bg=UI.FUNDO_CARTAO)
+        self.selo_mods.pack(side="left", padx=(7, 0))
+        self.selo_forge = UI.Selo(selos, texto="", cor=UI.BORDA_CLARA, width=136,
+                                  bg=UI.FUNDO_CARTAO)
+        self.selo_forge.pack(side="left", padx=(7, 0))
+
+    def _montar_log(self, pai):
+        self.cartao_log = UI.Cartao(pai)
+        self.cartao_log.pack(fill="both", expand=True, pady=(12, 0))
+
+        cabeca = tk.Frame(self.cartao_log, bg=UI.FUNDO_CARTAO)
+        cabeca.pack(fill="x", padx=14, pady=(11, 0))
+        self.botao_log = tk.Label(cabeca, text="DETALHES  \u25bc", bg=UI.FUNDO_CARTAO,
+                                  fg=UI.TEXTO_FRACO, font=(UI.FONTE, 9, "bold"),
+                                  cursor="hand2")
+        self.botao_log.pack(side="left")
+        self.botao_log.bind("<Button-1>", lambda e: self._alternar_log())
+        self.botao_log.bind("<Enter>", lambda e: self.botao_log.configure(fg=UI.OURO))
+        self.botao_log.bind("<Leave>",
+                            lambda e: self.botao_log.configure(fg=UI.TEXTO_FRACO))
+
+        self.moldura_log = tk.Frame(self.cartao_log, bg=UI.FUNDO_CARTAO)
+        self.log_box = tk.Text(self.moldura_log, height=8, bg=UI.FUNDO_POCO,
+                               fg=UI.TEXTO_FRACO, relief="flat",
+                               font=("Consolas", 8), wrap="word", padx=10, pady=8,
+                               insertwidth=0, highlightthickness=1,
+                               highlightbackground=UI.BORDA)
         self.log_box.pack(fill="both", expand=True)
+        self.log_box.tag_configure("ok", foreground=UI.VERDE_CLARO)
+        self.log_box.tag_configure("erro", foreground=UI.VERMELHO_CLARO)
+        self.log_box.tag_configure("aviso", foreground=UI.LARANJA)
         self.log_box.configure(state="disabled")
+        self._alternar_log(abrir=True)
 
-        # ---- Coluna direita: noticias ----
-        right = tk.Frame(main, bg=BG, width=250)
-        right.pack(side="right", fill="y", padx=(14, 0))
-        right.pack_propagate(False)
-        tk.Label(right, text="NOTICIAS DO SERVIDOR", bg=BG, fg=GOLD,
-                 font=("Segoe UI", 9, "bold")).pack(anchor="w", pady=(0, 4))
-        self.news_box = tk.Text(right, bg=BG3, fg=FG, relief="flat",
-                                font=("Segoe UI", 8), wrap="word", padx=8, pady=8)
-        self.news_box.pack(fill="both", expand=True)
-        self.news_box.tag_configure("titulo", foreground=GOLD,
-                                   font=("Segoe UI", 9, "bold"), spacing1=6, spacing3=2)
-        self.news_box.tag_configure("texto", foreground="#c9c9d1", spacing3=6)
-        self.news_box.insert("end", "Carregando...\n", "texto")
+    def _alternar_log(self, abrir=None):
+        self._log_aberto = (not self._log_aberto) if abrir is None else abrir
+        if self._log_aberto:
+            self.moldura_log.pack(fill="both", expand=True, padx=14, pady=(9, 13))
+            self.botao_log.configure(text="DETALHES  \u25b2")
+        else:
+            self.moldura_log.pack_forget()
+            self.botao_log.configure(text="DETALHES  \u25bc")
+
+    def _montar_noticias(self, pai):
+        cartao = UI.Cartao(pai, titulo="NOTICIAS DO SERVIDOR")
+        cartao.pack(fill="both", expand=True)
+        self.news_box = tk.Text(cartao, bg=UI.FUNDO_CARTAO, fg=UI.TEXTO_SUAVE,
+                                relief="flat", font=(UI.FONTE, 9), wrap="word",
+                                padx=12, pady=10, insertwidth=0,
+                                highlightthickness=0, cursor="arrow")
+        self.news_box.pack(fill="both", expand=True, padx=2, pady=(8, 8))
+        self.news_box.tag_configure("titulo", foreground=UI.OURO,
+                                    font=(UI.FONTE, 10, "bold"), spacing1=9,
+                                    spacing3=3)
+        self.news_box.tag_configure("texto", foreground=UI.TEXTO_SUAVE, spacing3=9,
+                                    lmargin1=2, lmargin2=2)
+        self.news_box.tag_configure("fraco", foreground=UI.TEXTO_FRACO)
+        self.news_box.insert("end", "Carregando...", "fraco")
         self.news_box.configure(state="disabled")
 
-        self.action_btn = tk.Button(self, text="VERIFICANDO...", command=self.on_action,
-                                    bg=GOLD, fg="#1b1b1f", relief="flat",
-                                    font=("Segoe UI", 13, "bold"), pady=10)
-        self.action_btn.pack(fill="x", side="bottom", padx=16, pady=(0, 14))
+    # =================================================================
+    # Animacoes e utilidades de tela
+    # =================================================================
+    def _animar_pontinhos(self):
+        """Faz os pontinhos do texto de espera irem e voltarem."""
+        if self.mode == "check" or self.busy:
+            self._pontinhos = (self._pontinhos + 1) % 4
+            base = self.status_var.get().rstrip(". ")
+            if base:
+                self.status_var.set(base + "." * self._pontinhos)
+        self.after(420, self._animar_pontinhos)
 
-    # ---------------- helpers ----------------
-    def log(self, text):
+    def _ocupado(self, ligado):
+        if ligado:
+            self.girador.iniciar()
+            self.barra.carregando(True)
+        else:
+            self.girador.parar()
+            self.barra.carregando(False)
+
+    def _no_principal(self, funcao, *args):
+        """
+        Garante que quem mexe na tela e a thread da interface.
+        O tkinter nao aceita widget alterado de outra thread: isso trava ou
+        derruba a janela de forma imprevisivel.
+        """
+        if threading.current_thread() is threading.main_thread():
+            funcao(*args)
+        else:
+            try:
+                self.after(0, lambda: funcao(*args))
+            except Exception:
+                pass
+
+    def set_status(self, texto):
+        self._no_principal(self.status_var.set, texto)
+
+    def log(self, text, tag=None):
+        self._no_principal(self._escrever_log, text, tag)
+
+    def _escrever_log(self, text, tag=None):
+        if tag is None:
+            baixo = text.lower()
+            if "erro" in baixo or "falh" in baixo:
+                tag = "erro"
+            elif "aviso" in baixo or "atencao" in baixo:
+                tag = "aviso"
+            elif "instalado" in baixo or "sucesso" in baixo:
+                tag = "ok"
         self.log_box.configure(state="normal")
-        self.log_box.insert("end", text + "\n")
+        self.log_box.insert("end", text + "\n", tag or "")
         self.log_box.see("end")
         self.log_box.configure(state="disabled")
 
     def set_progress(self, done, total):
-        self.bar["value"] = 100 if not total else int(done / total * 100)
-        self.update_idletasks()
+        self._no_principal(self.barra.definir, 1.0 if not total else done / total)
+
+    def atualizar_selos(self):
+        m = self.manifest or {}
+        if not m:
+            return
+        self.selo_pack.definir(f"Pack v{m.get('pack_version','?')}", UI.OURO)
+        self.selo_mods.definir(f"{len(m.get('mods', []))} mods", UI.BORDA_CLARA)
+        forge = (m.get("forge") or {}).get("version", "?")
+        if self.forge_needed:
+            self.selo_forge.definir(f"Forge {forge} falta", UI.LARANJA)
+        else:
+            self.selo_forge.definir(f"Forge {forge} pronto", UI.VERDE)
 
     def render_news(self, noticias):
+        self._no_principal(self._escrever_noticias, noticias)
+
+    def _escrever_noticias(self, noticias):
         self.news_box.configure(state="normal")
         self.news_box.delete("1.0", "end")
         if not noticias:
-            self.news_box.insert("end", "Nenhuma noticia por agora.\n", "texto")
+            self.news_box.insert("end", "Nenhuma noticia por agora.", "fraco")
         else:
-            for n in noticias:
+            for i, n in enumerate(noticias):
                 if isinstance(n, str):
                     self.news_box.insert("end", n + "\n", "texto")
                     continue
                 titulo = n.get("titulo") or n.get("title") or ""
                 texto = n.get("texto") or n.get("text") or ""
                 if titulo:
-                    self.news_box.insert("end", titulo + "\n", "titulo")
+                    prefixo = "" if i == 0 else "\n"
+                    self.news_box.insert("end", prefixo + titulo + "\n", "titulo")
                 if texto:
                     self.news_box.insert("end", texto + "\n", "texto")
         self.news_box.configure(state="disabled")
 
+    # =================================================================
+    # Pastas
+    # =================================================================
     def current_folder(self):
-        """Devolve a pasta escolhida, corrigindo os erros comuns de escolha."""
         bruta = self.label_to_path.get(self.game_var.get(), "")
         if not bruta:
             return ""
         corrigida, aviso = normalizar_pasta(bruta)
         if aviso and aviso != getattr(self, "_ultimo_aviso_pasta", None):
             self._ultimo_aviso_pasta = aviso
-            self.log(f"  {aviso}")
+            self.log(f"  {aviso}", "aviso")
         return corrigida
 
     def update_path_label(self):
         self.path_var.set(self.current_folder() or "(nada selecionado)")
 
-    def populate_instances(self):
-        instances = detect_instances()
+    def populate_instances(self, instances=None):
+        if instances is None:
+            instances = detect_instances()
         self.label_to_path = {}
         labels = []
         for inst in instances:
-            label = f"{inst['label']}  [{inst['mods']} mods]"
+            label = f"{inst['label']}   [{inst['mods']} mods]"
             self.label_to_path[label] = inst["path"]
             labels.append(label)
 
         salvo = self.settings.get("game_dir")
         if salvo and salvo not in self.label_to_path.values():
-            label = f"Escolhida por voce  [{salvo}]"
+            label = f"Escolhida por voce   [{salvo}]"
             self.label_to_path[label] = salvo
             labels.insert(0, label)
 
         self.game_box["values"] = labels
-        self.log(f"Instalacoes detectadas: {len(instances)}")
+        self.log(f"Instalacoes encontradas: {len(instances)}")
         for inst in instances:
             self.log(f"  . {inst['label']} ({inst['mods']} mods)")
 
@@ -372,45 +515,41 @@ class App(tk.Tk):
         self.update_path_label()
 
     def pick_game_dir(self):
-        path = filedialog.askdirectory(title="Selecione a pasta do Minecraft (a que tem 'mods')")
+        path = filedialog.askdirectory(
+            title="Selecione a pasta do jogo (a que CONTEM a pasta mods)")
         if not path:
             return
-        label = f"Escolhida por voce  [{path}]"
+        label = f"Escolhida por voce   [{path}]"
         self.label_to_path[label] = path
-        vals = list(self.game_box["values"])
-        if label not in vals:
-            vals.insert(0, label)
-            self.game_box["values"] = vals
+        valores = list(self.game_box["values"])
+        if label not in valores:
+            valores.insert(0, label)
+            self.game_box["values"] = valores
         self.game_var.set(label)
         self.on_folder_change()
 
-    def populate_launchers(self):
-        """Busca os launchers instalados e preenche a lista."""
-        self.log("Procurando launchers instalados...")
-        try:
-            encontrados = detectar_launchers(log=self.log)
-        except Exception as exc:
-            self.log(f"  (nao consegui procurar launchers: {exc})")
-            encontrados = []
-
+    # =================================================================
+    # Launchers
+    # =================================================================
+    def _aplicar_launchers(self, encontrados):
         self.rotulo_para_launcher = {}
         rotulos = []
         for item in encontrados:
-            rotulo = f"{item['nome']}  -  {item['caminho']}"
+            rotulo = f"{item['nome']}   -   {item['caminho']}"
             self.rotulo_para_launcher[rotulo] = item["caminho"]
             rotulos.append(rotulo)
 
         salvo = self.settings.get("launcher")
-        if salvo and Path(salvo).is_file() and salvo not in self.rotulo_para_launcher.values():
-            rotulo = f"Escolhido por voce  -  {salvo}"
+        if (salvo and Path(salvo).is_file()
+                and salvo not in self.rotulo_para_launcher.values()):
+            rotulo = f"Escolhido por voce   -   {salvo}"
             self.rotulo_para_launcher[rotulo] = salvo
             rotulos.insert(0, rotulo)
 
         self.launcher_box["values"] = rotulos
-
         if not rotulos:
-            self.launcher_var.set("")
-            self.log("  Nenhum launcher encontrado. Use o botao Procurar.")
+            self.launcher_var.set("Nenhum encontrado - use o botao Procurar")
+            self.log("  Nenhum launcher encontrado. Use o botao Procurar.", "aviso")
             return
 
         escolhido = None
@@ -420,12 +559,10 @@ class App(tk.Tk):
                     escolhido = r
                     break
         self.launcher_var.set(escolhido or rotulos[0])
-        self.log(f"  {len(rotulos)} launcher(s) na lista. Usando: "
-                 f"{self.current_launcher()}")
+        self.log(f"  {len(rotulos)} launcher(s) na lista")
 
     def current_launcher(self):
-        rotulo = self.launcher_var.get()
-        return self.rotulo_para_launcher.get(rotulo, "")
+        return self.rotulo_para_launcher.get(self.launcher_var.get(), "")
 
     def pick_launcher(self):
         path = filedialog.askopenfilename(
@@ -433,7 +570,7 @@ class App(tk.Tk):
             filetypes=[("Executavel", "*.exe"), ("Todos", "*.*")])
         if not path:
             return
-        rotulo = f"Escolhido por voce  -  {path}"
+        rotulo = f"Escolhido por voce   -   {path}"
         self.rotulo_para_launcher[rotulo] = path
         valores = list(self.launcher_box["values"])
         if rotulo not in valores:
@@ -457,71 +594,115 @@ class App(tk.Tk):
             self.settings["launcher"] = alvo
         save_json(SETTINGS_FILE, self.settings)
 
+    # =================================================================
+    # Estado do botao
+    # =================================================================
     def set_mode(self, mode):
+        self._no_principal(self._aplicar_modo, mode)
+
+    def _aplicar_modo(self, mode):
         self.mode = mode
+        self._ocupado(False)
         if mode == "update":
-            texto = "INSTALAR / ATUALIZAR" if self.forge_needed else "ATUALIZAR"
-            self.action_btn.configure(text=texto, bg=GOLD, fg="#1b1b1f", state="normal")
+            texto = "INSTALAR E ATUALIZAR" if self.forge_needed else "ATUALIZAR"
+            self.botao.configurar(texto=texto, cor=UI.OURO, cor_texto="#15151d",
+                                  ativo=True)
+            self.botao.pulsar(True)
         elif mode == "play":
-            self.action_btn.configure(text="JOGAR", bg=GREEN, fg="white", state="normal")
+            self.botao.pulsar(False)
+            self.botao.configurar(texto="JOGAR", cor=UI.VERDE, cor_texto="#ffffff",
+                                  ativo=True)
+            self.barra.definir(1.0)
         else:
-            self.action_btn.configure(text="TENTAR DE NOVO", bg=RED, fg="white", state="normal")
+            self.botao.pulsar(False)
+            self.botao.configurar(texto="TENTAR DE NOVO", cor=UI.VERMELHO,
+                                  cor_texto="#ffffff", ativo=True)
+        self.atualizar_selos()
 
-    # ---------------- fluxo ----------------
+    # =================================================================
+    # Fluxo
+    # =================================================================
     def check_updates(self):
-        def work():
-            try:
-                self.manifest = fetch_manifest(MANIFEST_URL)
-            except Exception as exc:
-                self.status_var.set("Nao consegui verificar atualizacoes (sem internet?).")
-                self.log(f"ERRO: {exc}")
-                self.render_news([])
-                self.set_mode("error")
-                return
-            m = self.manifest
-            self.log(f"Pack remoto: v{m.get('pack_version','?')} | "
-                     f"Minecraft {m.get('minecraft','?')} | {m.get('loader','?')} | "
-                     f"{len(m.get('mods', []))} mods")
-            self.render_news(m.get("noticias") or m.get("news") or [])
-            self.populate_instances()
-            self.evaluate()
-            self.populate_launchers()
+        """
+        Busca e varredura acontecem em segundo plano; o resultado e entregue
+        para a thread da interface montar a tela.
+        """
+        self.mode = "check"
+        self._ocupado(True)
+        self.botao.configurar(texto="VERIFICANDO...", ativo=False)
 
-        threading.Thread(target=work, daemon=True).start()
+        def trabalho():
+            try:
+                manifest = fetch_manifest(MANIFEST_URL)
+            except Exception as exc:
+                self._no_principal(self._verificacao_falhou, exc)
+                return
+            try:
+                instancias = detect_instances()
+            except Exception as exc:
+                self.log(f"  (nao consegui listar instalacoes: {exc})", "erro")
+                instancias = []
+            self._no_principal(self._verificacao_pronta, manifest, instancias)
+
+            # A busca de launcher vem depois, para a tela ja aparecer preenchida
+            self.log("Procurando launchers instalados")
+            try:
+                encontrados = detectar_launchers(log=self.log)
+            except Exception as exc:
+                self.log(f"  (nao consegui procurar launchers: {exc})", "erro")
+                encontrados = []
+            self._no_principal(self._aplicar_launchers, encontrados)
+
+        threading.Thread(target=trabalho, daemon=True).start()
+
+    def _verificacao_falhou(self, exc):
+        self.set_status("Nao consegui verificar atualizacoes")
+        self.log(f"ERRO: {exc}", "erro")
+        self.render_news([])
+        self.set_mode("error")
+
+    def _verificacao_pronta(self, manifest, instancias):
+        self.manifest = manifest
+        m = manifest
+        self.log(f"Pack v{m.get('pack_version','?')} | Minecraft "
+                 f"{m.get('minecraft','?')} | {m.get('loader','?')} | "
+                 f"{len(m.get('mods', []))} mods")
+        self.render_news(m.get("noticias") or m.get("news") or [])
+        self.populate_instances(instancias)
+        self.evaluate()
 
     def evaluate(self):
         folder = self.current_folder()
         if not folder:
-            self.status_var.set("Selecione onde voce joga o BroxasSMP.")
+            self.set_status("Selecione onde voce joga o BroxasSMP")
             self.set_mode("error")
             return
 
         fstate = get_folder_state(self.state_data, folder)
         nivel, msgs = analyze_folder(folder, self.manifest, fstate)
         if nivel == "perigo":
-            self.warn_lbl.configure(fg=RED)
+            self.warn_lbl.configure(fg=UI.VERMELHO_CLARO)
             self.warn_var.set("ATENCAO: " + " ".join(msgs))
-            self.status_var.set("Escolha outra pasta para continuar.")
+            self.set_status("Escolha outra pasta para continuar")
             self.set_mode("error")
             return
-        self.warn_lbl.configure(fg=ORANGE if nivel == "aviso" else MUTED)
+        self.warn_lbl.configure(fg=UI.LARANJA if nivel == "aviso" else UI.TEXTO_FRACO)
         self.warn_var.set(("AVISO: " if nivel == "aviso" else "") + " ".join(msgs))
 
-        # Forge
         mc, fv, _ = parse_forge_info(self.manifest)
         self.forge_needed = False
         if mc and fv:
             if is_forge_installed(folder, mc, fv):
-                self.log(f"Forge {fv} ja instalado.")
+                self.log(f"Forge {fv} ja instalado", "ok")
             else:
                 self.forge_needed = True
-                self.log(f"Forge {mc}-{fv} NAO encontrado -> sera instalado.")
+                self.log(f"Forge {mc}-{fv} nao encontrado, sera instalado", "aviso")
 
         try:
             to_dl, to_rm, ok = plan_sync(self.manifest, Path(folder), fstate)
         except Exception as exc:
-            self.status_var.set("Erro ao comparar arquivos.")
-            self.log(f"ERRO: {exc}")
+            self.set_status("Erro ao comparar arquivos")
+            self.log(f"ERRO: {exc}", "erro")
             self.set_mode("error")
             return
 
@@ -534,11 +715,12 @@ class App(tk.Tk):
         if to_rm:
             partes.append(f"remover {len(to_rm)}")
         if partes:
-            self.status_var.set("Falta: " + ", ".join(partes) + f". ({ok} ja em dia)")
+            self.set_status("Falta " + ", ".join(partes) + f".   {ok} ja em dia.")
+            self.barra.definir(0.0)
             self.set_mode("update")
         else:
-            self.status_var.set(
-                f"Tudo em dia! Pack v{self.manifest.get('pack_version','?')}. Pode jogar.")
+            self.set_status(
+                f"Tudo em dia! Pack v{self.manifest.get('pack_version','?')}.")
             self.set_mode("play")
 
     def on_action(self):
@@ -550,8 +732,8 @@ class App(tk.Tk):
             self.launch()
             return
         if self.mode == "error":
-            self.log("--- verificando de novo ---")
-            self.status_var.set("Verificando...")
+            self.log("Verificando de novo")
+            self.set_status("Verificando")
             self.check_updates()
             return
 
@@ -568,42 +750,49 @@ class App(tk.Tk):
             return
 
         self.busy = True
-        self.action_btn.configure(state="disabled", text="TRABALHANDO...")
+        self.botao.pulsar(False)
+        self.botao.configurar(texto="TRABALHANDO...", ativo=False)
+        self.girador.iniciar()
 
         def work():
             try:
                 if self.forge_needed:
                     mc, fv, url = parse_forge_info(self.manifest)
-                    self.status_var.set("Instalando o Forge...")
-                    self.log("--- instalando Forge ---")
+                    self.set_status("Instalando o Forge")
+                    self.barra.carregando(True)
+                    self.log("Instalando o Forge")
                     ok_forge, msg = install_forge(folder, mc, fv, url, log=self.log)
-                    self.log(f"  {msg}")
+                    self.log(f"  {msg}", "ok" if ok_forge else "erro")
                     if not ok_forge:
-                        self.status_var.set("Falha ao instalar o Forge.")
+                        self.set_status("Falha ao instalar o Forge")
                         messagebox.showerror("Forge", msg)
                         self.busy = False
                         self.set_mode("update")
                         return
                     self.forge_needed = False
+                    self.barra.carregando(False)
 
-                self.status_var.set("Sincronizando mods...")
+                self.set_status("Sincronizando os mods")
                 fstate = get_folder_state(self.state_data, folder)
-                self.log(f"--- sincronizando em {folder} ---")
+                self.log(f"Sincronizando em {folder}")
                 res = do_sync(self.manifest, Path(folder), self.state_data, fstate,
                               self.log, self.set_progress)
-                self.log(f"--- fim: {len(res.downloaded)} baixados, "
-                         f"{len(res.removed)} removidos, {res.kept} ok ---")
+                self.log(f"Fim: {len(res.downloaded)} baixados, "
+                         f"{len(res.removed)} removidos, {res.kept} ja estavam ok")
                 if res.errors:
-                    self.status_var.set(f"Concluido com {len(res.errors)} erro(s). Veja o log.")
+                    self.set_status(
+                        f"Concluido com {len(res.errors)} erro(s). Veja os detalhes.")
                     for e in res.errors:
-                        self.log(f"  ! {e}")
+                        self.log(f"  ! {e}", "erro")
+                    self._alternar_log(abrir=True)
                     self.set_mode("update")
                 else:
-                    self.status_var.set("Tudo pronto! Pode jogar.")
+                    self.set_status("Tudo pronto! Bom jogo.")
                     self.set_progress(1, 1)
                     self.set_mode("play")
             finally:
                 self.busy = False
+                self.girador.parar()
 
         threading.Thread(target=work, daemon=True).start()
 
@@ -617,7 +806,7 @@ class App(tk.Tk):
                 "Seus mods JA estao atualizados! Voce pode abrir o launcher "
                 "que costuma usar e jogar normalmente.\n\n"
                 "Se quiser que este programa abra o launcher para voce, clique "
-                "em Procurar e selecione o atalho ou o executavel dele "
+                "em Procurar e selecione o executavel dele "
                 "(TLauncher.exe, CurseForge.exe, etc).")
             return
         try:
