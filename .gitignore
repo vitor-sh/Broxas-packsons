@@ -1,0 +1,9 @@
+
+# Arquivo gerado pelo GitHub Actions na hora de compilar
+configuracao.py
+
+# Sobras do PyInstaller
+build/
+dist/
+*.spec
+__pycache__/

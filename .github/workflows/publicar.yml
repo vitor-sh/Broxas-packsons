@@ -5,6 +5,7 @@ name: Publicar pack e gerar o EXE
 on:
   push:
     paths:
+      - ".github/workflows/**"
       - "mods/**"
       - "noticias.txt"
       - "pack.json"
@@ -113,24 +114,38 @@ jobs:
       - name: Instalar PyInstaller
         run: python -m pip install --upgrade pip pyinstaller
 
-      - name: Configurar o app (URL, nome e IP automaticamente)
+      # Gera um arquivo de configuracao em vez de editar o codigo com regex.
+      # A tentativa anterior com regex falhava em silencio no Windows, porque
+      # o checkout converte as linhas para CRLF e o ancora $ nao casava.
+      - name: Gerar configuracao do app
         shell: pwsh
         run: |
           $cfg = Get-Content pack.json -Raw | ConvertFrom-Json
           $manifestUrl = "https://raw.githubusercontent.com/${{ github.repository }}/main/manifest.json"
-          $f = "broxas_updater.py"
-          $t = Get-Content $f -Raw
-          $t = $t -replace '(?m)^MANIFEST_URL = ".*"$', ('MANIFEST_URL = "' + $manifestUrl + '"')
-          $t = $t -replace '(?m)^SERVER_NAME = ".*"$',  ('SERVER_NAME = "' + $cfg.server_name + '"')
-          $t = $t -replace '(?m)^SERVER_IP = ".*"$',    ('SERVER_IP = "' + $cfg.server_ip + '"')
-          Set-Content $f $t -NoNewline
-          Select-String -Path $f -Pattern '^MANIFEST_URL|^SERVER_NAME|^SERVER_IP'
+          $linhas = @(
+            '# Arquivo gerado automaticamente pelo GitHub Actions. Nao edite.',
+            ('MANIFEST_URL = "' + $manifestUrl + '"'),
+            ('SERVER_NAME = "' + $cfg.server_name + '"'),
+            ('SERVER_IP = "' + $cfg.server_ip + '"')
+          )
+          Set-Content -Path "configuracao.py" -Value $linhas -Encoding utf8
+          Write-Host "--- configuracao.py ---"
+          Get-Content configuracao.py
+
+      # Trava de seguranca: se a configuracao nao tiver sido aplicada, o build
+      # para aqui em vez de publicar um executavel que da 404 no jogador.
+      - name: Conferir a configuracao
+        shell: pwsh
+        run: |
+          python -c "import configuracao as c; assert 'SEU_USUARIO' not in c.MANIFEST_URL, 'a URL do manifest nao foi configurada'; assert c.MANIFEST_URL.startswith('https://'), 'URL invalida'; print('URL do manifest:', c.MANIFEST_URL)"
+          python -c "import broxas_updater as a; assert 'SEU_USUARIO' not in a.MANIFEST_URL, 'o app nao carregou a configuracao'; print('O app vai usar:', a.MANIFEST_URL); print('Servidor:', a.SERVER_NAME, '-', a.SERVER_IP)"
 
       - name: Compilar o executavel
         shell: pwsh
         run: |
           $nome = (Get-Content pack.json -Raw | ConvertFrom-Json).server_name
-          $opcoes = @("--onefile","--noconsole","--clean","--name","$nome-Updater")
+          $opcoes = @("--onefile","--noconsole","--clean","--name","$nome-Updater",
+                      "--hidden-import","configuracao")
           if (Test-Path "icone.ico") { $opcoes += @("--icon","icone.ico") }
           python -m PyInstaller @opcoes broxas_updater.py
           Get-ChildItem dist
