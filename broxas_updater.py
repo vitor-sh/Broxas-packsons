@@ -25,6 +25,7 @@ from tkinter import filedialog, messagebox, ttk
 from detector import analyze_folder, detect_instances, normalizar_pasta
 from forge_setup import install_forge, is_forge_installed, parse_forge_info
 from launchers import detectar_launchers
+import preparar_jogo
 import interface as UI
 
 # =====================================================================
@@ -787,6 +788,9 @@ class App(tk.Tk):
                     self._alternar_log(abrir=True)
                     self.set_mode("update")
                 else:
+                    self.log("Preparando o jogo")
+                    for m in self.preparar_jogo_para_entrar():
+                        self.log(f"  {m}")
                     self.set_status("Tudo pronto! Bom jogo.")
                     self.set_progress(1, 1)
                     self.set_mode("play")
@@ -796,10 +800,31 @@ class App(tk.Tk):
 
         threading.Thread(target=work, daemon=True).start()
 
+    def preparar_jogo_para_entrar(self):
+        """
+        Poupa trabalho de quem vai jogar: coloca o servidor na lista de
+        multijogador e deixa o perfil do Forge pre-selecionado no launcher.
+        """
+        pasta = self.current_folder()
+        if not pasta:
+            return []
+        mc, fv, _ = parse_forge_info(self.manifest or {})
+        try:
+            return preparar_jogo.preparar(pasta, mc or "1.20.1", fv or "",
+                                          SERVER_NAME, SERVER_IP, log=self.log)
+        except Exception as exc:
+            self.log(f"  (nao consegui preparar o jogo: {exc})", "erro")
+            return []
+
     def launch(self):
         path = self.current_launcher().strip()
         mc = (self.manifest or {}).get("minecraft", "1.20.1")
         loader = (self.manifest or {}).get("loader", "Forge")
+
+        self.log("Preparando o jogo")
+        avisos = self.preparar_jogo_para_entrar()
+        for m in avisos:
+            self.log(f"  {m}")
         if not path or not Path(path).exists():
             messagebox.showwarning(
                 "Launcher nao encontrado",
@@ -812,10 +837,15 @@ class App(tk.Tk):
         try:
             subprocess.Popen([path], close_fds=True)
             self.log(f"Abrindo launcher: {path}")
+            resumo = "\n".join(f"- {m}" for m in avisos) if avisos else ""
             messagebox.showinfo(
                 "Bom jogo!",
-                f"Launcher aberto.\n\nSelecione o perfil {loader} ({mc}) "
-                f"e entre no servidor:\n{SERVER_IP}")
+                f"Launcher aberto!\n\n"
+                f"O perfil {loader} ({mc}) ja esta selecionado: basta apertar "
+                f"em Play.\n\n"
+                f"Dentro do jogo, va em Multijogador: o {SERVER_NAME} ja esta "
+                f"na lista.\n\n"
+                + (f"O que foi preparado:\n{resumo}" if resumo else ""))
         except Exception as exc:
             messagebox.showerror("Erro", f"Nao consegui abrir o launcher:\n{exc}")
 
