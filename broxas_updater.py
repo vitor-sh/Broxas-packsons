@@ -24,6 +24,7 @@ from tkinter import filedialog, messagebox, ttk
 
 from detector import analyze_folder, detect_instances, normalizar_pasta
 from forge_setup import install_forge, is_forge_installed, parse_forge_info
+from launchers import detectar_launchers
 
 # =====================================================================
 # CONFIGURACAO
@@ -120,32 +121,6 @@ def download(url: str, dest: Path):
                 break
             out.write(chunk)
     tmp.replace(dest)
-
-
-def guess_launchers() -> list:
-    appdata = os.getenv("APPDATA") or ""
-    local = os.getenv("LOCALAPPDATA") or ""
-    pf = os.getenv("ProgramFiles") or r"C:\Program Files"
-    pf86 = os.getenv("ProgramFiles(x86)") or r"C:\Program Files (x86)"
-    home = str(Path.home())
-    candidates = [
-        ("TLauncher", Path(appdata) / "TLauncher" / "TLauncher.exe"),
-        ("TLauncher", Path(home) / "Desktop" / "TLauncher.exe"),
-        ("TLauncher", Path(appdata) / ".tlauncher" / "TLauncher.exe"),
-        ("CurseForge", Path(local) / "Programs" / "CurseForge" / "CurseForge.exe"),
-        ("Minecraft Launcher", Path(pf86) / "Minecraft Launcher" / "MinecraftLauncher.exe"),
-        ("Minecraft Launcher", Path(pf) / "Minecraft Launcher" / "MinecraftLauncher.exe"),
-        ("Prism Launcher", Path(local) / "Programs" / "PrismLauncher" / "prismlauncher.exe"),
-        ("Prism Launcher", Path(pf) / "Prism Launcher" / "prismlauncher.exe"),
-        ("MultiMC", Path(pf) / "MultiMC" / "MultiMC.exe"),
-        ("Modrinth App", Path(local) / "Programs" / "Modrinth App" / "Modrinth App.exe"),
-    ]
-    found, seen = [], set()
-    for name, path in candidates:
-        if path.exists() and str(path) not in seen:
-            seen.add(str(path))
-            found.append((name, str(path)))
-    return found
 
 
 # ---------------------------------------------------------------------
@@ -280,15 +255,13 @@ class App(tk.Tk):
                  font=("Segoe UI", 9, "bold")).pack(anchor="w")
         row2 = tk.Frame(left, bg=BG)
         row2.pack(fill="x", pady=(2, 6))
-        self.launcher_var = tk.StringVar(value=self.settings.get("launcher") or "")
-        self.launcher_box = ttk.Combobox(row2, textvariable=self.launcher_var)
-        found = guess_launchers()
-        self.launcher_box["values"] = [p for _, p in found]
-        if not self.launcher_var.get() and found:
-            self.launcher_var.set(found[0][1])
+        self.launcher_var = tk.StringVar(value="Procurando launchers instalados...")
+        self.launcher_box = ttk.Combobox(row2, textvariable=self.launcher_var,
+                                         state="readonly")
         self.launcher_box.pack(side="left", fill="x", expand=True, ipady=2)
         tk.Button(row2, text="Procurar", command=self.pick_launcher, bg=BG2, fg=FG,
                   relief="flat", padx=8).pack(side="left", padx=(5, 0))
+        self.rotulo_para_launcher = {}
 
         self.status_var = tk.StringVar(value="Verificando...")
         tk.Label(left, textvariable=self.status_var, bg=BG, fg=MUTED,
@@ -411,12 +384,63 @@ class App(tk.Tk):
         self.game_var.set(label)
         self.on_folder_change()
 
+    def populate_launchers(self):
+        """Busca os launchers instalados e preenche a lista."""
+        self.log("Procurando launchers instalados...")
+        try:
+            encontrados = detectar_launchers(log=self.log)
+        except Exception as exc:
+            self.log(f"  (nao consegui procurar launchers: {exc})")
+            encontrados = []
+
+        self.rotulo_para_launcher = {}
+        rotulos = []
+        for item in encontrados:
+            rotulo = f"{item['nome']}  -  {item['caminho']}"
+            self.rotulo_para_launcher[rotulo] = item["caminho"]
+            rotulos.append(rotulo)
+
+        salvo = self.settings.get("launcher")
+        if salvo and Path(salvo).is_file() and salvo not in self.rotulo_para_launcher.values():
+            rotulo = f"Escolhido por voce  -  {salvo}"
+            self.rotulo_para_launcher[rotulo] = salvo
+            rotulos.insert(0, rotulo)
+
+        self.launcher_box["values"] = rotulos
+
+        if not rotulos:
+            self.launcher_var.set("")
+            self.log("  Nenhum launcher encontrado. Use o botao Procurar.")
+            return
+
+        escolhido = None
+        if salvo:
+            for r, c in self.rotulo_para_launcher.items():
+                if os.path.normcase(c) == os.path.normcase(salvo):
+                    escolhido = r
+                    break
+        self.launcher_var.set(escolhido or rotulos[0])
+        self.log(f"  {len(rotulos)} launcher(s) na lista. Usando: "
+                 f"{self.current_launcher()}")
+
+    def current_launcher(self):
+        rotulo = self.launcher_var.get()
+        return self.rotulo_para_launcher.get(rotulo, "")
+
     def pick_launcher(self):
         path = filedialog.askopenfilename(
-            title="Selecione o executavel do launcher",
+            title="Selecione o executavel do launcher que voce usa",
             filetypes=[("Executavel", "*.exe"), ("Todos", "*.*")])
-        if path:
-            self.launcher_var.set(path)
+        if not path:
+            return
+        rotulo = f"Escolhido por voce  -  {path}"
+        self.rotulo_para_launcher[rotulo] = path
+        valores = list(self.launcher_box["values"])
+        if rotulo not in valores:
+            valores.insert(0, rotulo)
+            self.launcher_box["values"] = valores
+        self.launcher_var.set(rotulo)
+        self.save_settings()
 
     def on_folder_change(self):
         self.update_path_label()
@@ -428,7 +452,9 @@ class App(tk.Tk):
         folder = self.current_folder()
         if folder:
             self.settings["game_dir"] = folder
-        self.settings["launcher"] = self.launcher_var.get()
+        alvo = self.current_launcher()
+        if alvo:
+            self.settings["launcher"] = alvo
         save_json(SETTINGS_FILE, self.settings)
 
     def set_mode(self, mode):
@@ -459,6 +485,7 @@ class App(tk.Tk):
             self.render_news(m.get("noticias") or m.get("news") or [])
             self.populate_instances()
             self.evaluate()
+            self.populate_launchers()
 
         threading.Thread(target=work, daemon=True).start()
 
@@ -581,15 +608,17 @@ class App(tk.Tk):
         threading.Thread(target=work, daemon=True).start()
 
     def launch(self):
-        path = self.launcher_var.get().strip()
+        path = self.current_launcher().strip()
         mc = (self.manifest or {}).get("minecraft", "1.20.1")
         loader = (self.manifest or {}).get("loader", "Forge")
         if not path or not Path(path).exists():
             messagebox.showwarning(
                 "Launcher nao encontrado",
-                "Selecione o executavel do launcher que voce usa.\n\n"
-                "Seus mods JA estao atualizados: pode abrir o launcher "
-                "manualmente e jogar normalmente.")
+                "Seus mods JA estao atualizados! Voce pode abrir o launcher "
+                "que costuma usar e jogar normalmente.\n\n"
+                "Se quiser que este programa abra o launcher para voce, clique "
+                "em Procurar e selecione o atalho ou o executavel dele "
+                "(TLauncher.exe, CurseForge.exe, etc).")
             return
         try:
             subprocess.Popen([path], close_fds=True)
