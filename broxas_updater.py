@@ -22,7 +22,7 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
-from detector import analyze_folder, detect_instances
+from detector import analyze_folder, detect_instances, normalizar_pasta
 from forge_setup import install_forge, is_forge_installed, parse_forge_info
 
 # =====================================================================
@@ -353,7 +353,15 @@ class App(tk.Tk):
         self.news_box.configure(state="disabled")
 
     def current_folder(self):
-        return self.label_to_path.get(self.game_var.get(), "")
+        """Devolve a pasta escolhida, corrigindo os erros comuns de escolha."""
+        bruta = self.label_to_path.get(self.game_var.get(), "")
+        if not bruta:
+            return ""
+        corrigida, aviso = normalizar_pasta(bruta)
+        if aviso and aviso != getattr(self, "_ultimo_aviso_pasta", None):
+            self._ultimo_aviso_pasta = aviso
+            self.log(f"  {aviso}")
+        return corrigida
 
     def update_path_label(self):
         self.path_var.set(self.current_folder() or "(nada selecionado)")
