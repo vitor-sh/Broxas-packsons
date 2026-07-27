@@ -1,0 +1,11 @@
+{
+  "_comentario": "Mods que nao cabem na pasta mods/ (o navegador do GitHub so aceita ate 25 MB por arquivo). Suba estes no Release chamado mods-grandes.",
+  "mods": [
+    {
+      "name": "heralds_luna-2.5-forge-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/download/mods-grandes/heralds_luna-2.5-forge-1.20.1.jar",
+      "sha1": "0c87084e6a467996f4653c3de613327c9b9b0eed",
+      "size": 32255503
+    }
+  ]
+}
