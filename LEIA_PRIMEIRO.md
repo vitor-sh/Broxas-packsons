@@ -1,72 +1,73 @@
 # BroxasSMP Updater — O que fazer agora
 
-Tudo já está montado neste repositório. **Falta só você subir os mods.**
+## ✅ Boa notícia: o upload ficou 10x menor
 
----
+O erro que você teve (`Commit failed — The file is too large`) é o limite de
+**25 MB por arquivo** do upload pelo navegador do GitHub.
 
-## ⚠️ Antes: dois problemas que eu corrigi no seu manifest
+Resolvi isso de um jeito melhor: usei os hashes SHA-1 que você já tinha gerado
+para consultar a **API do Modrinth** e descobrir o link oficial de cada mod.
+Resultado:
 
-Você tinha gerado o `manifest.json` (139 mods, hashes corretos 👍), mas as URLs
-estavam apontando pra `releases/tag/mods`, que é a **página HTML** do release,
-não o arquivo. Nenhum download funcionaria.
-
-Corrigi as 139 URLs. E descobri outra coisa: o **navegador do GitHub só aceita
-upload de arquivos até 25 MB**, e um mod seu passa disso:
-
-| Mod | Tamanho | Onde vai |
+| | Antes | Agora |
 |---|---|---|
-| `heralds_luna-2.5-forge-1.20.1.jar` | 30.8 MB | Release `mods-grandes` |
-| os outros 138 | até 24 MB | pasta `mods/` |
+| Mods que você precisa enviar | 139 | **37** |
+| Tamanho do upload | 282,8 MB | **28,6 MB** |
+| Maior arquivo | 30,8 MB ❌ | **4,69 MB** ✅ |
+| Precisa criar Release? | Sim | **Não** |
 
-Já deixei isso configurado. Os hashes que você gerou foram todos aproveitados.
+Os outros **102 mods são baixados direto do CDN oficial do Modrinth**. Isso
+também deixa o download mais rápido pra galera e resolve a questão de licença
+(não estamos re-hospedando esses mods).
 
----
-
-## PASSO 1 — Fazer o merge deste Pull Request
-
-Na aba **Pull requests** do repositório, abra o PR que eu criei e clique em
-**Merge pull request** → **Confirm merge**.
-
-Isso ativa o robô que compila o `.exe`.
+Testei 5 links do Modrinth por HTTP: todos responderam **200** com o tamanho
+exato conferindo com o hash.
 
 ---
 
-## PASSO 2 — Subir os 138 mods na pasta `mods/`
+## PASSO 1 — Subir os 37 mods
 
-1. Na página inicial do repo, clique na pasta **mods**
+1. Na página inicial do repositório, clique na pasta **mods**
 2. **Add file → Upload files**
-3. Arraste os `.jar` da sua pasta de mods
-   - O GitHub aceita **100 arquivos por vez**, então faça em 2 tandas
-   - **NÃO** suba o `heralds_luna-2.5-forge-1.20.1.jar` aqui (é o do passo 3)
+3. Arraste **apenas os 37 arquivos** listados no `LISTA_DE_MODS.md`
+   (seção *"VOCE PRECISA ENVIAR ESTES"*)
 4. **Commit changes**
 
-> A lista completa está no arquivo `LISTA_DE_MODS.md`, se quiser conferir.
+Agora cabe tudo de uma vez: 37 arquivos, 28,6 MB no total, nenhum acima de 25 MB.
 
-## PASSO 3 — Subir o mod grande num Release
+> **Dica pra achar os arquivos rápido:** abra a sua pasta de mods, ordene por
+> nome e vá selecionando com Ctrl+clique os 37 da lista. Ou copie os 37 pra uma
+> pasta separada primeiro e arraste tudo de lá.
 
-1. Na página inicial do repo → lado direito → **Releases** → **Create a new release**
-2. Em **Choose a tag**, digite exatamente:
-   ```
-   mods-grandes
-   ```
-   e clique em **Create new tag**
-3. Em **Attach binaries**, arraste o **`heralds_luna-2.5-forge-1.20.1.jar`**
-4. **Publish release**
+## PASSO 2 — Pegar o `.exe`
 
-## PASSO 4 — Pegar o `.exe`
-
-1. Aba **Actions** → espere o item ficar ✅ verde (2 a 4 minutos)
+1. Aba **Actions** → espere ficar ✅ verde (2 a 4 minutos)
 2. Página inicial → **Releases** → **BroxasSMP Updater**
 3. Baixe o **`BroxasSMP-Updater.exe`**
 
-**Pronto!** Manda esse link do Releases no Discord. Ele é fixo: sempre vai
-apontar pra versão mais nova.
+**Pronto!** Manda o link do Releases no Discord. Ele é fixo: sempre aponta pra
+versão mais nova.
+
+---
+
+## Os 37 arquivos que faltam
+
+Estão todos no `LISTA_DE_MODS.md`. Os maiores:
+
+```
+4.69 MB  voicechat-forge-1.20.1-2.6.21.jar
+3.63 MB  naturalist-5.0pre5+forge-1.20.1.jar
+2.94 MB  Neruina-2.1.2-forge+1.20.1.jar
+2.49 MB  cfm-forge-1.20.1-7.0.0-pre36.jar
+2.49 MB  bettervillage-forge-1.20.1-3.3.1-all.jar
+```
+...e mais 32 arquivos, todos abaixo de 1,3 MB.
 
 ---
 
 ## Depois: como atualizar o pack
 
-### Trocar, adicionar ou remover mod
+### Adicionar ou remover mod
 1. Entre na pasta **mods** do repositório
 2. Adicionar: *Add file → Upload files* e arraste
 3. Remover: clique no arquivo → ícone de lixeira → *Commit changes*
@@ -74,8 +75,8 @@ apontar pra versão mais nova.
 
 Acabou. O botão da galera vira **ATUALIZAR** sozinho.
 
-> Se o mod novo passar de 25 MB, suba no Release `mods-grandes` e adicione uma
-> linha no `mods_externos.json` com o `name` e a `url`. O hash é opcional.
+> Se o mod novo passar de 25 MB, me chame: eu procuro o link oficial dele no
+> Modrinth e adiciono no `mods_externos.json`, aí você não precisa enviar o arquivo.
 
 ### Escrever notícias
 Edite o **`noticias.txt`** pelo lápis:
@@ -97,11 +98,11 @@ Edite o **`pack.json`**.
 | `detector.py` | Acha as instalações de Minecraft do PC |
 | `forge_setup.py` | Instala o Forge automaticamente |
 | `gerar_manifest.py` | Monta a lista do pack |
+| `mods_externos.json` | Os 102 mods com link oficial do Modrinth |
+| `manifest.json` | A lista completa dos 139 mods |
 | `pack.json` | Nome do servidor, IP, versões |
 | `noticias.txt` | Notícias que aparecem no app |
-| `mods_externos.json` | Mods hospedados fora da pasta `mods/` |
-| `manifest.json` | A lista do pack (gerada automaticamente) |
-| `LISTA_DE_MODS.md` | Conferência dos 139 mods |
+| `LISTA_DE_MODS.md` | Quais mods enviar e quais são automáticos |
 | `.github/workflows/publicar.yml` | O robô que compila o `.exe` |
 
 ---
@@ -109,23 +110,14 @@ Edite o **`pack.json`**.
 ## Se der erro
 
 **❌ vermelho na aba Actions**
-Clique no item pra ver a mensagem. Causas comuns:
-- A pasta `mods` está vazia → suba os `.jar`
-- Faltou fazer o merge do PR
+Clique no item pra ver a mensagem. Causa mais comum: a pasta `mods` está vazia.
+
+**`Commit failed — file is too large`**
+Algum arquivo acima de 25 MB entrou no upload. Confira a lista do
+`LISTA_DE_MODS.md` — os 37 corretos são todos pequenos.
 
 **Um mod não baixa no updater**
-Confira se o nome do arquivo na pasta `mods` está **idêntico** ao do
-`manifest.json`. Renomear arquivo quebra o link.
+O nome do arquivo na pasta `mods` tem que ser **idêntico** ao do `manifest.json`.
 
 **Antivírus reclamou do `.exe`**
 Falso-positivo comum de programa feito com PyInstaller. Avise a galera.
-
----
-
-## ⚖️ Aviso sobre licença de mods
-
-Vários mods **não permitem redistribuição**. Hospedar os `.jar` aqui é a forma
-mais prática, mas pode contrariar a licença de alguns autores. A alternativa
-segura é apontar a `url` de cada mod pro link oficial do CurseForge/Modrinth
-no `manifest.json` — o updater aceita qualquer URL. Se quiser seguir esse
-caminho, me chame que eu ajusto.
