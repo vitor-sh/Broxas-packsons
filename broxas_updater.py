@@ -36,6 +36,13 @@ MANIFEST_URL = "https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPO/main/mani
 SERVER_NAME = "BroxasSMP"
 SERVER_IP = "enx-cirion-23.enx.host:10018"
 
+# O GitHub gera o arquivo configuracao.py na hora de compilar, com os valores
+# certos. Se ele existir, os valores acima sao substituidos.
+try:
+    from configuracao import MANIFEST_URL, SERVER_NAME, SERVER_IP  # noqa: F811
+except Exception:
+    pass
+
 # =====================================================================
 
 APP_DIR = Path(os.getenv("APPDATA") or Path.home()) / ".broxas_updater"
