@@ -149,13 +149,11 @@ def detect_instances():
     by_path = {}
     for rec in found:
         key = os.path.normcase(os.path.normpath(rec["path"]))
-        prev = by_path.get(key)
-        if prev is None:
+        # Mantem o primeiro rotulo encontrado. A pasta padrao entra primeiro,
+        # entao o .minecraft aparece como ".minecraft (pasta padrao)" em vez de
+        # herdar o nome de um perfil qualquer, que confunde o jogador.
+        if key not in by_path:
             by_path[key] = rec
-        elif prev["source"] == "Padrao" and rec["source"] != "Padrao":
-            # prefere o rotulo do launcher especifico
-            rec_merged = dict(rec)
-            by_path[key] = rec_merged
 
     result = list(by_path.values())
     # Ordena: quem tem mais mods primeiro (mais provavel de ser a instancia em uso)
@@ -166,6 +164,47 @@ def detect_instances():
 # ---------------------------------------------------------------------
 # Analise de seguranca antes de sincronizar
 # ---------------------------------------------------------------------
+
+def parece_minecraft(path) -> bool:
+    """Verifica se a pasta tem a cara de uma instalacao de Minecraft."""
+    path = Path(path)
+    pistas = ["mods", "config", "versions", "saves", "options.txt",
+              "resourcepacks", "logs", "launcher_profiles.json"]
+    return any((path / p).exists() for p in pistas)
+
+
+def normalizar_pasta(escolhida):
+    """
+    Conserta as escolhas erradas mais comuns do jogador.
+
+    - apontou para a pasta 'mods'      -> usa a pasta de cima
+    - apontou para a pasta que CONTEM  -> entra no .minecraft / minecraft
+      o .minecraft
+
+    Devolve (pasta_corrigida, mensagem). A mensagem e None quando nada mudou.
+    """
+    p = Path(escolhida)
+    if not p.exists():
+        return str(p), None
+
+    # Ja e uma instalacao valida? Nao mexe.
+    if parece_minecraft(p) and p.name.lower() != "mods":
+        return str(p), None
+
+    # Caso 1: escolheu a propria pasta 'mods'
+    if p.name.lower() == "mods" and parece_minecraft(p.parent):
+        return str(p.parent), (
+            f"Voce escolheu a pasta 'mods'. Usando a pasta do jogo: {p.parent}"
+        )
+
+    # Caso 2: escolheu a pasta que contem o .minecraft
+    for interno in (".minecraft", "minecraft"):
+        alvo = p / interno
+        if alvo.exists() and parece_minecraft(alvo):
+            return str(alvo), f"Entrando em {interno}: {alvo}"
+
+    return str(p), None
+
 
 def analyze_folder(folder, manifest, folder_state):
     """
@@ -180,12 +219,11 @@ def analyze_folder(folder, manifest, folder_state):
         return "perigo", ["A pasta selecionada nao existe."]
 
     # Parece uma pasta de Minecraft?
-    pistas = ["mods", "config", "versions", "saves", "options.txt", "resourcepacks"]
-    achou = [p for p in pistas if (folder / p).exists()]
-    if not achou:
+    if not parece_minecraft(folder) or folder.name.lower() == "mods":
         return "perigo", [
             "Essa pasta nao parece ser uma instalacao de Minecraft.",
-            "Procure a pasta que contem 'mods', 'config' e 'saves'.",
+            "Escolha a pasta do jogo (a que CONTEM a pasta 'mods'),",
+            "normalmente chamada .minecraft",
         ]
 
     wanted = {m["name"] for m in manifest.get("mods", [])}
