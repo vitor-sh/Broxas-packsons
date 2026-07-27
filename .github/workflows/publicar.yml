@@ -145,7 +145,11 @@ jobs:
         run: |
           $nome = (Get-Content pack.json -Raw | ConvertFrom-Json).server_name
           $opcoes = @("--onefile","--noconsole","--clean","--name","$nome-Updater",
-                      "--hidden-import","configuracao")
+                      "--hidden-import","configuracao",
+                      "--hidden-import","interface",
+                      "--hidden-import","launchers",
+                      "--hidden-import","detector",
+                      "--hidden-import","forge_setup")
           if (Test-Path "icone.ico") { $opcoes += @("--icon","icone.ico") }
           python -m PyInstaller @opcoes broxas_updater.py
           Get-ChildItem dist
