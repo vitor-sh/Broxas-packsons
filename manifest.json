@@ -1,0 +1,859 @@
+{
+  "pack_version": "1.0",
+  "minecraft": "1.20.1",
+  "loader": "Forge 47.4.20",
+  "forge": {
+    "version": "47.4.20",
+    "installer_url": "https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.4.20/forge-1.20.1-47.4.20-installer.jar"
+  },
+  "noticias": [
+    {
+      "titulo": "Bem-vindo a Valoria!",
+      "texto": "Leia a Constituicao de Valoria (o livro que vem no kit inicial) antes de sair batendo em todo mundo."
+    },
+    {
+      "titulo": "Cerco marcado",
+      "texto": "A janela de cerco e das 19h as 22h. Fora desse horario, atacar base reivindicada e proibido."
+    },
+    {
+      "titulo": "Cidade Neutra",
+      "texto": "Todo comercio entre clas acontece na Cidade Neutra de Mercado. Zona sem PvP, respeitem."
+    }
+  ],
+  "mods": [
+    {
+      "name": "[1.20.1-forge]-Epic-Knights-Japanese-Armory-1.6.2.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/%5B1.20.1-forge%5D-Epic-Knights-Japanese-Armory-1.6.2.jar",
+      "sha1": "13b3cfef061bf313d1eddad832cdd77562309580",
+      "size": 343504
+    },
+    {
+      "name": "[1.20.1] SecurityCraft v1.10.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/%5B1.20.1%5D%20SecurityCraft%20v1.10.1.jar",
+      "sha1": "98e4af60aa0f272105b7ffcdf154d7ab670a73bc",
+      "size": 4769715
+    },
+    {
+      "name": "[forge]ctov-3.4.14.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/%5Bforge%5Dctov-3.4.14.jar",
+      "sha1": "8fa73fd4c5ae58636e159e54321651adf555ac44",
+      "size": 6772753
+    },
+    {
+      "name": "amendments-1.20-2.2.5.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/amendments-1.20-2.2.5.jar",
+      "sha1": "5d5a1d7d2d2dd37c578fdea2495757baaa624092",
+      "size": 1301022
+    },
+    {
+      "name": "appleskin-forge-mc1.20.1-2.5.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/appleskin-forge-mc1.20.1-2.5.1.jar",
+      "sha1": "81919356f84eab14258db98924b66c3c38e372b1",
+      "size": 47428
+    },
+    {
+      "name": "architectury-9.2.14-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/architectury-9.2.14-forge.jar",
+      "sha1": "a52918a500ff421180a1cbd1a0cabee712134ec4",
+      "size": 580602
+    },
+    {
+      "name": "artifacts-forge-9.5.19.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/artifacts-forge-9.5.19.jar",
+      "sha1": "91ab6fc2cc208550f7fc37c43e42eba81eff318e",
+      "size": 850974
+    },
+    {
+      "name": "astikorcartsredux-1.2.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/astikorcartsredux-1.2.3.jar",
+      "sha1": "62c693ee857ff6bd39e7582d02b57874ec0aa8ac",
+      "size": 530068
+    },
+    {
+      "name": "AttributeFix-Forge-1.20.1-21.0.5.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/AttributeFix-Forge-1.20.1-21.0.5.jar",
+      "sha1": "76d6b2d0f2a3c9842587ad20666ba419cd8c1efa",
+      "size": 19499
+    },
+    {
+      "name": "balm-forge-1.20.1-7.3.41-all.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/balm-forge-1.20.1-7.3.41-all.jar",
+      "sha1": "fde6edd5f3f2aa412a1ba5fccad20ea4348fdcf2",
+      "size": 559741
+    },
+    {
+      "name": "bettervillage-forge-1.20.1-3.3.1-all.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/bettervillage-forge-1.20.1-3.3.1-all.jar",
+      "sha1": "0c2f647cec98c3a4ca6d05b7a2f14962e66ad824",
+      "size": 2612506
+    },
+    {
+      "name": "Bookshelf-Forge-1.20.1-20.2.15.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Bookshelf-Forge-1.20.1-20.2.15.jar",
+      "sha1": "9df4908f606c6dc62a358b3e04e3fdedba59a12c",
+      "size": 343925
+    },
+    {
+      "name": "camera-forge-1.20.1-1.0.20.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/camera-forge-1.20.1-1.0.20.jar",
+      "sha1": "299cc4fa41a12a247cc73024259247574bfa5d0e",
+      "size": 299726
+    },
+    {
+      "name": "carryon-forge-1.20.1-2.1.2.7.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/carryon-forge-1.20.1-2.1.2.7.jar",
+      "sha1": "9999714ca3dd2f2401f0396ca44f3b27c3784c4f",
+      "size": 439457
+    },
+    {
+      "name": "cfm-forge-1.20.1-7.0.0-pre36.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/cfm-forge-1.20.1-7.0.0-pre36.jar",
+      "sha1": "66d0ac56f3f6f1efbd6ed7b3cb4a48824d0585c0",
+      "size": 2613393
+    },
+    {
+      "name": "chatnotify-forge-2.6.9_2B1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/chatnotify-forge-2.6.9_2B1.20.1.jar",
+      "sha1": "d55c0d87a1846adb6e35b9bf2e23914b07e88a2b",
+      "size": 1020477
+    },
+    {
+      "name": "cloth-config-11.1.136-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/cloth-config-11.1.136-forge.jar",
+      "sha1": "c65d07748acc57ceb45d53b3964368b84f34d54f",
+      "size": 1181413
+    },
+    {
+      "name": "Clumps-forge-1.20.1-12.0.0.4.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Clumps-forge-1.20.1-12.0.0.4.jar",
+      "sha1": "97cc669f68dbe812cb77cc3631339334fc28b877",
+      "size": 20299
+    },
+    {
+      "name": "comforts-forge-6.4.0+1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/comforts-forge-6.4.0%2B1.20.1.jar",
+      "sha1": "e7b9fe89566bb1ee013e33745f22f309f679536e",
+      "size": 382083
+    },
+    {
+      "name": "constructionwand-1.20.1-2.11.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/constructionwand-1.20.1-2.11.jar",
+      "sha1": "80bd5223cd8984dc1038cb9f2d1cb6b97f31998a",
+      "size": 210312
+    },
+    {
+      "name": "Controlling-forge-1.20.1-12.0.2.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Controlling-forge-1.20.1-12.0.2.jar",
+      "sha1": "f6d3cdd3ec68c5590cf5b2e89c38dbf031824bfd",
+      "size": 115280
+    },
+    {
+      "name": "Corgilib-Forge-1.20.1-4.0.3.4.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Corgilib-Forge-1.20.1-4.0.3.4.jar",
+      "sha1": "4b08e5f8f2580842eacd5388458a0b52411a9fb2",
+      "size": 360700
+    },
+    {
+      "name": "coroutil-forge-1.20.1-1.3.7.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/coroutil-forge-1.20.1-1.3.7.jar",
+      "sha1": "7f5f0b62a638b6053c95919cbe8c2bea2e0c93d0",
+      "size": 64187
+    },
+    {
+      "name": "corpse-forge-1.20.1-1.0.23.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/corpse-forge-1.20.1-1.0.23.jar",
+      "sha1": "843b16ca88bc5c390bb22a2a84437e6bffdd43dd",
+      "size": 245644
+    },
+    {
+      "name": "cosmeticarmorreworked-1.20.1-v1a.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/cosmeticarmorreworked-1.20.1-v1a.jar",
+      "sha1": "afd9fa3fe95e8c086e8d439df403ed1e5ea5cbea",
+      "size": 88752
+    },
+    {
+      "name": "cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar",
+      "sha1": "68ea28d819d01251c38a9e36a4ce7487cf7b8723",
+      "size": 9595
+    },
+    {
+      "name": "cristellib-1.1.6-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/cristellib-1.1.6-forge.jar",
+      "sha1": "524ecf0f93f28be2f5db21d87dd81bdbc1a450e1",
+      "size": 431318
+    },
+    {
+      "name": "Cuffed-1.20.1-1.3.14.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Cuffed-1.20.1-1.3.14.jar",
+      "sha1": "680bea9fe7015a016d72720cc1ecca9dca97631c",
+      "size": 874533
+    },
+    {
+      "name": "culturaldelights-0.16.7.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/culturaldelights-0.16.7.jar",
+      "sha1": "20288317274a146267a0cc8c19dcc8898cb71c0a",
+      "size": 267386
+    },
+    {
+      "name": "curios-forge-5.14.1+1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/curios-forge-5.14.1%2B1.20.1.jar",
+      "sha1": "452175b95ad3db6ff58bb8968f6bf7a9d1e0f480",
+      "size": 398066
+    },
+    {
+      "name": "Cyclic-1.20.1-1.13.7.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Cyclic-1.20.1-1.13.7.jar",
+      "sha1": "f5e2a09fea3345f0bd891b613452d6ccb64b9865",
+      "size": 4275426
+    },
+    {
+      "name": "Data_Anchor-forge-1.20.1-1.0.0.20.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Data_Anchor-forge-1.20.1-1.0.0.20.jar",
+      "sha1": "f16089cc8af8e5dca8f5a14dc7bab11840d9b9a8",
+      "size": 112171
+    },
+    {
+      "name": "deathland_economy-2.0.0-forge-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/deathland_economy-2.0.0-forge-1.20.1.jar",
+      "sha1": "b76b40a3958e913f4dd48cb7c31edd4047024d17",
+      "size": 268512
+    },
+    {
+      "name": "diet-forge-2.1.1+1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/diet-forge-2.1.1%2B1.20.1.jar",
+      "sha1": "c5f5d5980803259931dfa62236e888fb08ecf70a",
+      "size": 368483
+    },
+    {
+      "name": "dungeons-and-taverns-3.0.3.f[Forge].jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/dungeons-and-taverns-3.0.3.f%5BForge%5D.jar",
+      "sha1": "3f324242f3daf4785a8b9338f228679418f4870a",
+      "size": 13161907
+    },
+    {
+      "name": "DungeonsArise-1.20.1-2.1.57-release.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/DungeonsArise-1.20.1-2.1.57-release.jar",
+      "sha1": "1bc95d13cf8208c5cfe100a001d6b078d15742f7",
+      "size": 8579488
+    },
+    {
+      "name": "embeddium-0.3.31+mc1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/embeddium-0.3.31%2Bmc1.20.1.jar",
+      "sha1": "bb2fa8f3e493af16af9160d049f96c614a1faf2f",
+      "size": 1320675
+    },
+    {
+      "name": "EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar",
+      "sha1": "0328a8350cf0a6d1c44265367a077649088b354b",
+      "size": 66883
+    },
+    {
+      "name": "endrem_forge-5.3.3-R-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/endrem_forge-5.3.3-R-1.20.1.jar",
+      "sha1": "b4df41de8439e834a493fe59842709ef33ecfa82",
+      "size": 889634
+    },
+    {
+      "name": "Enhanced-Celestials-forge-1.20.1-5.0.3.2.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Enhanced-Celestials-forge-1.20.1-5.0.3.2.jar",
+      "sha1": "53cd78df951489f24f0f943f6b169d4d45d96578",
+      "size": 1629693
+    },
+    {
+      "name": "epic-knights-1.20.1-forge-10.11.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/epic-knights-1.20.1-forge-10.11.jar",
+      "sha1": "b76f56523dcde7ae30f4a3c299b1d104348b92eb",
+      "size": 2913733
+    },
+    {
+      "name": "epic-knights-addon-1.20.x-forge-2.6.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/epic-knights-addon-1.20.x-forge-2.6.jar",
+      "sha1": "c5d284743d3d59a7ca4cdfdf42e4a01afb10e146",
+      "size": 2012821
+    },
+    {
+      "name": "epic-knights-antique-legacy-1.20.x-forge-1.13.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/epic-knights-antique-legacy-1.20.x-forge-1.13.jar",
+      "sha1": "de812ad140b67bbace4ef7be33e035c7e1beca89",
+      "size": 5434731
+    },
+    {
+      "name": "epic-knights-slavic-armory-1.20.x-forge-2.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/epic-knights-slavic-armory-1.20.x-forge-2.1.jar",
+      "sha1": "e54539d7eee96e5441db89ac580bcb4fc3ae534a",
+      "size": 1007892
+    },
+    {
+      "name": "FarmersDelight-1.20.1-1.3.2.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/FarmersDelight-1.20.1-1.3.2.jar",
+      "sha1": "397763ae36dc2e0f526e0338c875850437580157",
+      "size": 3313327
+    },
+    {
+      "name": "FastLeafDecay-32.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/FastLeafDecay-32.jar",
+      "sha1": "4a76af4ca71dd9939d3c21206792c0d5f75b93a7",
+      "size": 9835
+    },
+    {
+      "name": "ferritecore-6.0.1-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/ferritecore-6.0.1-forge.jar",
+      "sha1": "417fb6ce8f52abf40bd9d0390371790f9576f8ba",
+      "size": 123034
+    },
+    {
+      "name": "finite_water-1.20.1-1.0.0.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/finite_water-1.20.1-1.0.0.jar",
+      "sha1": "9e694575f5328c9e2661a927f6a3df79b92fc74e",
+      "size": 6695
+    },
+    {
+      "name": "flib-1.20.1-0.0.16.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/flib-1.20.1-0.0.16.jar",
+      "sha1": "3f1b66947cf152c88b4f104ac2ad45865d583b97",
+      "size": 276850
+    },
+    {
+      "name": "Forgematica-0.1.13-mc1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Forgematica-0.1.13-mc1.20.1.jar",
+      "sha1": "d235d2ac0ce0143425d4d1e3d9a32d32fc994a93",
+      "size": 997501
+    },
+    {
+      "name": "framework-forge-1.20.1-0.8.0.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/framework-forge-1.20.1-0.8.0.jar",
+      "sha1": "27347879f8760a7bc0b4bd71977abc50e498811c",
+      "size": 383868
+    },
+    {
+      "name": "ftb-library-forge-2001.2.13.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/ftb-library-forge-2001.2.13.jar",
+      "sha1": "a5427d5ff07eb044144ed0b54308370d88bce17e",
+      "size": 780558
+    },
+    {
+      "name": "ftb-ranks-forge-2001.1.7.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/ftb-ranks-forge-2001.1.7.jar",
+      "sha1": "1ef101b4c5991cc239d9b56a95500e3b404228f7",
+      "size": 87362
+    },
+    {
+      "name": "gasmaskresistance-1.0.0.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/gasmaskresistance-1.0.0.jar",
+      "sha1": "18e592b288a1bc7157ab25fb29f6cf96305441bb",
+      "size": 5173
+    },
+    {
+      "name": "geckolib-forge-1.20.1-4.8.4.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/geckolib-forge-1.20.1-4.8.4.jar",
+      "sha1": "81982cc287f80ffabb2fd36d22cc95e4255c739d",
+      "size": 1038209
+    },
+    {
+      "name": "GlitchCore-forge-1.20.1-0.0.1.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/GlitchCore-forge-1.20.1-0.0.1.1.jar",
+      "sha1": "1a0aaf7c33b9acb26bf75899a43e8941cac1f6e7",
+      "size": 87550
+    },
+    {
+      "name": "goblintraders-forge-1.20.1-1.11.5.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/goblintraders-forge-1.20.1-1.11.5.jar",
+      "sha1": "12bf1775fae7132c4f10ce3f61122bc0a2f171d6",
+      "size": 328727
+    },
+    {
+      "name": "handcrafted-forge-1.20.1-3.0.6.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/handcrafted-forge-1.20.1-3.0.6.jar",
+      "sha1": "f1b9a009529134c736c59d6d192d53a4a25e5e5f",
+      "size": 7111059
+    },
+    {
+      "name": "HariShop-mc1.20.1-v1.1.3-hotfix.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/HariShop-mc1.20.1-v1.1.3-hotfix.jar",
+      "sha1": "c94bee53ef8f380eee1392ae6d217d28bba1919a",
+      "size": 993651
+    },
+    {
+      "name": "heralds_luna-2.5-forge-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/heralds_luna-2.5-forge-1.20.1.jar",
+      "sha1": "0c87084e6a467996f4653c3de613327c9b9b0eed",
+      "size": 32255503
+    },
+    {
+      "name": "immersive_aircraft-1.4.1+1.20.1-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/immersive_aircraft-1.4.1%2B1.20.1-forge.jar",
+      "sha1": "e0fcdfe54114d49b53b50514e5e2a2255a396f3f",
+      "size": 2435800
+    },
+    {
+      "name": "immersive_weathering-1.20.1-2.0.5-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/immersive_weathering-1.20.1-2.0.5-forge.jar",
+      "sha1": "d89ad3793ffb97df27f415ac6cc07c61460dd9f3",
+      "size": 2269048
+    },
+    {
+      "name": "infernalmobs-1.20.1.10.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/infernalmobs-1.20.1.10.jar",
+      "sha1": "c92c41beb89b916726383c533a00a0608215aeb3",
+      "size": 145817
+    },
+    {
+      "name": "ironchest-1.20.1-14.4.4.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/ironchest-1.20.1-14.4.4.jar",
+      "sha1": "4b2dd0f581e40f8bd6f6e63b2d84c06dfde2c4eb",
+      "size": 311290
+    },
+    {
+      "name": "ironfurnaces-1.20.1-4.1.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/ironfurnaces-1.20.1-4.1.3.jar",
+      "sha1": "6586a3ef18d3cd5afce4cae2ab29e3daf1bd05de",
+      "size": 606244
+    },
+    {
+      "name": "Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar",
+      "sha1": "d8fa4e840a3d60f2172de0584d804d0bf7e6db19",
+      "size": 22930
+    },
+    {
+      "name": "Jade-1.20.1-Forge-11.13.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Jade-1.20.1-Forge-11.13.3.jar",
+      "sha1": "d08e64e66521d69e083c8525f1fc507f1c202384",
+      "size": 553487
+    },
+    {
+      "name": "jei-1.20.1-forge-15.20.0.112.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/jei-1.20.1-forge-15.20.0.112.jar",
+      "sha1": "f12b3781af6337794ae6e010420a97585360ea2f",
+      "size": 1385600
+    },
+    {
+      "name": "Kambrik-6.1.1+1.20.1-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Kambrik-6.1.1%2B1.20.1-forge.jar",
+      "sha1": "48cdc22a0f6698c9059f437538e5546f74900541",
+      "size": 325546
+    },
+    {
+      "name": "kotlinforforge-4.12.0-all.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/kotlinforforge-4.12.0-all.jar",
+      "sha1": "962fdb760409d6d71cbf079235f1ca94e3863a22",
+      "size": 7442998
+    },
+    {
+      "name": "kubejs-forge-2001.6.5-build.26.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/kubejs-forge-2001.6.5-build.26.jar",
+      "sha1": "8b0cc9797d4ed00fd2d1002d58960af8b32012ae",
+      "size": 1658792
+    },
+    {
+      "name": "largemeals-1.20.1-1.3.0.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/largemeals-1.20.1-1.3.0.jar",
+      "sha1": "7662138788a75832a0c6bad6b13b006cac383496",
+      "size": 77128
+    },
+    {
+      "name": "Lazr_s Lib-1.20-1.1.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Lazr_s%20Lib-1.20-1.1.1.jar",
+      "sha1": "2be2715b4ed23d943533e5bff0929ac6ba271759",
+      "size": 120029
+    },
+    {
+      "name": "libraryferret-forge-1.20.1-4.0.0.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/libraryferret-forge-1.20.1-4.0.0.jar",
+      "sha1": "29f240c16ff1a1bc574d69162d379cc1c881e1ab",
+      "size": 190536
+    },
+    {
+      "name": "lithostitched-forge-1.20.1-1.4.11.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/lithostitched-forge-1.20.1-1.4.11.jar",
+      "sha1": "d1a755de84ee5d8910ff1e65e815473056e93ece",
+      "size": 476347
+    },
+    {
+      "name": "lootr-forge-1.20-0.7.35.94.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/lootr-forge-1.20-0.7.35.94.jar",
+      "sha1": "1ec77a7df8adbf3290a296bf25b8f99f37a60020",
+      "size": 463485
+    },
+    {
+      "name": "MaFgLib-0.1.14-mc1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/MaFgLib-0.1.14-mc1.20.1.jar",
+      "sha1": "fd18a3d8a9a72ee27cbb709a88c061b2347d2244",
+      "size": 521709
+    },
+    {
+      "name": "MEconomy-1.0.5-HOTFIX-Forge-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/MEconomy-1.0.5-HOTFIX-Forge-1.20.1.jar",
+      "sha1": "042442a255f017f43406b8e4ab30202d73649f9f",
+      "size": 1982881
+    },
+    {
+      "name": "miners_delight-1.20.1-1.4.5-backport.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/miners_delight-1.20.1-1.4.5-backport.jar",
+      "sha1": "638438679800711939e7a8029ae3d5340f8c17bd",
+      "size": 548776
+    },
+    {
+      "name": "modernfix-forge-5.27.66_2Bmc1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/modernfix-forge-5.27.66_2Bmc1.20.1.jar",
+      "sha1": "322fdb7aadc06b540cff69a2a0a513bf37050f0f",
+      "size": 1002234
+    },
+    {
+      "name": "mogruleconomy-0.1-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/mogruleconomy-0.1-1.20.1.jar",
+      "sha1": "17e867e117b2bcc55cb34e5e5315296d8c61d645",
+      "size": 40957
+    },
+    {
+      "name": "moonlight-1.20-2.16.34-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/moonlight-1.20-2.16.34-forge.jar",
+      "sha1": "5e20f2f0ce56a534accb32f80853d5a246599a4d",
+      "size": 1419416
+    },
+    {
+      "name": "morearmor-1.20.1-1.4.6.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/morearmor-1.20.1-1.4.6.jar",
+      "sha1": "492f15bf05357d7ce644cb3e286fe67e48e37010",
+      "size": 1005091
+    },
+    {
+      "name": "MouseTweaks-forge-mc1.20.1-2.25.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/MouseTweaks-forge-mc1.20.1-2.25.1.jar",
+      "sha1": "d751153e722a4e014691c83f39f5b07c6ec5333c",
+      "size": 76237
+    },
+    {
+      "name": "musketmod-1.20.1-forge-1.5.4.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/musketmod-1.20.1-forge-1.5.4.jar",
+      "sha1": "44ed6aa820e86e9802ad917d4eddda5877982e5a",
+      "size": 448661
+    },
+    {
+      "name": "naturalist-5.0pre5+forge-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/naturalist-5.0pre5%2Bforge-1.20.1.jar",
+      "sha1": "bc2c527dd52a1e6a92a3e34db1a88742e8e7d596",
+      "size": 3807415
+    },
+    {
+      "name": "NaturesCompass-1.20.1-1.12.0-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/NaturesCompass-1.20.1-1.12.0-forge.jar",
+      "sha1": "a8589de59cdd8fed9c29610e624063a2990e422b",
+      "size": 227495
+    },
+    {
+      "name": "Necronomicon-Forge-1.6.0+1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Necronomicon-Forge-1.6.0%2B1.20.1.jar",
+      "sha1": "2ad4ffa0fb087e4467c6f7496d456fc1ac949ebf",
+      "size": 33251
+    },
+    {
+      "name": "Neruina-2.1.2-forge+1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Neruina-2.1.2-forge%2B1.20.1.jar",
+      "sha1": "a02a8ccd580ba3c37ba26ff19cf35b221ae2a073",
+      "size": 3086403
+    },
+    {
+      "name": "NoChatReports-FORGE-1.20.1-v2.2.2.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/NoChatReports-FORGE-1.20.1-v2.2.2.jar",
+      "sha1": "069396e689ae887d065c8d61b7945e685fbcc65b",
+      "size": 272740
+    },
+    {
+      "name": "NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar",
+      "sha1": "a189c024b78b1057f7bab8a64c327ed27a6d186d",
+      "size": 9676
+    },
+    {
+      "name": "notenoughanimations-forge-1.12.4-mc1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/notenoughanimations-forge-1.12.4-mc1.20.1.jar",
+      "sha1": "71484079011f71a37d913b491828412992fd8314",
+      "size": 1944068
+    },
+    {
+      "name": "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/OctoLib-FORGE-0.5.0.1%2B1.20.1.jar",
+      "sha1": "9eab28baff36942e1c924489e34753df10f40208",
+      "size": 424035
+    },
+    {
+      "name": "oculus-mc1.20.1-1.8.0.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/oculus-mc1.20.1-1.8.0.jar",
+      "sha1": "984f774e71790deaec674c7587bd24e0711871b2",
+      "size": 2851119
+    },
+    {
+      "name": "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/player-animation-lib-forge-1.0.2-rc1%2B1.20.jar",
+      "sha1": "16808f94a41d45d8e986b4e4ea6b02ba57fa058a",
+      "size": 181437
+    },
+    {
+      "name": "polymorph-forge-0.49.10+1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/polymorph-forge-0.49.10%2B1.20.1.jar",
+      "sha1": "e4afd6f512cc06311320357ed974cee586e031c3",
+      "size": 299601
+    },
+    {
+      "name": "PuzzlesLib-v8.1.33-1.20.1-Forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/PuzzlesLib-v8.1.33-1.20.1-Forge.jar",
+      "sha1": "285b7c7616971338ccbe0022c9ea0f8ad3036aaf",
+      "size": 1342987
+    },
+    {
+      "name": "realmrpg_skeletons-1.1.0-forge-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/realmrpg_skeletons-1.1.0-forge-1.20.1.jar",
+      "sha1": "b3e2385a5df9a24b12089b76f97a9e9337956255",
+      "size": 652022
+    },
+    {
+      "name": "recruits-1.20.1-1.15.2.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/recruits-1.20.1-1.15.2.jar",
+      "sha1": "8d2ed3f0ab18c67a1d9394526bcae47b3ec162ab",
+      "size": 2811101
+    },
+    {
+      "name": "relics-1.20.1-0.8.0.13.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/relics-1.20.1-0.8.0.13.jar",
+      "sha1": "940358d190780a9a59a69dd7e75a5e7cf07e4209",
+      "size": 1521089
+    },
+    {
+      "name": "resourcefullib-forge-1.20.1-2.1.29.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/resourcefullib-forge-1.20.1-2.1.29.jar",
+      "sha1": "6fc590a7c56a720fec57e290cbb0a106efbb3ffa",
+      "size": 432753
+    },
+    {
+      "name": "rhino-forge-2001.2.3-build.10.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/rhino-forge-2001.2.3-build.10.jar",
+      "sha1": "c83c9b719a6bab33fbd2b3f2f680eb3adbfc1aa1",
+      "size": 1798244
+    },
+    {
+      "name": "rusticdelight-forge-1.20.1-1.6.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/rusticdelight-forge-1.20.1-1.6.1.jar",
+      "sha1": "b86a272376b2b4aa8af88b973c67d01aac01d883",
+      "size": 565773
+    },
+    {
+      "name": "saintsdragons-0.8.2_2Bforge-1.20.1-alpha.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/saintsdragons-0.8.2_2Bforge-1.20.1-alpha.jar",
+      "sha1": "bf93d2c5be8380bd30ed7791b4d9f1a5a04125b2",
+      "size": 21907921
+    },
+    {
+      "name": "Searchables-forge-1.20.1-1.0.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Searchables-forge-1.20.1-1.0.3.jar",
+      "sha1": "ed5a23ec30c90fd06b3f1d8140614028e1fafaee",
+      "size": 77732
+    },
+    {
+      "name": "SereneSeasons-forge-1.20.1-9.1.0.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/SereneSeasons-forge-1.20.1-9.1.0.3.jar",
+      "sha1": "e553c2a50dc08d7b8b2aee6da1db0dc156fe961a",
+      "size": 160885
+    },
+    {
+      "name": "siegeweapons-1.20.1-0.2.5.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/siegeweapons-1.20.1-0.2.5.jar",
+      "sha1": "f4ae32159b78d6d5e9f1c11588107678cd1151bd",
+      "size": 1040867
+    },
+    {
+      "name": "SimpleStorageNetwork-1.20.1-1.13.2.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/SimpleStorageNetwork-1.20.1-1.13.2.jar",
+      "sha1": "a4cfebd4a1ca155ac6cb7dc03446f20d8ccfa73a",
+      "size": 509724
+    },
+    {
+      "name": "simplyswords-forge-1.56.0-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/simplyswords-forge-1.56.0-1.20.1.jar",
+      "sha1": "ff801e939da0f9afc2d96cce4375d8c4bb368533",
+      "size": 15202091
+    },
+    {
+      "name": "smallships-forge-1.20.1-2.0.0-b1.4.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/smallships-forge-1.20.1-2.0.0-b1.4.jar",
+      "sha1": "9998ddc8a278e0b87ab642d289ae2a1e3dbebef6",
+      "size": 1816687
+    },
+    {
+      "name": "sodiumextras-forge-1.0.7-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/sodiumextras-forge-1.0.7-1.20.1.jar",
+      "sha1": "7603f44bc4750774fbbdc07a3153c391650fcf3d",
+      "size": 438540
+    },
+    {
+      "name": "sodiumoptionsapi-forge-1.0.10-1.20.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/sodiumoptionsapi-forge-1.0.10-1.20.1.jar",
+      "sha1": "7529fbf938787ed13a251cbf40936f8c29ec4b6c",
+      "size": 443978
+    },
+    {
+      "name": "solcarrot-1.20.1-1.15.1.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/solcarrot-1.20.1-1.15.1.jar",
+      "sha1": "f7fa1fd0c633b10f98d7f0f97766b95aac1a2dc0",
+      "size": 104185
+    },
+    {
+      "name": "spark-1.10.53-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/spark-1.10.53-forge.jar",
+      "sha1": "231fb325368c0660954f47bfb03493f5246fa4d1",
+      "size": 3114590
+    },
+    {
+      "name": "SpartanWeaponry-1.20.1-forge-3.2.1-all.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/SpartanWeaponry-1.20.1-forge-3.2.1-all.jar",
+      "sha1": "187977cf09972df5773c92b8af5fd342a9d726cb",
+      "size": 2834011
+    },
+    {
+      "name": "sqlite-jdbc-3.41.2.1+20230506-all.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/sqlite-jdbc-3.41.2.1%2B20230506-all.jar",
+      "sha1": "1ad5bc55cf1f2dcf4a5667de3c7f54c837d77645",
+      "size": 12855867
+    },
+    {
+      "name": "Structory_1.20.x_v1.3.5.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Structory_1.20.x_v1.3.5.jar",
+      "sha1": "88c1d90ac79c98a50e3e4bd3a93c70431c716dd5",
+      "size": 1286460
+    },
+    {
+      "name": "Structory_Towers_1.20.x_v1.0.7.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Structory_Towers_1.20.x_v1.0.7.jar",
+      "sha1": "fa147459b82e1c0a774c19b598a55a9ca0d7b0ef",
+      "size": 526234
+    },
+    {
+      "name": "supplementaries-1.20-3.1.43-forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/supplementaries-1.20-3.1.43-forge.jar",
+      "sha1": "326d65a29981de28016e3828370d68a8f63e1798",
+      "size": 13667742
+    },
+    {
+      "name": "tacz-1.20.1-1.0.2-release.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/tacz-1.20.1-1.0.2-release.jar",
+      "sha1": "6975836748588fa16d99bb75920d1921c06fb155",
+      "size": 25153131
+    },
+    {
+      "name": "TerraBlender-forge-1.20.1-3.0.1.10.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/TerraBlender-forge-1.20.1-3.0.1.10.jar",
+      "sha1": "3bd99fb59e8b06b04e78b5153790c1e08b2be5dc",
+      "size": 107532
+    },
+    {
+      "name": "tl_skin_cape_forge_1.20-1.38.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/tl_skin_cape_forge_1.20-1.38.jar",
+      "sha1": "a3f0483f5e7b4c4ed60174a07faf4c50dc113684",
+      "size": 1180127
+    },
+    {
+      "name": "ToughAsNails-forge-1.20.1-9.2.0.171.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/ToughAsNails-forge-1.20.1-9.2.0.171.jar",
+      "sha1": "e1caa4a2fb30965913aefe84fe55acffdaaab26e",
+      "size": 459479
+    },
+    {
+      "name": "Towns-and-Towers-1.12-Fabric+Forge.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/Towns-and-Towers-1.12-Fabric%2BForge.jar",
+      "sha1": "5a28ec56457cf1bf154e993cf73dba0428a7921b",
+      "size": 2864275
+    },
+    {
+      "name": "travelersbackpack-forge-1.20.1-9.1.56.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/travelersbackpack-forge-1.20.1-9.1.56.jar",
+      "sha1": "31a852198b6e692744f59bd03d714bd673235c91",
+      "size": 1413418
+    },
+    {
+      "name": "TreeChop-1.20.1-forge-0.19.0-fixed.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/TreeChop-1.20.1-forge-0.19.0-fixed.jar",
+      "sha1": "ac5a20b5a2fd9ed7d6e9a0c033f53307947e5f3f",
+      "size": 517225
+    },
+    {
+      "name": "vassalsuzerain-1.2.0.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/vassalsuzerain-1.2.0.jar",
+      "sha1": "620ce85cf710f3a9adebd76e79d67165c3f28128",
+      "size": 75335
+    },
+    {
+      "name": "VeggiesDelight-1.20.1-1.9.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/VeggiesDelight-1.20.1-1.9.3.jar",
+      "sha1": "783d60320cb58c677197bcebf5db72d0c1c7a727",
+      "size": 598808
+    },
+    {
+      "name": "voicechat-forge-1.20.1-2.6.21.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/voicechat-forge-1.20.1-2.6.21.jar",
+      "sha1": "77ae96b41c9328213659991c113a6e13c95724ba",
+      "size": 4918879
+    },
+    {
+      "name": "waystones-forge-1.20.1-14.1.20.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/waystones-forge-1.20.1-14.1.20.jar",
+      "sha1": "cde06d0f1e9042fb2e0b536a4d2c5443d129dd51",
+      "size": 533738
+    },
+    {
+      "name": "weaponmaster_ydm-forge-1.20.1-4.2.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/weaponmaster_ydm-forge-1.20.1-4.2.3.jar",
+      "sha1": "9fe819dc110461f55909dabbed73e4fe3bdde158",
+      "size": 283977
+    },
+    {
+      "name": "weather2-1.20.1-2.8.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/weather2-1.20.1-2.8.3.jar",
+      "sha1": "4ec7a372945874dd734a20fa61574f08d2b6763a",
+      "size": 6852245
+    },
+    {
+      "name": "workers-1.20.1-2.0.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/workers-1.20.1-2.0.3.jar",
+      "sha1": "1f68527132995485145433b07cd459fb4b602d06",
+      "size": 1316715
+    },
+    {
+      "name": "worldedit-mod-7.2.15.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/worldedit-mod-7.2.15.jar",
+      "sha1": "9c52765ca56f917ef8cbafc20e9a4f45c346508f",
+      "size": 5825402
+    },
+    {
+      "name": "YungsApi-1.20-Forge-4.0.6.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/YungsApi-1.20-Forge-4.0.6.jar",
+      "sha1": "af584b690f5646c6032002b58abc4591beed3833",
+      "size": 370524
+    },
+    {
+      "name": "YungsBetterDesertTemples-1.20-Forge-3.0.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/YungsBetterDesertTemples-1.20-Forge-3.0.3.jar",
+      "sha1": "31b386b2dbaa4933e0a10ccdfb25f56da16931a6",
+      "size": 918012
+    },
+    {
+      "name": "YungsBetterDungeons-1.20-Forge-4.0.4.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/YungsBetterDungeons-1.20-Forge-4.0.4.jar",
+      "sha1": "67a9e1c2ff126ab54cea8e0709d178915243039e",
+      "size": 792381
+    },
+    {
+      "name": "YungsBetterMineshafts-1.20-Forge-4.0.4.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/YungsBetterMineshafts-1.20-Forge-4.0.4.jar",
+      "sha1": "e2cbc574807a994bb9610184eb4bbfe29a6c0774",
+      "size": 492998
+    },
+    {
+      "name": "YungsBetterStrongholds-1.20-Forge-4.0.3.jar",
+      "url": "https://github.com/vitor-sh/Broxas-packsons/releases/tag/mods/YungsBetterStrongholds-1.20-Forge-4.0.3.jar",
+      "sha1": "3730238c56edca4bb5b2238e1314aec572ced385",
+      "size": 473564
+    }
+  ]
+}
