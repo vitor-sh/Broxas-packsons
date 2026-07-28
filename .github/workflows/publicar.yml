@@ -14,6 +14,7 @@ on:
       - "detector.py"
       - "forge_setup.py"
       - "gerar_manifest.py"
+      - "verificar_manifest.py"
   workflow_dispatch:
 
 permissions:
@@ -63,6 +64,12 @@ jobs:
             --noticias "noticias.txt" \
             --externos "mods_externos.json" \
             --saida "manifest.json"
+
+      # Confere se todos os mods podem ser baixados ANTES de publicar. Se algo
+      # quebrou, o manifest nao e salvo e a galera continua com a versao
+      # anterior, que funciona.
+      - name: Conferir se todos os mods podem ser baixados
+        run: python verificar_manifest.py manifest.json
 
       # Salva com nova tentativa: se alguem publicar algo no meio do caminho,
       # a execucao pega as mudancas novas e tenta de novo em vez de falhar.
