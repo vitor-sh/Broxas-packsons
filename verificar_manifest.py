@@ -27,9 +27,18 @@ ESPERA = 6          # segundos entre tentativas
 LINHAS_DE_TRABALHO = 8
 
 
+def _contexto():
+    try:
+        import certifi
+        import ssl
+        return ssl.create_default_context(cafile=certifi.where())
+    except Exception:
+        return None
+
+
 def _consultar(url, metodo="HEAD"):
     req = urllib.request.Request(url, method=metodo, headers={"User-Agent": AGENTE})
-    with urllib.request.urlopen(req, timeout=40) as resp:
+    with urllib.request.urlopen(req, timeout=40, context=_contexto()) as resp:
         tamanho = resp.headers.get("Content-Length")
         return resp.status, int(tamanho) if tamanho else None
 
