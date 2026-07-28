@@ -135,14 +135,11 @@ def install_forge(game_dir, mc_version, forge_version, installer_url=None, log=p
     tmpdir = Path(tempfile.gettempdir())
     installer = tmpdir / f"forge-{mc_version}-{forge_version}-installer.jar"
     try:
-        log(f"  Baixando instalador do Forge...")
-        req = urllib.request.Request(url, headers={"User-Agent": "BroxasUpdater/1.0"})
-        with urllib.request.urlopen(req, timeout=120) as resp, open(installer, "wb") as out:
-            while True:
-                chunk = resp.read(1024 * 128)
-                if not chunk:
-                    break
-                out.write(chunk)
+        log("  Baixando instalador do Forge...")
+        import rede
+        ok, motivo = rede.baixar(url, installer, log=log)
+        if not ok:
+            return False, f"Nao consegui baixar o instalador do Forge: {motivo}"
     except Exception as exc:
         return False, f"Nao consegui baixar o instalador do Forge: {exc}"
 

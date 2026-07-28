@@ -15,6 +15,7 @@ on:
       - "forge_setup.py"
       - "gerar_manifest.py"
       - "verificar_manifest.py"
+      - "rede.py"
   workflow_dispatch:
 
 permissions:
@@ -119,7 +120,7 @@ jobs:
           python-version: "3.11"
 
       - name: Instalar PyInstaller
-        run: python -m pip install --upgrade pip pyinstaller
+        run: python -m pip install --upgrade pip pyinstaller certifi
 
       # Gera um arquivo de configuracao em vez de editar o codigo com regex.
       # A tentativa anterior com regex falhava em silencio no Windows, porque
@@ -157,7 +158,10 @@ jobs:
                       "--hidden-import","launchers",
                       "--hidden-import","detector",
                       "--hidden-import","forge_setup",
-                      "--hidden-import","preparar_jogo")
+                      "--hidden-import","preparar_jogo",
+                      "--hidden-import","rede",
+                      "--hidden-import","certifi",
+                      "--collect-data","certifi")
           if (Test-Path "icone.ico") { $opcoes += @("--icon","icone.ico") }
           python -m PyInstaller @opcoes broxas_updater.py
           Get-ChildItem dist

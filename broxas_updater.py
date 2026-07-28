@@ -26,6 +26,7 @@ from detector import analyze_folder, detect_instances, normalizar_pasta
 from forge_setup import install_forge, is_forge_installed, parse_forge_info
 from launchers import detectar_launchers
 import preparar_jogo
+import rede
 import interface as UI
 
 # =====================================================================
@@ -99,22 +100,14 @@ def get_folder_state(state: dict, folder) -> dict:
 
 
 def fetch_manifest(url: str) -> dict:
-    req = urllib.request.Request(url, headers={"User-Agent": "BroxasUpdater/1.0"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    return json.loads(rede.ler_texto(url, tempo=30))
 
 
-def download(url: str, dest: Path):
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    tmp = dest.with_suffix(dest.suffix + ".part")
-    req = urllib.request.Request(url, headers={"User-Agent": "BroxasUpdater/1.0"})
-    with urllib.request.urlopen(req, timeout=120) as resp, open(tmp, "wb") as out:
-        while True:
-            chunk = resp.read(1024 * 128)
-            if not chunk:
-                break
-            out.write(chunk)
-    tmp.replace(dest)
+def download(url: str, dest: Path, sha1=None, log=None):
+    ok, motivo = rede.baixar(url, dest, sha1_esperado=sha1, log=log)
+    if not ok:
+        raise RuntimeError(motivo)
+    return motivo
 
 
 # ---------------------------------------------------------------------
@@ -166,10 +159,10 @@ def do_sync(manifest, game_dir: Path, state, folder_state, log, set_progress):
         name = entry["name"]
         try:
             log(f"  + baixando: {name}")
-            download(entry["url"], mods_dir / name)
-            expected = (entry.get("sha1") or "").lower()
-            if expected and sha1_of(mods_dir / name).lower() != expected:
-                result.errors.append(f"{name}: hash diferente do esperado")
+            observacao = download(entry["url"], mods_dir / name,
+                                  sha1=entry.get("sha1"), log=log)
+            if observacao:
+                log(f"    {observacao}")
             result.downloaded.append(name)
         except Exception as exc:
             result.errors.append(f"baixar {name}: {exc}")
