@@ -1,7 +1,7 @@
 {
   "pack_id": "magia",
   "pack_nome": "Magia e Tecnologia",
-  "pack_version": "2.0.21",
+  "pack_version": "2.0.22",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -443,12 +443,6 @@
       "url": "https://cdn.modrinth.com/data/SsIkH9rZ/versions/oHxMouff/diet-forge-2.1.1%2B1.20.1.jar",
       "sha1": "c5f5d5980803259931dfa62236e888fb08ecf70a",
       "size": 368483
-    },
-    {
-      "name": "dimdoors-5.4.4-1.20.1-forge.jar",
-      "url": "https://cdn.modrinth.com/data/b8Q0BxnV/versions/yU3KXKPV/dimdoors-5.4.4-1.20.1-forge.jar",
-      "sha1": "4bd4590c53bc7acecbaa8526698c6a3ab6223fbd",
-      "size": 17827316
     },
     {
       "name": "Draconic-Evolution-1.20.1-3.1.2.621-universal.jar",

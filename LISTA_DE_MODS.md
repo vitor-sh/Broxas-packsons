@@ -1,6 +1,6 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.21. Nao edite na mao.
+Gerado automaticamente na versao 2.0.22. Nao edite na mao.
 
 ## Guerra Medieval  (`packs/guerra/`)
 
@@ -157,7 +157,7 @@ Ficam em `packs/guerra/mods_externos.json`. Nao ocupam espaco no repositorio.
 
 ## Magia e Tecnologia  (`packs/magia/`)
 
-167 mods | 602 MB | Forge 47.4.20
+166 mods | 585 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (35)
 
@@ -199,7 +199,7 @@ Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 - voicechat-forge-1.20.1-2.6.21.jar  (4.69 MB)
 - waystones-forge-1.20.1-14.1.20.jar  (0.51 MB)
 
-### Baixados por link oficial (132)
+### Baixados por link oficial (131)
 
 Ficam em `packs/magia/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -238,7 +238,6 @@ Ficam em `packs/magia/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Cyclic-1.20.1-1.13.7.jar  (4.08 MB)
 - Data_Anchor-forge-1.20.1-1.0.0.20.jar  (0.11 MB)
 - diet-forge-2.1.1+1.20.1.jar  (0.35 MB)
-- dimdoors-5.4.4-1.20.1-forge.jar  (17.00 MB)
 - Draconic-Evolution-1.20.1-3.1.2.621-universal.jar  (5.66 MB)
 - dungeons-and-taverns-3.0.3.f[Forge].jar  (12.55 MB)
 - DungeonsArise-1.20.1-2.1.57-release.jar  (8.18 MB)
