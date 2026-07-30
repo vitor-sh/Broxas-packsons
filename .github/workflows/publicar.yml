@@ -1,19 +1,25 @@
-name: Publicar pack e gerar o EXE
+name: Publicar packs e gerar o EXE
 
-# Roda sozinho quando voce mexer nos mods, nas noticias ou no pack.json.
+# Roda sozinho quando voce mexer em qualquer pack (mods, noticias, pack.json)
+# ou no codigo do launcher.
 # Tambem pode ser rodado na mao pelo botao "Run workflow".
 on:
   push:
+    # So no main. Sem isso, subir uma branch de teste ja publicaria um Release
+    # e escreveria os manifests no main.
+    branches:
+      - main
     paths:
       - ".github/workflows/**"
-      - "mods/**"
-      - "noticias.txt"
-      - "pack.json"
-      - "mods_externos.json"
+      - "packs/**"
+      - "launcher.json"
       - "broxas_updater.py"
+      - "interface.py"
       - "detector.py"
       - "forge_setup.py"
-      - "gerar_manifest.py"
+      - "launchers.py"
+      - "preparar_jogo.py"
+      - "gerar_packs.py"
       - "verificar_manifest.py"
       - "rede.py"
   workflow_dispatch:
@@ -21,80 +27,139 @@ on:
 permissions:
   contents: write
 
-# Evita que duas execucoes tentem salvar o manifest ao mesmo tempo.
+# Evita que duas execucoes tentem salvar os manifests ao mesmo tempo.
 concurrency:
-  group: publicar-pack
+  group: publicar-packs
   cancel-in-progress: false
 
 jobs:
   # ------------------------------------------------------------------
-  # 1) Gera o manifest.json a partir da pasta mods/ e do noticias.txt
+  # 1) Gera o manifest.json de CADA pack em packs/ e o packs.json
   # ------------------------------------------------------------------
-  manifest:
+  packs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Ler configuracoes do pack.json
+      - name: Definir a versao
         id: info
         run: |
-          MC=$(python -c "import json;print(json.load(open('pack.json'))['minecraft'])")
-          FORGE=$(python -c "import json;print(json.load(open('pack.json'))['forge'])")
-          VERSAO="1.0.${{ github.run_number }}"
-          echo "mc=$MC" >> $GITHUB_OUTPUT
-          echo "forge=$FORGE" >> $GITHUB_OUTPUT
+          VERSAO="2.0.${{ github.run_number }}"
           echo "versao=$VERSAO" >> $GITHUB_OUTPUT
-          echo "Minecraft $MC | Forge $FORGE | pack v$VERSAO"
+          echo "Versao dos packs: $VERSAO"
 
-      - name: Conferir se a pasta mods existe
+      # Confere a estrutura antes de gerar qualquer coisa, para a mensagem de
+      # erro ser clara em vez de um traceback do Python.
+      - name: Conferir a estrutura das pastas
         run: |
-          if [ ! -d mods ] || [ -z "$(ls -A mods/*.jar 2>/dev/null)" ]; then
-            echo "::error::A pasta 'mods' esta vazia. Suba os arquivos .jar dentro dela."
+          if [ ! -d packs ]; then
+            echo "::error::A pasta 'packs' nao existe."
             exit 1
           fi
-          echo "Encontrados $(ls mods/*.jar | wc -l) mods na pasta."
 
-      - name: Gerar manifest.json
+          encontrados=0
+          for pasta in packs/*/; do
+            [ -d "$pasta" ] || continue
+            id=$(basename "$pasta")
+
+            if [ ! -f "$pasta/pack.json" ]; then
+              echo "::error::Falta o arquivo packs/$id/pack.json"
+              exit 1
+            fi
+
+            qtd=$(ls "$pasta"mods/*.jar 2>/dev/null | wc -l)
+            externos=0
+            if [ -f "$pasta/mods_externos.json" ]; then
+              externos=$(python -c "import json;print(len(json.load(open('$pasta/mods_externos.json')).get('mods',[])))")
+            fi
+
+            if [ "$qtd" -eq 0 ] && [ "$externos" -eq 0 ]; then
+              echo "::error::O pack '$id' nao tem nenhum mod (nem na pasta, nem por link)."
+              exit 1
+            fi
+
+            echo "  $id: $qtd mod(s) na pasta + $externos por link"
+            encontrados=$((encontrados + 1))
+          done
+
+          if [ "$encontrados" -eq 0 ]; then
+            echo "::error::Nenhum pack encontrado dentro de packs/"
+            exit 1
+          fi
+          echo "$encontrados pack(s) encontrado(s)."
+
+      - name: Gerar os manifests e o packs.json
         run: |
-          python gerar_manifest.py \
-            --mods "mods" \
-            --base-url "https://raw.githubusercontent.com/${{ github.repository }}/main/mods" \
-            --versao "${{ steps.info.outputs.versao }}" \
-            --minecraft "${{ steps.info.outputs.mc }}" \
-            --forge "${{ steps.info.outputs.forge }}" \
-            --noticias "noticias.txt" \
-            --externos "mods_externos.json" \
-            --saida "manifest.json"
+          python gerar_packs.py \
+            --repo "${{ github.repository }}" \
+            --versao "${{ steps.info.outputs.versao }}"
 
-      # Confere se todos os mods podem ser baixados ANTES de publicar. Se algo
-      # quebrou, o manifest nao e salvo e a galera continua com a versao
-      # anterior, que funciona.
+      # Confere se todos os mods de TODOS os packs podem ser baixados ANTES de
+      # publicar. Se algo quebrou, nada e salvo e a galera continua com a
+      # versao anterior, que funciona.
+      - name: Instalar certifi
+        run: python -m pip install --upgrade certifi
+
       - name: Conferir se todos os mods podem ser baixados
-        run: python verificar_manifest.py manifest.json
+        env:
+          # Arquivo recem-enviado leva um tempinho para aparecer no
+          # raw.githubusercontent.com. Sem paciencia aqui, o robo falha por
+          # engano quando voce sobe um mod novo.
+          VERIFICAR_TENTATIVAS: "8"
+          VERIFICAR_ESPERA: "20"
+        run: |
+          falhou=0
+          for manifest in packs/*/manifest.json; do
+            id=$(basename "$(dirname "$manifest")")
+            echo "::group::Conferindo o pack '$id'"
+            if ! python verificar_manifest.py "$manifest"; then
+              echo "::error::O pack '$id' tem mods que nao podem ser baixados."
+              falhou=1
+            fi
+            echo "::endgroup::"
+          done
+          exit $falhou
 
       # Salva com nova tentativa: se alguem publicar algo no meio do caminho,
       # a execucao pega as mudancas novas e tenta de novo em vez de falhar.
-      - name: Salvar manifest.json no repositorio
+      - name: Salvar os manifests no repositorio
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          cp manifest.json "$RUNNER_TEMP/manifest.json"
+
+          mkdir -p "$RUNNER_TEMP/gerados"
+          cp packs.json "$RUNNER_TEMP/gerados/packs.json"
+          cp LISTA_DE_MODS.md "$RUNNER_TEMP/gerados/LISTA_DE_MODS.md"
+          for manifest in packs/*/manifest.json; do
+            id=$(basename "$(dirname "$manifest")")
+            cp "$manifest" "$RUNNER_TEMP/gerados/$id.manifest.json"
+          done
 
           for tentativa in 1 2 3 4 5; do
             git fetch origin main
             git checkout -B main origin/main
-            cp "$RUNNER_TEMP/manifest.json" manifest.json
-            git add manifest.json
+
+            cp "$RUNNER_TEMP/gerados/packs.json" packs.json
+            cp "$RUNNER_TEMP/gerados/LISTA_DE_MODS.md" LISTA_DE_MODS.md
+            git add packs.json LISTA_DE_MODS.md
+            for arquivo in "$RUNNER_TEMP/gerados/"*.manifest.json; do
+              id=$(basename "$arquivo" .manifest.json)
+              if [ -d "packs/$id" ]; then
+                cp "$arquivo" "packs/$id/manifest.json"
+                git add "packs/$id/manifest.json"
+              fi
+            done
 
             if git diff --staged --quiet; then
-              echo "O manifest ja esta atualizado, nada para salvar."
+              echo "As listas ja estao atualizadas, nada para salvar."
               exit 0
             fi
 
-            git commit -m "Atualiza manifest (pack v${{ steps.info.outputs.versao }})"
+            git commit -m "Atualiza as listas dos packs (v${{ steps.info.outputs.versao }})" \
+                       -m "Gerado por gerar_packs.py"
 
             if git push origin HEAD:main; then
-              echo "manifest.json salvo com sucesso."
+              echo "Listas salvas com sucesso."
               exit 0
             fi
 
@@ -102,13 +167,13 @@ jobs:
             sleep 5
           done
 
-          echo "::error::Nao consegui salvar o manifest.json depois de 5 tentativas."
+          echo "::error::Nao consegui salvar as listas depois de 5 tentativas."
           exit 1
 
   # ------------------------------------------------------------------
   # 2) Compila o .exe no Windows e publica em Releases
-  #    Roda em paralelo: nao depende do manifest, porque o app so
-  #    guarda o ENDERECO do manifest, nao o conteudo dele.
+  #    Roda em paralelo: nao depende do job de cima, porque o app so
+  #    guarda o ENDERECO do packs.json, nao o conteudo dele.
   # ------------------------------------------------------------------
   exe:
     runs-on: windows-latest
@@ -128,11 +193,12 @@ jobs:
       - name: Gerar configuracao do app
         shell: pwsh
         run: |
-          $cfg = Get-Content pack.json -Raw | ConvertFrom-Json
-          $manifestUrl = "https://raw.githubusercontent.com/${{ github.repository }}/main/manifest.json"
+          $cfg = Get-Content launcher.json -Raw | ConvertFrom-Json
+          $packsUrl = "https://raw.githubusercontent.com/${{ github.repository }}/main/packs.json"
           $linhas = @(
             '# Arquivo gerado automaticamente pelo GitHub Actions. Nao edite.',
-            ('MANIFEST_URL = "' + $manifestUrl + '"'),
+            ('PACKS_URL = "' + $packsUrl + '"'),
+            'MANIFEST_URL = ""',
             ('SERVER_NAME = "' + $cfg.server_name + '"'),
             ('SERVER_IP = "' + $cfg.server_ip + '"')
           )
@@ -145,13 +211,13 @@ jobs:
       - name: Conferir a configuracao
         shell: pwsh
         run: |
-          python -c "import configuracao as c; assert 'SEU_USUARIO' not in c.MANIFEST_URL, 'a URL do manifest nao foi configurada'; assert c.MANIFEST_URL.startswith('https://'), 'URL invalida'; print('URL do manifest:', c.MANIFEST_URL)"
-          python -c "import broxas_updater as a; assert 'SEU_USUARIO' not in a.MANIFEST_URL, 'o app nao carregou a configuracao'; print('O app vai usar:', a.MANIFEST_URL); print('Servidor:', a.SERVER_NAME, '-', a.SERVER_IP)"
+          python -c "import configuracao as c; assert 'SEU_USUARIO' not in c.PACKS_URL, 'a URL do packs.json nao foi configurada'; assert c.PACKS_URL.startswith('https://'), 'URL invalida'; print('URL dos packs:', c.PACKS_URL)"
+          python -c "import broxas_updater as a; assert 'SEU_USUARIO' not in a.PACKS_URL, 'o app nao carregou a configuracao'; print('O app vai usar:', a.PACKS_URL); print('Servidor:', a.SERVER_NAME, '-', a.SERVER_IP)"
 
       - name: Compilar o executavel
         shell: pwsh
         run: |
-          $nome = (Get-Content pack.json -Raw | ConvertFrom-Json).server_name
+          $nome = (Get-Content launcher.json -Raw | ConvertFrom-Json).server_name
           $opcoes = @("--onefile","--noconsole","--clean","--name","$nome-Updater",
                       "--hidden-import","configuracao",
                       "--hidden-import","interface",
@@ -178,9 +244,10 @@ jobs:
           tag_name: updater
           name: BroxasSMP Updater
           body: |
-            Baixe o arquivo .exe abaixo, abra e clique no botao.
+            Baixe o arquivo .exe abaixo, abra e escolha o modpack que quer jogar.
 
-            Pack: v1.0.${{ github.run_number }}
+            Modpacks: Guerra Medieval e Magia e Tecnologia
+            Versao: 2.0.${{ github.run_number }}
             Publicado automaticamente.
           files: dist/*.exe
           fail_on_unmatched_files: true

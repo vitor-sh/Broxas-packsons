@@ -15,6 +15,7 @@ Uso:
 """
 
 import json
+import os
 import sys
 import time
 import urllib.error
@@ -22,9 +23,13 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
 AGENTE = "BroxasUpdater/1.0 (verificacao)"
-TENTATIVAS = 3
-ESPERA = 6          # segundos entre tentativas
-LINHAS_DE_TRABALHO = 8
+
+# Da para aumentar pelas variaveis de ambiente. O robo do GitHub usa valores
+# maiores, porque arquivo recem-enviado leva alguns minutos para aparecer no
+# raw.githubusercontent.com e um 404 nesse caso e falso alarme.
+TENTATIVAS = int(os.getenv("VERIFICAR_TENTATIVAS", "3"))
+ESPERA = int(os.getenv("VERIFICAR_ESPERA", "6"))       # segundos entre tentativas
+LINHAS_DE_TRABALHO = int(os.getenv("VERIFICAR_LINHAS", "8"))
 
 
 def _contexto():

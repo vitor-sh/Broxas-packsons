@@ -1,117 +1,14 @@
-# Lista de mods do pack
+# Lista de mods dos packs
 
-Total: 139 mods
+Gerado automaticamente na versao 2.0.0. Nao edite na mao.
 
-## Baixados automaticamente do Modrinth (102)
+## Guerra Medieval  (`packs/guerra/`)
 
-Nao precisam ser enviados para este repositorio.
+139 mods | 283 MB | Forge 47.4.20
 
-- [1.20.1] SecurityCraft v1.10.1.jar
-- [forge]ctov-3.4.14.jar
-- amendments-1.20-2.2.5.jar
-- appleskin-forge-mc1.20.1-2.5.1.jar
-- architectury-9.2.14-forge.jar
-- artifacts-forge-9.5.19.jar
-- astikorcartsredux-1.2.3.jar
-- AttributeFix-Forge-1.20.1-21.0.5.jar
-- Bookshelf-Forge-1.20.1-20.2.15.jar
-- carryon-forge-1.20.1-2.1.2.7.jar
-- chatnotify-forge-2.6.9_2B1.20.1.jar
-- cloth-config-11.1.136-forge.jar
-- comforts-forge-6.4.0+1.20.1.jar
-- constructionwand-1.20.1-2.11.jar
-- Corgilib-Forge-1.20.1-4.0.3.4.jar
-- coroutil-forge-1.20.1-1.3.7.jar
-- cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar
-- cristellib-1.1.6-forge.jar
-- culturaldelights-0.16.7.jar
-- curios-forge-5.14.1+1.20.1.jar
-- Cyclic-1.20.1-1.13.7.jar
-- Data_Anchor-forge-1.20.1-1.0.0.20.jar
-- diet-forge-2.1.1+1.20.1.jar
-- dungeons-and-taverns-3.0.3.f[Forge].jar
-- DungeonsArise-1.20.1-2.1.57-release.jar
-- embeddium-0.3.31+mc1.20.1.jar
-- EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar
-- endrem_forge-5.3.3-R-1.20.1.jar
-- Enhanced-Celestials-forge-1.20.1-5.0.3.2.jar
-- epic-knights-1.20.1-forge-10.11.jar
-- epic-knights-addon-1.20.x-forge-2.6.jar
-- epic-knights-antique-legacy-1.20.x-forge-1.13.jar
-- epic-knights-slavic-armory-1.20.x-forge-2.1.jar
-- FarmersDelight-1.20.1-1.3.2.jar
-- ferritecore-6.0.1-forge.jar
-- finite_water-1.20.1-1.0.0.jar
-- flib-1.20.1-0.0.16.jar
-- Forgematica-0.1.13-mc1.20.1.jar
-- handcrafted-forge-1.20.1-3.0.6.jar
-- heralds_luna-2.5-forge-1.20.1.jar
-- immersive_aircraft-1.4.1+1.20.1-forge.jar
-- immersive_weathering-1.20.1-2.0.5-forge.jar
-- ironchest-1.20.1-14.4.4.jar
-- Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar
-- Jade-1.20.1-Forge-11.13.3.jar
-- jei-1.20.1-forge-15.20.0.112.jar
-- Kambrik-6.1.1+1.20.1-forge.jar
-- kotlinforforge-4.12.0-all.jar
-- kubejs-forge-2001.6.5-build.26.jar
-- Lazr_s Lib-1.20-1.1.1.jar
-- libraryferret-forge-1.20.1-4.0.0.jar
-- lithostitched-forge-1.20.1-1.4.11.jar
-- lootr-forge-1.20-0.7.35.94.jar
-- MaFgLib-0.1.14-mc1.20.1.jar
-- MEconomy-1.0.5-HOTFIX-Forge-1.20.1.jar
-- miners_delight-1.20.1-1.4.5-backport.jar
-- modernfix-forge-5.27.66_2Bmc1.20.1.jar
-- mogruleconomy-0.1-1.20.1.jar
-- moonlight-1.20-2.16.34-forge.jar
-- morearmor-1.20.1-1.4.6.jar
-- MouseTweaks-forge-mc1.20.1-2.25.1.jar
-- musketmod-1.20.1-forge-1.5.4.jar
-- NaturesCompass-1.20.1-1.12.0-forge.jar
-- Necronomicon-Forge-1.6.0+1.20.1.jar
-- NoChatReports-FORGE-1.20.1-v2.2.2.jar
-- NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar
-- notenoughanimations-forge-1.12.4-mc1.20.1.jar
-- OctoLib-FORGE-0.5.0.1+1.20.1.jar
-- oculus-mc1.20.1-1.8.0.jar
-- player-animation-lib-forge-1.0.2-rc1+1.20.jar
-- polymorph-forge-0.49.10+1.20.1.jar
-- PuzzlesLib-v8.1.33-1.20.1-Forge.jar
-- realmrpg_skeletons-1.1.0-forge-1.20.1.jar
-- recruits-1.20.1-1.15.2.jar
-- relics-1.20.1-0.8.0.13.jar
-- resourcefullib-forge-1.20.1-2.1.29.jar
-- rhino-forge-2001.2.3-build.10.jar
-- rusticdelight-forge-1.20.1-1.6.1.jar
-- saintsdragons-0.8.2_2Bforge-1.20.1-alpha.jar
-- SimpleStorageNetwork-1.20.1-1.13.2.jar
-- simplyswords-forge-1.56.0-1.20.1.jar
-- smallships-forge-1.20.1-2.0.0-b1.4.jar
-- sodiumextras-forge-1.0.7-1.20.1.jar
-- sodiumoptionsapi-forge-1.0.10-1.20.1.jar
-- spark-1.10.53-forge.jar
-- SpartanWeaponry-1.20.1-forge-3.2.1-all.jar
-- sqlite-jdbc-3.41.2.1+20230506-all.jar
-- Structory_Towers_1.20.x_v1.0.7.jar
-- supplementaries-1.20-3.1.43-forge.jar
-- tacz-1.20.1-1.0.2-release.jar
-- Towns-and-Towers-1.12-Fabric+Forge.jar
-- travelersbackpack-forge-1.20.1-9.1.56.jar
-- VeggiesDelight-1.20.1-1.9.3.jar
-- weaponmaster_ydm-forge-1.20.1-4.2.3.jar
-- weather2-1.20.1-2.8.3.jar
-- workers-1.20.1-2.0.3.jar
-- worldedit-mod-7.2.15.jar
-- YungsApi-1.20-Forge-4.0.6.jar
-- YungsBetterDesertTemples-1.20-Forge-3.0.3.jar
-- YungsBetterDungeons-1.20-Forge-4.0.4.jar
-- YungsBetterMineshafts-1.20-Forge-4.0.4.jar
-- YungsBetterStrongholds-1.20-Forge-4.0.3.jar
+### Guardados aqui no repositorio (37)
 
-## VOCE PRECISA ENVIAR ESTES para a pasta mods/ (37)
-
-Total: 28.6 MB. Nenhum passa de 25 MB.
+Ficam em `packs/guerra/mods/`. Da para adicionar e remover pelo site do GitHub.
 
 - [1.20.1-forge]-Epic-Knights-Japanese-Armory-1.6.2.jar  (0.33 MB)
 - balm-forge-1.20.1-7.3.41-all.jar  (0.53 MB)
@@ -150,3 +47,288 @@ Total: 28.6 MB. Nenhum passa de 25 MB.
 - vassalsuzerain-1.2.0.jar  (0.07 MB)
 - voicechat-forge-1.20.1-2.6.21.jar  (4.69 MB)
 - waystones-forge-1.20.1-14.1.20.jar  (0.51 MB)
+
+### Baixados por link oficial (102)
+
+Ficam em `packs/guerra/mods_externos.json`. Nao ocupam espaco no repositorio.
+
+- [1.20.1] SecurityCraft v1.10.1.jar  (4.55 MB)
+- [forge]ctov-3.4.14.jar  (6.46 MB)
+- amendments-1.20-2.2.5.jar  (1.24 MB)
+- appleskin-forge-mc1.20.1-2.5.1.jar  (0.05 MB)
+- architectury-9.2.14-forge.jar  (0.55 MB)
+- artifacts-forge-9.5.19.jar  (0.81 MB)
+- astikorcartsredux-1.2.3.jar  (0.51 MB)
+- AttributeFix-Forge-1.20.1-21.0.5.jar  (0.02 MB)
+- Bookshelf-Forge-1.20.1-20.2.15.jar  (0.33 MB)
+- carryon-forge-1.20.1-2.1.2.7.jar  (0.42 MB)
+- chatnotify-forge-2.6.9_2B1.20.1.jar  (0.97 MB)
+- cloth-config-11.1.136-forge.jar  (1.13 MB)
+- comforts-forge-6.4.0+1.20.1.jar  (0.36 MB)
+- constructionwand-1.20.1-2.11.jar  (0.20 MB)
+- Corgilib-Forge-1.20.1-4.0.3.4.jar  (0.34 MB)
+- coroutil-forge-1.20.1-1.3.7.jar  (0.06 MB)
+- cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar  (0.01 MB)
+- cristellib-1.1.6-forge.jar  (0.41 MB)
+- culturaldelights-0.16.7.jar  (0.25 MB)
+- curios-forge-5.14.1+1.20.1.jar  (0.38 MB)
+- Cyclic-1.20.1-1.13.7.jar  (4.08 MB)
+- Data_Anchor-forge-1.20.1-1.0.0.20.jar  (0.11 MB)
+- diet-forge-2.1.1+1.20.1.jar  (0.35 MB)
+- dungeons-and-taverns-3.0.3.f[Forge].jar  (12.55 MB)
+- DungeonsArise-1.20.1-2.1.57-release.jar  (8.18 MB)
+- embeddium-0.3.31+mc1.20.1.jar  (1.26 MB)
+- EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar  (0.06 MB)
+- endrem_forge-5.3.3-R-1.20.1.jar  (0.85 MB)
+- Enhanced-Celestials-forge-1.20.1-5.0.3.2.jar  (1.55 MB)
+- epic-knights-1.20.1-forge-10.11.jar  (2.78 MB)
+- epic-knights-addon-1.20.x-forge-2.6.jar  (1.92 MB)
+- epic-knights-antique-legacy-1.20.x-forge-1.13.jar  (5.18 MB)
+- epic-knights-slavic-armory-1.20.x-forge-2.1.jar  (0.96 MB)
+- FarmersDelight-1.20.1-1.3.2.jar  (3.16 MB)
+- ferritecore-6.0.1-forge.jar  (0.12 MB)
+- finite_water-1.20.1-1.0.0.jar  (0.01 MB)
+- flib-1.20.1-0.0.16.jar  (0.26 MB)
+- Forgematica-0.1.13-mc1.20.1.jar  (0.95 MB)
+- handcrafted-forge-1.20.1-3.0.6.jar  (6.78 MB)
+- heralds_luna-2.5-forge-1.20.1.jar  (30.76 MB)
+- immersive_aircraft-1.4.1+1.20.1-forge.jar  (2.32 MB)
+- immersive_weathering-1.20.1-2.0.5-forge.jar  (2.16 MB)
+- ironchest-1.20.1-14.4.4.jar  (0.30 MB)
+- Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar  (0.02 MB)
+- Jade-1.20.1-Forge-11.13.3.jar  (0.53 MB)
+- jei-1.20.1-forge-15.20.0.112.jar  (1.32 MB)
+- Kambrik-6.1.1+1.20.1-forge.jar  (0.31 MB)
+- kotlinforforge-4.12.0-all.jar  (7.10 MB)
+- kubejs-forge-2001.6.5-build.26.jar  (1.58 MB)
+- Lazr_s Lib-1.20-1.1.1.jar  (0.11 MB)
+- libraryferret-forge-1.20.1-4.0.0.jar  (0.18 MB)
+- lithostitched-forge-1.20.1-1.4.11.jar  (0.45 MB)
+- lootr-forge-1.20-0.7.35.94.jar  (0.44 MB)
+- MaFgLib-0.1.14-mc1.20.1.jar  (0.50 MB)
+- MEconomy-1.0.5-HOTFIX-Forge-1.20.1.jar  (1.89 MB)
+- miners_delight-1.20.1-1.4.5-backport.jar  (0.52 MB)
+- modernfix-forge-5.27.66_2Bmc1.20.1.jar  (0.96 MB)
+- mogruleconomy-0.1-1.20.1.jar  (0.04 MB)
+- moonlight-1.20-2.16.34-forge.jar  (1.35 MB)
+- morearmor-1.20.1-1.4.6.jar  (0.96 MB)
+- MouseTweaks-forge-mc1.20.1-2.25.1.jar  (0.07 MB)
+- musketmod-1.20.1-forge-1.5.4.jar  (0.43 MB)
+- NaturesCompass-1.20.1-1.12.0-forge.jar  (0.22 MB)
+- Necronomicon-Forge-1.6.0+1.20.1.jar  (0.03 MB)
+- NoChatReports-FORGE-1.20.1-v2.2.2.jar  (0.26 MB)
+- NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar  (0.01 MB)
+- notenoughanimations-forge-1.12.4-mc1.20.1.jar  (1.85 MB)
+- OctoLib-FORGE-0.5.0.1+1.20.1.jar  (0.40 MB)
+- oculus-mc1.20.1-1.8.0.jar  (2.72 MB)
+- player-animation-lib-forge-1.0.2-rc1+1.20.jar  (0.17 MB)
+- polymorph-forge-0.49.10+1.20.1.jar  (0.29 MB)
+- PuzzlesLib-v8.1.33-1.20.1-Forge.jar  (1.28 MB)
+- realmrpg_skeletons-1.1.0-forge-1.20.1.jar  (0.62 MB)
+- recruits-1.20.1-1.15.2.jar  (2.68 MB)
+- relics-1.20.1-0.8.0.13.jar  (1.45 MB)
+- resourcefullib-forge-1.20.1-2.1.29.jar  (0.41 MB)
+- rhino-forge-2001.2.3-build.10.jar  (1.71 MB)
+- rusticdelight-forge-1.20.1-1.6.1.jar  (0.54 MB)
+- saintsdragons-0.8.2_2Bforge-1.20.1-alpha.jar  (20.89 MB)
+- SimpleStorageNetwork-1.20.1-1.13.2.jar  (0.49 MB)
+- simplyswords-forge-1.56.0-1.20.1.jar  (14.50 MB)
+- smallships-forge-1.20.1-2.0.0-b1.4.jar  (1.73 MB)
+- sodiumextras-forge-1.0.7-1.20.1.jar  (0.42 MB)
+- sodiumoptionsapi-forge-1.0.10-1.20.1.jar  (0.42 MB)
+- spark-1.10.53-forge.jar  (2.97 MB)
+- SpartanWeaponry-1.20.1-forge-3.2.1-all.jar  (2.70 MB)
+- sqlite-jdbc-3.41.2.1+20230506-all.jar  (12.26 MB)
+- Structory_Towers_1.20.x_v1.0.7.jar  (0.50 MB)
+- supplementaries-1.20-3.1.43-forge.jar  (13.03 MB)
+- tacz-1.20.1-1.0.2-release.jar  (23.99 MB)
+- Towns-and-Towers-1.12-Fabric+Forge.jar  (2.73 MB)
+- travelersbackpack-forge-1.20.1-9.1.56.jar  (1.35 MB)
+- VeggiesDelight-1.20.1-1.9.3.jar  (0.57 MB)
+- weaponmaster_ydm-forge-1.20.1-4.2.3.jar  (0.27 MB)
+- weather2-1.20.1-2.8.3.jar  (6.53 MB)
+- workers-1.20.1-2.0.3.jar  (1.26 MB)
+- worldedit-mod-7.2.15.jar  (5.56 MB)
+- YungsApi-1.20-Forge-4.0.6.jar  (0.35 MB)
+- YungsBetterDesertTemples-1.20-Forge-3.0.3.jar  (0.88 MB)
+- YungsBetterDungeons-1.20-Forge-4.0.4.jar  (0.76 MB)
+- YungsBetterMineshafts-1.20-Forge-4.0.4.jar  (0.47 MB)
+- YungsBetterStrongholds-1.20-Forge-4.0.3.jar  (0.45 MB)
+
+## Magia e Tecnologia  (`packs/magia/`)
+
+163 mods | 598 MB | Forge 47.4.20
+
+### Guardados aqui no repositorio (30)
+
+Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
+
+- balm-forge-1.20.1-7.3.41-all.jar  (0.53 MB)
+- bettervillage-forge-1.20.1-3.3.1-all.jar  (2.49 MB)
+- camera-forge-1.20.1-1.0.20.jar  (0.29 MB)
+- cfm-forge-1.20.1-7.0.0-pre36.jar  (2.49 MB)
+- Clumps-forge-1.20.1-12.0.0.4.jar  (0.02 MB)
+- Controlling-forge-1.20.1-12.0.2.jar  (0.11 MB)
+- cosmeticarmorreworked-1.20.1-v1a.jar  (0.08 MB)
+- Cuffed-1.20.1-1.3.14.jar  (0.83 MB)
+- deathland_economy-2.0.0-forge-1.20.1.jar  (0.26 MB)
+- FastLeafDecay-32.jar  (0.01 MB)
+- framework-forge-1.20.1-0.8.0.jar  (0.37 MB)
+- ftb-library-forge-2001.2.13.jar  (0.74 MB)
+- gasmaskresistance-1.0.0.jar  (0.00 MB)
+- geckolib-forge-1.20.1-4.8.4.jar  (0.99 MB)
+- GlitchCore-forge-1.20.1-0.0.1.1.jar  (0.08 MB)
+- goblintraders-forge-1.20.1-1.11.5.jar  (0.31 MB)
+- infernalmobs-1.20.1.10.jar  (0.14 MB)
+- ironfurnaces-1.20.1-4.1.3.jar  (0.58 MB)
+- largemeals-1.20.1-1.3.0.jar  (0.07 MB)
+- naturalist-5.0pre5+forge-1.20.1.jar  (3.63 MB)
+- Neruina-2.1.2-forge+1.20.1.jar  (2.94 MB)
+- Searchables-forge-1.20.1-1.0.3.jar  (0.07 MB)
+- SereneSeasons-forge-1.20.1-9.1.0.3.jar  (0.15 MB)
+- siegeweapons-1.20.1-0.2.5.jar  (0.99 MB)
+- solcarrot-1.20.1-1.15.1.jar  (0.10 MB)
+- Structory_1.20.x_v1.3.5.jar  (1.23 MB)
+- TerraBlender-forge-1.20.1-3.0.1.10.jar  (0.10 MB)
+- TreeChop-1.20.1-forge-0.19.0-fixed.jar  (0.49 MB)
+- voicechat-forge-1.20.1-2.6.21.jar  (4.69 MB)
+- waystones-forge-1.20.1-14.1.20.jar  (0.51 MB)
+
+### Baixados por link oficial (133)
+
+Ficam em `packs/magia/mods_externos.json`. Nao ocupam espaco no repositorio.
+
+- [1.20.1] SecurityCraft v1.10.1.jar  (4.55 MB)
+- aaa_particles-forge-1.20.1-2.2.3.jar  (5.01 MB)
+- amendments-1.20-2.2.5.jar  (1.24 MB)
+- Apotheosis-1.20.1-7.4.8.jar  (2.67 MB)
+- ApothicAttributes-1.20.1-1.3.7.jar  (0.22 MB)
+- appleskin-forge-mc1.20.1-2.5.1.jar  (0.05 MB)
+- architectury-9.2.14-forge.jar  (0.55 MB)
+- artifacts-forge-9.5.19.jar  (0.81 MB)
+- AttributeFix-Forge-1.20.1-21.0.5.jar  (0.02 MB)
+- AvaritiaNeo-1.20.1-1.1.6.jar  (0.97 MB)
+- BiomesOPlenty-1.20.1-18.0.0.592.jar  (20.79 MB)
+- BOMD-Forge-1.20.1-1.1.2.jar  (1.67 MB)
+- Bookshelf-Forge-1.20.1-20.2.15.jar  (0.33 MB)
+- born_in_chaos_[Forge]1.20.1_1.7.5.jar  (11.29 MB)
+- Botania-1.20.1-454-FORGE.jar  (11.65 MB)
+- BrandonsCore-1.20.1-3.2.1.302-universal.jar  (1.30 MB)
+- carryon-forge-1.20.1-2.1.2.7.jar  (0.42 MB)
+- cataclysm_spellbooks-1.2.9-1.20.1-all.jar  (1.21 MB)
+- CerbonsAPI-Forge-1.20.1-1.1.0.jar  (0.23 MB)
+- chatnotify-forge-2.6.9_2B1.20.1.jar  (0.97 MB)
+- cloth-config-11.1.136-forge.jar  (1.13 MB)
+- CodeChickenLib-1.20.1-4.4.0.528-universal.jar  (1.41 MB)
+- comforts-forge-6.4.0+1.20.1.jar  (0.36 MB)
+- constructionwand-1.20.1-2.11.jar  (0.20 MB)
+- Corgilib-Forge-1.20.1-4.0.3.4.jar  (0.34 MB)
+- coroutil-forge-1.20.1-1.3.7.jar  (0.06 MB)
+- cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar  (0.01 MB)
+- Cosmic_Horizons_0.0.7.3-forge-1.20.1.jar  (27.07 MB)
+- create-1.20.1-6.0.8.jar  (18.28 MB)
+- cristellib-1.1.6-forge.jar  (0.41 MB)
+- Cucumber-1.20.1-7.0.16.jar  (0.26 MB)
+- culturaldelights-0.16.7.jar  (0.25 MB)
+- curios-forge-5.14.1+1.20.1.jar  (0.38 MB)
+- Cyclic-1.20.1-1.13.7.jar  (4.08 MB)
+- Data_Anchor-forge-1.20.1-1.0.0.20.jar  (0.11 MB)
+- diet-forge-2.1.1+1.20.1.jar  (0.35 MB)
+- dimdoors-5.4.4-1.20.1-forge.jar  (17.00 MB)
+- Draconic-Evolution-1.20.1-3.1.2.621-universal.jar  (5.66 MB)
+- dungeons-and-taverns-3.0.3.f[Forge].jar  (12.55 MB)
+- DungeonsArise-1.20.1-2.1.57-release.jar  (8.18 MB)
+- elevatorid-1.20.1-1.9.1-forge.jar  (0.18 MB)
+- embeddium-0.3.31+mc1.20.1.jar  (1.26 MB)
+- EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar  (0.06 MB)
+- endrem_forge-5.3.3-R-1.20.1.jar  (0.85 MB)
+- Enhanced-Celestials-forge-1.20.1-5.0.3.2.jar  (1.55 MB)
+- Explorify v1.6.5.mod.jar  (0.73 MB)
+- FarmersDelight-1.20.1-1.3.2.jar  (3.16 MB)
+- ferritecore-6.0.1-forge.jar  (0.12 MB)
+- flib-1.20.1-0.0.16.jar  (0.26 MB)
+- Forgematica-0.1.13-mc1.20.1.jar  (0.95 MB)
+- fossil-forge-1.20.1-9.3.4.0.jar  (28.27 MB)
+- gravestone-forge-1.20.1-1.0.35.jar  (0.30 MB)
+- handcrafted-forge-1.20.1-3.0.6.jar  (6.78 MB)
+- immersive_aircraft-1.4.1+1.20.1-forge.jar  (2.32 MB)
+- immersive_weathering-1.20.1-2.0.5-forge.jar  (2.16 MB)
+- infinity-2.7.2+1.20.1-forge.jar  (9.98 MB)
+- inventorypets-1.20.1-2.2.8.jar  (7.54 MB)
+- ironchest-1.20.1-14.4.4.jar  (0.30 MB)
+- irons_spellbooks-1.20.1-3.16.2.jar  (14.83 MB)
+- irons_spellbooks_emc-0.1.0+forge-1.20.1.jar  (0.05 MB)
+- irons_spells_dynamic_skilltree_1.1.0.jar  (0.24 MB)
+- Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar  (0.02 MB)
+- Jade-1.20.1-Forge-11.13.3.jar  (0.53 MB)
+- jei-1.20.1-forge-15.20.0.112.jar  (1.32 MB)
+- journeymap-1.20.1-5.10.3-forge.jar  (6.83 MB)
+- Kambrik-6.1.1+1.20.1-forge.jar  (0.31 MB)
+- kotlinforforge-4.12.0-all.jar  (7.10 MB)
+- kubejs-forge-2001.6.5-build.26.jar  (1.58 MB)
+- L_Enders_Cataclysm-3.31.jar  (70.49 MB)
+- Lazr_s Lib-1.20-1.1.1.jar  (0.11 MB)
+- libraryferret-forge-1.20.1-4.0.0.jar  (0.18 MB)
+- lionfishapi-3.0.jar  (0.10 MB)
+- lithostitched-forge-1.20.1-1.4.11.jar  (0.45 MB)
+- lootr-forge-1.20-0.7.35.94.jar  (0.44 MB)
+- MaFgLib-0.1.14-mc1.20.1.jar  (0.50 MB)
+- MEconomy-1.0.5-HOTFIX-Forge-1.20.1.jar  (1.89 MB)
+- Mekanism-1.20.1-10.4.16.80.jar  (11.98 MB)
+- miners_delight-1.20.1-1.4.5-backport.jar  (0.52 MB)
+- mixin-booster-0.1.3+1.20.1.jar  (1.25 MB)
+- modernfix-forge-5.27.66_2Bmc1.20.1.jar  (0.96 MB)
+- mogruleconomy-0.1-1.20.1.jar  (0.04 MB)
+- moonlight-1.20-2.16.34-forge.jar  (1.35 MB)
+- morearmor-1.20.1-1.4.6.jar  (0.96 MB)
+- morehitboxes-forge-1.20.1-1.9.2.jar  (0.28 MB)
+- MoreSwordsLegacy-Forge-1.20.1-2.0.6.jar  (0.15 MB)
+- MouseTweaks-forge-mc1.20.1-2.25.1.jar  (0.07 MB)
+- MysticalAgradditions-1.20.1-7.0.12.jar  (0.32 MB)
+- MysticalAgriculture-1.20.1-7.0.24.jar  (2.26 MB)
+- NaturesCompass-1.20.1-1.12.0-forge.jar  (0.22 MB)
+- Necronomicon-Forge-1.6.0+1.20.1.jar  (0.03 MB)
+- NoChatReports-FORGE-1.20.1-v2.2.2.jar  (0.26 MB)
+- NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar  (0.01 MB)
+- notenoughanimations-forge-1.12.4-mc1.20.1.jar  (1.85 MB)
+- OctoLib-FORGE-0.5.0.1+1.20.1.jar  (0.40 MB)
+- oculus-mc1.20.1-1.8.0.jar  (2.72 MB)
+- Patchouli-1.20.1-85-FORGE.jar  (0.61 MB)
+- PatPat-1.2.4+1.20.1+forge.jar  (1.32 MB)
+- Placebo-1.20.1-8.6.3.jar  (0.27 MB)
+- player-animation-lib-forge-1.0.2-rc1+1.20.jar  (0.17 MB)
+- polymorph-forge-0.49.10+1.20.1.jar  (0.29 MB)
+- productivebees-1.20.1-12.6.0.jar  (4.73 MB)
+- ProjectE-1.20.1-PE1.0.1.jar  (2.15 MB)
+- projectexpansion-1.20.1-1.1.3.jar  (1.00 MB)
+- PuzzlesLib-v8.1.33-1.20.1-Forge.jar  (1.28 MB)
+- realmrpg_skeletons-1.1.0-forge-1.20.1.jar  (0.62 MB)
+- relics-1.20.1-0.8.0.13.jar  (1.45 MB)
+- resourcefullib-forge-1.20.1-2.1.29.jar  (0.41 MB)
+- rhino-forge-2001.2.3-build.10.jar  (1.71 MB)
+- rusticdelight-forge-1.20.1-1.6.1.jar  (0.54 MB)
+- saintsdragons-0.8.2_2Bforge-1.20.1-alpha.jar  (20.89 MB)
+- sculkhorde-1.20.1-0.12.6.jar  (14.82 MB)
+- SimpleStorageNetwork-1.20.1-1.13.2.jar  (0.49 MB)
+- simplyswords-forge-1.56.0-1.20.1.jar  (14.50 MB)
+- smallships-forge-1.20.1-2.0.0-b1.4.jar  (1.73 MB)
+- sodiumextras-forge-1.0.7-1.20.1.jar  (0.42 MB)
+- sodiumoptionsapi-forge-1.0.10-1.20.1.jar  (0.42 MB)
+- spark-1.10.53-forge.jar  (2.97 MB)
+- SpartanWeaponry-1.20.1-forge-3.2.1-all.jar  (2.70 MB)
+- sqlite-jdbc-3.41.2.1+20230506-all.jar  (12.26 MB)
+- supplementaries-1.20-3.1.43-forge.jar  (13.03 MB)
+- tacz-1.20.1-1.0.2-release.jar  (23.99 MB)
+- travelersbackpack-forge-1.20.1-9.1.56.jar  (1.35 MB)
+- twilightforest-1.20.1-4.3.2508-universal.jar  (22.25 MB)
+- VeggiesDelight-1.20.1-1.9.3.jar  (0.57 MB)
+- weather2-1.20.1-2.8.3.jar  (6.53 MB)
+- wind_spellbooks-1.20.1-1.0.0.jar  (0.46 MB)
+- witherstormmod-1.20.1-4.2.1-all.jar  (45.15 MB)
+- worldedit-mod-7.2.15.jar  (5.56 MB)
+- YungsApi-1.20-Forge-4.0.6.jar  (0.35 MB)
+- YungsBetterDesertTemples-1.20-Forge-3.0.3.jar  (0.88 MB)
+- YungsBetterDungeons-1.20-Forge-4.0.4.jar  (0.76 MB)
+- YungsBetterMineshafts-1.20-Forge-4.0.4.jar  (0.47 MB)
+- YungsBetterStrongholds-1.20-Forge-4.0.3.jar  (0.45 MB)
+

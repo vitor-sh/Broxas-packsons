@@ -1,92 +1,106 @@
-# BroxasSMP Updater — O que fazer agora
+# BroxasSMP — Guia rápido do repositório
 
-## ✅ Boa notícia: o upload ficou 10x menor
+Este repositório é o "servidor de arquivos" dos modpacks. Você mexe aqui, o robô
+do GitHub faz o resto, e o `.exe` da galera atualiza sozinho.
 
-O erro que você teve (`Commit failed — The file is too large`) é o limite de
-**25 MB por arquivo** do upload pelo navegador do GitHub.
+---
 
-Resolvi isso de um jeito melhor: usei os hashes SHA-1 que você já tinha gerado
-para consultar a **API do Modrinth** e descobrir o link oficial de cada mod.
-Resultado:
+## Os 2 modpacks
 
-| | Antes | Agora |
+| | Guerra Medieval | Magia e Tecnologia |
 |---|---|---|
-| Mods que você precisa enviar | 139 | **37** |
-| Tamanho do upload | 282,8 MB | **28,6 MB** |
-| Maior arquivo | 30,8 MB ❌ | **4,69 MB** ✅ |
-| Precisa criar Release? | Sim | **Não** |
+| Pasta | `packs/guerra/` | `packs/magia/` |
+| Mods | 139 | 163 |
+| Download | ~283 MB | ~598 MB |
+| RAM recomendada | 6 GB | **8 a 10 GB** |
 
-Os outros **102 mods são baixados direto do CDN oficial do Modrinth**. Isso
-também deixa o download mais rápido pra galera e resolve a questão de licença
-(não estamos re-hospedando esses mods).
+No launcher aparece um seletor **MODPACK** no topo. A pessoa escolhe, o app
+baixa só aquele pack, e lembra a escolha na próxima vez.
 
-Testei 5 links do Modrinth por HTTP: todos responderam **200** com o tamanho
-exato conferindo com o hash.
-
----
-
-## PASSO 1 — Subir os 37 mods
-
-1. Na página inicial do repositório, clique na pasta **mods**
-2. **Add file → Upload files**
-3. Arraste **apenas os 37 arquivos** listados no `LISTA_DE_MODS.md`
-   (seção *"VOCE PRECISA ENVIAR ESTES"*)
-4. **Commit changes**
-
-Agora cabe tudo de uma vez: 37 arquivos, 28,6 MB no total, nenhum acima de 25 MB.
-
-> **Dica pra achar os arquivos rápido:** abra a sua pasta de mods, ordene por
-> nome e vá selecionando com Ctrl+clique os 37 da lista. Ou copie os 37 pra uma
-> pasta separada primeiro e arraste tudo de lá.
-
-## PASSO 2 — Pegar o `.exe`
-
-1. Aba **Actions** → espere ficar ✅ verde (2 a 4 minutos)
-2. Página inicial → **Releases** → **BroxasSMP Updater**
-3. Baixe o **`BroxasSMP-Updater.exe`**
-
-**Pronto!** Manda o link do Releases no Discord. Ele é fixo: sempre aponta pra
-versão mais nova.
+> **Dá pra usar a mesma pasta pros dois?** Dá, mas não recomendo. Se trocar de
+> pack na mesma pasta, o app remove os mods do pack anterior e baixa os do novo
+> (leva tempo e gasta banda). Melhor cada pack na sua pasta.
+> Mods que **você** colocou na mão nunca são apagados.
 
 ---
 
-## Os 37 arquivos que faltam
+## Como adicionar ou remover um mod
 
-Estão todos no `LISTA_DE_MODS.md`. Os maiores:
+Tudo acontece **dentro da pasta do pack**, nunca na raiz.
 
-```
-4.69 MB  voicechat-forge-1.20.1-2.6.21.jar
-3.63 MB  naturalist-5.0pre5+forge-1.20.1.jar
-2.94 MB  Neruina-2.1.2-forge+1.20.1.jar
-2.49 MB  cfm-forge-1.20.1-7.0.0-pre36.jar
-2.49 MB  bettervillage-forge-1.20.1-3.3.1-all.jar
-```
-...e mais 32 arquivos, todos abaixo de 1,3 MB.
+### Mod de até 25 MB
+1. Entre em `packs/guerra/mods` (ou `packs/magia/mods`)
+2. **Add file → Upload files**, arraste o `.jar`
+3. **Commit changes**
+4. Espere o ✅ na aba **Actions** (2 a 4 minutos)
+
+Pronto. O botão da galera vira **ATUALIZAR** sozinho.
+
+### Remover um mod
+- Se o arquivo está em `packs/<pack>/mods/`: clique nele → ícone de lixeira → *Commit changes*
+- Se **não** está lá, ele vem por link: abra `packs/<pack>/mods_externos.json`,
+  apague o bloco `{ "name": ..., "url": ..., "sha1": ..., "size": ... }` do mod
+  e faça commit
+
+### Mod acima de 25 MB
+O navegador do GitHub não deixa. Me chame: eu procuro o link oficial (Modrinth
+ou CurseForge) e adiciono no `mods_externos.json` do pack. Aí você não precisa
+enviar arquivo nenhum.
+
+> ⚠️ **Dependências:** quase todo mod grande depende de outro (biblioteca). Se
+> adicionar um mod na mão e o jogo não abrir, provavelmente falta a dependência.
+> Me manda o nome que eu resolvo.
 
 ---
 
-## Depois: como atualizar o pack
+## Escrever notícias
 
-### Adicionar ou remover mod
-1. Entre na pasta **mods** do repositório
-2. Adicionar: *Add file → Upload files* e arraste
-3. Remover: clique no arquivo → ícone de lixeira → *Commit changes*
-4. Espere o ✅ na aba **Actions**
+Cada pack tem as suas. Edite `packs/guerra/noticias.txt` ou
+`packs/magia/noticias.txt` pelo lápis:
 
-Acabou. O botão da galera vira **ATUALIZAR** sozinho.
-
-> Se o mod novo passar de 25 MB, me chame: eu procuro o link oficial dele no
-> Modrinth e adiciono no `mods_externos.json`, aí você não precisa enviar o arquivo.
-
-### Escrever notícias
-Edite o **`noticias.txt`** pelo lápis:
 ```
 # Cerco neste sábado
 A janela é das 19h às 22h. Preparem os exércitos.
 ```
 
-### Mudar IP ou versão do Forge
-Edite o **`pack.json`**.
+Linha com `#` é o título, o resto é o texto. Aparece no painel direito do app.
+
+---
+
+## Mudar IP, versão do Forge ou nome do pack
+
+Edite `packs/<pack>/pack.json`:
+
+```json
+{
+  "nome": "Guerra Medieval",
+  "ip": "enx-cirion-23.enx.host:10018",
+  "minecraft": "1.20.1",
+  "forge": "47.4.20",
+  "descricao": "Clas, cercos e guerra medieval"
+}
+```
+
+O `launcher.json` da raiz guarda só o nome e o IP padrão do **aplicativo** (é o
+que vira o nome do `.exe`).
+
+---
+
+## Criar um terceiro pack
+
+1. Crie a pasta `packs/nome-do-pack/`
+2. Coloque dentro: `pack.json` (copie de outro e edite) e a pasta `mods/`
+3. Commit → o robô detecta sozinho e o pack aparece no seletor do launcher
+
+---
+
+## Pegar o `.exe`
+
+Página inicial → **Releases** → **BroxasSMP Updater** → baixe o
+`BroxasSMP-Updater.exe`.
+
+O link do Releases é fixo: sempre aponta pra versão mais nova. Manda ele no
+Discord uma vez e nunca mais precisa mexer.
 
 ---
 
@@ -94,30 +108,42 @@ Edite o **`pack.json`**.
 
 | Arquivo | Pra quê |
 |---|---|
+| `packs/<id>/mods/` | Os `.jar` que você envia (até 25 MB cada) |
+| `packs/<id>/mods_externos.json` | Mods baixados por link oficial (não ocupam espaço aqui) |
+| `packs/<id>/pack.json` | Nome, IP, Minecraft e Forge daquele pack |
+| `packs/<id>/noticias.txt` | Notícias daquele pack |
+| `packs/<id>/manifest.json` | **Gerado pelo robô.** Não edite |
+| `packs.json` | **Gerado pelo robô.** Índice que o launcher lê |
+| `launcher.json` | Nome e IP padrão do aplicativo |
 | `broxas_updater.py` | O aplicativo que a galera usa |
+| `interface.py` | Aparência do aplicativo |
 | `detector.py` | Acha as instalações de Minecraft do PC |
+| `launchers.py` | Acha o launcher instalado (TLauncher, CurseForge, oficial...) |
 | `forge_setup.py` | Instala o Forge automaticamente |
-| `gerar_manifest.py` | Monta a lista do pack |
-| `mods_externos.json` | Os 102 mods com link oficial do Modrinth |
-| `manifest.json` | A lista completa dos 139 mods |
-| `pack.json` | Nome do servidor, IP, versões |
-| `noticias.txt` | Notícias que aparecem no app |
-| `LISTA_DE_MODS.md` | Quais mods enviar e quais são automáticos |
-| `.github/workflows/publicar.yml` | O robô que compila o `.exe` |
+| `preparar_jogo.py` | Adiciona o servidor na lista e pré-seleciona o perfil |
+| `rede.py` | Downloads (com o conserto do erro de certificado) |
+| `gerar_packs.py` | Monta os `manifest.json` e o `packs.json` |
+| `verificar_manifest.py` | Testa se todo mod do pack baixa, antes de publicar |
+| `.github/workflows/publicar.yml` | O robô que faz tudo isso e compila o `.exe` |
 
 ---
 
 ## Se der erro
 
 **❌ vermelho na aba Actions**
-Clique no item pra ver a mensagem. Causa mais comum: a pasta `mods` está vazia.
+Clique no item pra ler a mensagem. Causas comuns:
+- `O pack 'x' nao tem nenhum mod` → a pasta `mods` do pack está vazia
+- `Falta o arquivo packs/x/pack.json` → criou a pasta mas esqueceu o `pack.json`
+- `mods que nao podem ser baixados` → um link do `mods_externos.json` morreu (o
+  autor apagou a versão). Nada é publicado nesse caso, então a galera continua
+  com a versão anterior funcionando. Me chame pra achar o link novo.
 
 **`Commit failed — file is too large`**
-Algum arquivo acima de 25 MB entrou no upload. Confira a lista do
-`LISTA_DE_MODS.md` — os 37 corretos são todos pequenos.
+Arquivo acima de 25 MB. Me manda o nome que eu coloco por link.
 
 **Um mod não baixa no updater**
-O nome do arquivo na pasta `mods` tem que ser **idêntico** ao do `manifest.json`.
+O nome do arquivo em `packs/<pack>/mods/` tem que ser **idêntico** ao que está
+no `manifest.json`. Renomeou o `.jar`? Suba de novo com o nome original.
 
 **Antivírus reclamou do `.exe`**
 Falso-positivo comum de programa feito com PyInstaller. Avise a galera.

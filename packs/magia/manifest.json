@@ -1,5 +1,8 @@
 {
-  "pack_version": "1.0.17",
+  "pack_id": "magia",
+  "pack_nome": "Magia e Tecnologia",
+  "pack_version": "2.0.0",
+  "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
   "forge": {
@@ -8,238 +11,196 @@
   },
   "noticias": [
     {
-      "titulo": "Bem-vindo a Valoria!",
-      "texto": "Leia a Constituicao de Valoria (o livro que vem no kit inicial) antes de sair batendo em todo mundo."
+      "titulo": "Modpack de Magia e Tecnologia",
+      "texto": "Mundo separado do pack de Guerra. Aqui e progressao: magia, maquinas, dimensoes e bosses."
     },
     {
-      "titulo": "Cerco marcado",
-      "texto": "A janela de cerco e das 19h as 22h. Fora desse horario, atacar base reivindicada e proibido."
+      "titulo": "Comece pelo basico",
+      "texto": "Iron's Spellbooks pra magia, Create pra maquinaria simples, Mekanism quando quiser escalar. Mystical Agriculture resolve a falta de recursos."
     },
     {
-      "titulo": "Cidade Neutra",
-      "texto": "Todo comercio entre clas acontece na Cidade Neutra de Mercado. Zona sem PvP, respeitem."
+      "titulo": "O objetivo final",
+      "texto": "Avaritia. Os crafts sao absurdos de proposito: e o endgame do servidor. Boa sorte."
     }
   ],
   "mods": [
     {
       "name": "Clumps-forge-1.20.1-12.0.0.4.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/Clumps-forge-1.20.1-12.0.0.4.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/Clumps-forge-1.20.1-12.0.0.4.jar",
       "sha1": "97cc669f68dbe812cb77cc3631339334fc28b877",
       "size": 20299
     },
     {
       "name": "Controlling-forge-1.20.1-12.0.2.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/Controlling-forge-1.20.1-12.0.2.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/Controlling-forge-1.20.1-12.0.2.jar",
       "sha1": "f6d3cdd3ec68c5590cf5b2e89c38dbf031824bfd",
       "size": 115280
     },
     {
       "name": "Cuffed-1.20.1-1.3.14.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/Cuffed-1.20.1-1.3.14.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/Cuffed-1.20.1-1.3.14.jar",
       "sha1": "680bea9fe7015a016d72720cc1ecca9dca97631c",
       "size": 874533
     },
     {
       "name": "FastLeafDecay-32.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/FastLeafDecay-32.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/FastLeafDecay-32.jar",
       "sha1": "4a76af4ca71dd9939d3c21206792c0d5f75b93a7",
       "size": 9835
     },
     {
       "name": "GlitchCore-forge-1.20.1-0.0.1.1.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/GlitchCore-forge-1.20.1-0.0.1.1.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/GlitchCore-forge-1.20.1-0.0.1.1.jar",
       "sha1": "1a0aaf7c33b9acb26bf75899a43e8941cac1f6e7",
       "size": 87550
     },
     {
-      "name": "HariShop-mc1.20.1-v1.1.3-hotfix.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/HariShop-mc1.20.1-v1.1.3-hotfix.jar",
-      "sha1": "c94bee53ef8f380eee1392ae6d217d28bba1919a",
-      "size": 993651
-    },
-    {
       "name": "Neruina-2.1.2-forge+1.20.1.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/Neruina-2.1.2-forge%2B1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/Neruina-2.1.2-forge%2B1.20.1.jar",
       "sha1": "a02a8ccd580ba3c37ba26ff19cf35b221ae2a073",
       "size": 3086403
     },
     {
       "name": "Searchables-forge-1.20.1-1.0.3.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/Searchables-forge-1.20.1-1.0.3.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/Searchables-forge-1.20.1-1.0.3.jar",
       "sha1": "ed5a23ec30c90fd06b3f1d8140614028e1fafaee",
       "size": 77732
     },
     {
       "name": "SereneSeasons-forge-1.20.1-9.1.0.3.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/SereneSeasons-forge-1.20.1-9.1.0.3.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/SereneSeasons-forge-1.20.1-9.1.0.3.jar",
       "sha1": "e553c2a50dc08d7b8b2aee6da1db0dc156fe961a",
       "size": 160885
     },
     {
       "name": "Structory_1.20.x_v1.3.5.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/Structory_1.20.x_v1.3.5.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/Structory_1.20.x_v1.3.5.jar",
       "sha1": "88c1d90ac79c98a50e3e4bd3a93c70431c716dd5",
       "size": 1286460
     },
     {
       "name": "TerraBlender-forge-1.20.1-3.0.1.10.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/TerraBlender-forge-1.20.1-3.0.1.10.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/TerraBlender-forge-1.20.1-3.0.1.10.jar",
       "sha1": "3bd99fb59e8b06b04e78b5153790c1e08b2be5dc",
       "size": 107532
     },
     {
-      "name": "ToughAsNails-forge-1.20.1-9.2.0.171.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/ToughAsNails-forge-1.20.1-9.2.0.171.jar",
-      "sha1": "e1caa4a2fb30965913aefe84fe55acffdaaab26e",
-      "size": 459479
-    },
-    {
       "name": "TreeChop-1.20.1-forge-0.19.0-fixed.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/TreeChop-1.20.1-forge-0.19.0-fixed.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/TreeChop-1.20.1-forge-0.19.0-fixed.jar",
       "sha1": "ac5a20b5a2fd9ed7d6e9a0c033f53307947e5f3f",
       "size": 517225
     },
     {
-      "name": "[1.20.1-forge]-Epic-Knights-Japanese-Armory-1.6.2.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/%5B1.20.1-forge%5D-Epic-Knights-Japanese-Armory-1.6.2.jar",
-      "sha1": "13b3cfef061bf313d1eddad832cdd77562309580",
-      "size": 343504
-    },
-    {
       "name": "balm-forge-1.20.1-7.3.41-all.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/balm-forge-1.20.1-7.3.41-all.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/balm-forge-1.20.1-7.3.41-all.jar",
       "sha1": "fde6edd5f3f2aa412a1ba5fccad20ea4348fdcf2",
       "size": 559741
     },
     {
       "name": "bettervillage-forge-1.20.1-3.3.1-all.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/bettervillage-forge-1.20.1-3.3.1-all.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/bettervillage-forge-1.20.1-3.3.1-all.jar",
       "sha1": "0c2f647cec98c3a4ca6d05b7a2f14962e66ad824",
       "size": 2612506
     },
     {
       "name": "camera-forge-1.20.1-1.0.20.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/camera-forge-1.20.1-1.0.20.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/camera-forge-1.20.1-1.0.20.jar",
       "sha1": "299cc4fa41a12a247cc73024259247574bfa5d0e",
       "size": 299726
     },
     {
       "name": "cfm-forge-1.20.1-7.0.0-pre36.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/cfm-forge-1.20.1-7.0.0-pre36.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/cfm-forge-1.20.1-7.0.0-pre36.jar",
       "sha1": "66d0ac56f3f6f1efbd6ed7b3cb4a48824d0585c0",
       "size": 2613393
     },
     {
-      "name": "corpse-forge-1.20.1-1.0.23.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/corpse-forge-1.20.1-1.0.23.jar",
-      "sha1": "843b16ca88bc5c390bb22a2a84437e6bffdd43dd",
-      "size": 245644
-    },
-    {
       "name": "cosmeticarmorreworked-1.20.1-v1a.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/cosmeticarmorreworked-1.20.1-v1a.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/cosmeticarmorreworked-1.20.1-v1a.jar",
       "sha1": "afd9fa3fe95e8c086e8d439df403ed1e5ea5cbea",
       "size": 88752
     },
     {
       "name": "deathland_economy-2.0.0-forge-1.20.1.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/deathland_economy-2.0.0-forge-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/deathland_economy-2.0.0-forge-1.20.1.jar",
       "sha1": "b76b40a3958e913f4dd48cb7c31edd4047024d17",
       "size": 268512
     },
     {
       "name": "framework-forge-1.20.1-0.8.0.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/framework-forge-1.20.1-0.8.0.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/framework-forge-1.20.1-0.8.0.jar",
       "sha1": "27347879f8760a7bc0b4bd71977abc50e498811c",
       "size": 383868
     },
     {
       "name": "ftb-library-forge-2001.2.13.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/ftb-library-forge-2001.2.13.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/ftb-library-forge-2001.2.13.jar",
       "sha1": "a5427d5ff07eb044144ed0b54308370d88bce17e",
       "size": 780558
     },
     {
-      "name": "ftb-ranks-forge-2001.1.7.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/ftb-ranks-forge-2001.1.7.jar",
-      "sha1": "1ef101b4c5991cc239d9b56a95500e3b404228f7",
-      "size": 87362
-    },
-    {
       "name": "gasmaskresistance-1.0.0.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/gasmaskresistance-1.0.0.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/gasmaskresistance-1.0.0.jar",
       "sha1": "18e592b288a1bc7157ab25fb29f6cf96305441bb",
       "size": 5173
     },
     {
       "name": "geckolib-forge-1.20.1-4.8.4.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/geckolib-forge-1.20.1-4.8.4.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/geckolib-forge-1.20.1-4.8.4.jar",
       "sha1": "81982cc287f80ffabb2fd36d22cc95e4255c739d",
       "size": 1038209
     },
     {
       "name": "goblintraders-forge-1.20.1-1.11.5.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/goblintraders-forge-1.20.1-1.11.5.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/goblintraders-forge-1.20.1-1.11.5.jar",
       "sha1": "12bf1775fae7132c4f10ce3f61122bc0a2f171d6",
       "size": 328727
     },
     {
       "name": "infernalmobs-1.20.1.10.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/infernalmobs-1.20.1.10.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/infernalmobs-1.20.1.10.jar",
       "sha1": "c92c41beb89b916726383c533a00a0608215aeb3",
       "size": 145817
     },
     {
       "name": "ironfurnaces-1.20.1-4.1.3.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/ironfurnaces-1.20.1-4.1.3.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/ironfurnaces-1.20.1-4.1.3.jar",
       "sha1": "6586a3ef18d3cd5afce4cae2ab29e3daf1bd05de",
       "size": 606244
     },
     {
       "name": "largemeals-1.20.1-1.3.0.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/largemeals-1.20.1-1.3.0.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/largemeals-1.20.1-1.3.0.jar",
       "sha1": "7662138788a75832a0c6bad6b13b006cac383496",
       "size": 77128
     },
     {
       "name": "naturalist-5.0pre5+forge-1.20.1.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/naturalist-5.0pre5%2Bforge-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/naturalist-5.0pre5%2Bforge-1.20.1.jar",
       "sha1": "bc2c527dd52a1e6a92a3e34db1a88742e8e7d596",
       "size": 3807415
     },
     {
       "name": "siegeweapons-1.20.1-0.2.5.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/siegeweapons-1.20.1-0.2.5.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/siegeweapons-1.20.1-0.2.5.jar",
       "sha1": "f4ae32159b78d6d5e9f1c11588107678cd1151bd",
       "size": 1040867
     },
     {
       "name": "solcarrot-1.20.1-1.15.1.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/solcarrot-1.20.1-1.15.1.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/solcarrot-1.20.1-1.15.1.jar",
       "sha1": "f7fa1fd0c633b10f98d7f0f97766b95aac1a2dc0",
       "size": 104185
     },
     {
-      "name": "tl_skin_cape_forge_1.20-1.38.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/tl_skin_cape_forge_1.20-1.38.jar",
-      "sha1": "a3f0483f5e7b4c4ed60174a07faf4c50dc113684",
-      "size": 1180127
-    },
-    {
-      "name": "vassalsuzerain-1.2.0.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/vassalsuzerain-1.2.0.jar",
-      "sha1": "620ce85cf710f3a9adebd76e79d67165c3f28128",
-      "size": 75335
-    },
-    {
       "name": "voicechat-forge-1.20.1-2.6.21.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/voicechat-forge-1.20.1-2.6.21.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/voicechat-forge-1.20.1-2.6.21.jar",
       "sha1": "77ae96b41c9328213659991c113a6e13c95724ba",
       "size": 4918879
     },
     {
       "name": "waystones-forge-1.20.1-14.1.20.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/mods/waystones-forge-1.20.1-14.1.20.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/waystones-forge-1.20.1-14.1.20.jar",
       "sha1": "cde06d0f1e9042fb2e0b536a4d2c5443d129dd51",
       "size": 533738
     },
@@ -250,16 +211,28 @@
       "size": 4769715
     },
     {
-      "name": "[forge]ctov-3.4.14.jar",
-      "url": "https://cdn.modrinth.com/data/fgmhI8kH/versions/o7mg6MeV/%5Bforge%5Dctov-3.4.14.jar",
-      "sha1": "8fa73fd4c5ae58636e159e54321651adf555ac44",
-      "size": 6772753
+      "name": "aaa_particles-forge-1.20.1-2.2.3.jar",
+      "url": "https://cdn.modrinth.com/data/En8uHTOK/versions/9cBh3Vh8/aaa_particles-forge-1.20.1-2.2.3.jar",
+      "sha1": "cc77d1217cb53644240b8778a9e40b977f8a29cb",
+      "size": 5253752
     },
     {
       "name": "amendments-1.20-2.2.5.jar",
       "url": "https://cdn.modrinth.com/data/6iTJugQR/versions/73W8UHX3/amendments-1.20-2.2.5.jar",
       "sha1": "5d5a1d7d2d2dd37c578fdea2495757baaa624092",
       "size": 1301022
+    },
+    {
+      "name": "Apotheosis-1.20.1-7.4.8.jar",
+      "url": "https://cdn.modrinth.com/data/rqFWfVlz/versions/tT3CLYvK/Apotheosis-1.20.1-7.4.8.jar",
+      "sha1": "e508c4724a24f0c80836818fcdd3df6424b1fc40",
+      "size": 2803994
+    },
+    {
+      "name": "ApothicAttributes-1.20.1-1.3.7.jar",
+      "url": "https://cdn.modrinth.com/data/DGaH8Rh0/versions/fwL9CWGd/ApothicAttributes-1.20.1-1.3.7.jar",
+      "sha1": "1dc0744d17f0861fe6b067798d39abce9d8e0e86",
+      "size": 227511
     },
     {
       "name": "appleskin-forge-mc1.20.1-2.5.1.jar",
@@ -280,16 +253,28 @@
       "size": 850974
     },
     {
-      "name": "astikorcartsredux-1.2.3.jar",
-      "url": "https://cdn.modrinth.com/data/mnLFouB0/versions/Cua8odGy/astikorcartsredux-1.2.3.jar",
-      "sha1": "62c693ee857ff6bd39e7582d02b57874ec0aa8ac",
-      "size": 530068
-    },
-    {
       "name": "AttributeFix-Forge-1.20.1-21.0.5.jar",
       "url": "https://cdn.modrinth.com/data/lOOpEntO/versions/ihWybkI9/AttributeFix-Forge-1.20.1-21.0.5.jar",
       "sha1": "76d6b2d0f2a3c9842587ad20666ba419cd8c1efa",
       "size": 19499
+    },
+    {
+      "name": "AvaritiaNeo-1.20.1-1.1.6.jar",
+      "url": "https://cdn.modrinth.com/data/j5gjLUvf/versions/4m1M3cpV/AvaritiaNeo-1.20.1-1.1.6.jar",
+      "sha1": "ea062dd93d7d17b896a4e860c2807bf1216184f8",
+      "size": 1020346
+    },
+    {
+      "name": "BiomesOPlenty-1.20.1-18.0.0.592.jar",
+      "url": "https://cdn.modrinth.com/data/HXF82T3G/versions/zAvWfIlG/BiomesOPlenty-1.20.1-18.0.0.592.jar",
+      "sha1": "15072eb39c35a3f845d4bb04690d4b7f1808a980",
+      "size": 21800460
+    },
+    {
+      "name": "BOMD-Forge-1.20.1-1.1.2.jar",
+      "url": "https://cdn.modrinth.com/data/hFUzfDsn/versions/2Kw4xPhp/BOMD-Forge-1.20.1-1.1.2.jar",
+      "sha1": "232eb28172423cde46e8e1f038c670a01471fa92",
+      "size": 1753623
     },
     {
       "name": "Bookshelf-Forge-1.20.1-20.2.15.jar",
@@ -298,10 +283,40 @@
       "size": 343925
     },
     {
+      "name": "born_in_chaos_[Forge]1.20.1_1.7.5.jar",
+      "url": "https://cdn.modrinth.com/data/1kcHy4de/versions/8wmEhUSt/born_in_chaos_%5BForge%5D1.20.1_1.7.5.jar",
+      "sha1": "4d616e1ccef4c55e14b04ca63228d826f4fdda5e",
+      "size": 11839865
+    },
+    {
+      "name": "Botania-1.20.1-454-FORGE.jar",
+      "url": "https://cdn.modrinth.com/data/pfjLUfGv/versions/Y3Gc88UV/Botania-1.20.1-454-FORGE.jar",
+      "sha1": "7e167de1c70738fd9f29a00556f1c5ebb1daf34d",
+      "size": 12211755
+    },
+    {
+      "name": "BrandonsCore-1.20.1-3.2.1.302-universal.jar",
+      "url": "https://cdn.modrinth.com/data/iFDWVIFV/versions/qFTHdrDH/BrandonsCore-1.20.1-3.2.1.302-universal.jar",
+      "sha1": "1378ba5f84267c18f945c52d787ac86e40d6c241",
+      "size": 1358270
+    },
+    {
       "name": "carryon-forge-1.20.1-2.1.2.7.jar",
       "url": "https://cdn.modrinth.com/data/joEfVgkn/versions/edGQD16r/carryon-forge-1.20.1-2.1.2.7.jar",
       "sha1": "9999714ca3dd2f2401f0396ca44f3b27c3784c4f",
       "size": 439457
+    },
+    {
+      "name": "cataclysm_spellbooks-1.2.9-1.20.1-all.jar",
+      "url": "https://cdn.modrinth.com/data/3FEg0A8D/versions/e7VE8bSy/cataclysm_spellbooks-1.2.9-1.20.1-all.jar",
+      "sha1": "57fbb161849fca19aa12632944b01ce12760c4c4",
+      "size": 1266452
+    },
+    {
+      "name": "CerbonsAPI-Forge-1.20.1-1.1.0.jar",
+      "url": "https://cdn.modrinth.com/data/GkIc6rRo/versions/XWZQbKsr/CerbonsAPI-Forge-1.20.1-1.1.0.jar",
+      "sha1": "83cccb66e679d72345a5194e4ca520f647bc97e6",
+      "size": 241148
     },
     {
       "name": "chatnotify-forge-2.6.9_2B1.20.1.jar",
@@ -314,6 +329,12 @@
       "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/t8TXrZvZ/cloth-config-11.1.136-forge.jar",
       "sha1": "c65d07748acc57ceb45d53b3964368b84f34d54f",
       "size": 1181413
+    },
+    {
+      "name": "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+      "url": "https://cdn.modrinth.com/data/2gq0ALnz/versions/5zfJEMhM/CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+      "sha1": "66c614b047414e3cfcd69ff7f001b7033c5813c6",
+      "size": 1473536
     },
     {
       "name": "comforts-forge-6.4.0+1.20.1.jar",
@@ -346,10 +367,28 @@
       "size": 9595
     },
     {
+      "name": "Cosmic_Horizons_0.0.7.3-forge-1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/Mv7E5lAP/versions/HhC4bL9S/Cosmic_Horizons_0.0.7.3-forge-1.20.1.jar",
+      "sha1": "74398b1a08d38baf2645c93bf0db50a93c9334d2",
+      "size": 28385967
+    },
+    {
+      "name": "create-1.20.1-6.0.8.jar",
+      "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/8amzvn9x/create-1.20.1-6.0.8.jar",
+      "sha1": "b13d912b9247a38d66d11598c121442585a1c1e9",
+      "size": 19170905
+    },
+    {
       "name": "cristellib-1.1.6-forge.jar",
       "url": "https://cdn.modrinth.com/data/cl223EMc/versions/DOsSK4NK/cristellib-1.1.6-forge.jar",
       "sha1": "524ecf0f93f28be2f5db21d87dd81bdbc1a450e1",
       "size": 431318
+    },
+    {
+      "name": "Cucumber-1.20.1-7.0.16.jar",
+      "url": "https://cdn.modrinth.com/data/Rw1NrDzF/versions/xnLznSfT/Cucumber-1.20.1-7.0.16.jar",
+      "sha1": "88a9ec30e4acb5c80a3ae060ad70b79e945293c6",
+      "size": 271462
     },
     {
       "name": "culturaldelights-0.16.7.jar",
@@ -382,6 +421,18 @@
       "size": 368483
     },
     {
+      "name": "dimdoors-5.4.4-1.20.1-forge.jar",
+      "url": "https://cdn.modrinth.com/data/b8Q0BxnV/versions/yU3KXKPV/dimdoors-5.4.4-1.20.1-forge.jar",
+      "sha1": "4bd4590c53bc7acecbaa8526698c6a3ab6223fbd",
+      "size": 17827316
+    },
+    {
+      "name": "Draconic-Evolution-1.20.1-3.1.2.621-universal.jar",
+      "url": "https://cdn.modrinth.com/data/nBqivi8H/versions/YR33MHbk/Draconic-Evolution-1.20.1-3.1.2.621-universal.jar",
+      "sha1": "8abd0ee849f9654ec91d3ecbd115e2c296f08c73",
+      "size": 5934411
+    },
+    {
       "name": "dungeons-and-taverns-3.0.3.f[Forge].jar",
       "url": "https://cdn.modrinth.com/data/tpehi7ww/versions/ojHpWOrz/dungeons-and-taverns-3.0.3.f.jar",
       "sha1": "3f324242f3daf4785a8b9338f228679418f4870a",
@@ -392,6 +443,12 @@
       "url": "https://cdn.modrinth.com/data/8DfbfASn/versions/wiCQJUDT/DungeonsArise-1.20.1-2.1.57-release.jar",
       "sha1": "1bc95d13cf8208c5cfe100a001d6b078d15742f7",
       "size": 8579488
+    },
+    {
+      "name": "elevatorid-1.20.1-1.9.1-forge.jar",
+      "url": "https://cdn.modrinth.com/data/hi2dSXTu/versions/nWSTr4AA/elevatorid-1.20.1-1.9.1-forge.jar",
+      "sha1": "9117fbb20ce0b3b9abd25e19b3d5987a53be30c9",
+      "size": 187868
     },
     {
       "name": "embeddium-0.3.31+mc1.20.1.jar",
@@ -418,28 +475,10 @@
       "size": 1629693
     },
     {
-      "name": "epic-knights-1.20.1-forge-10.11.jar",
-      "url": "https://cdn.modrinth.com/data/L6jvzao4/versions/2kK9qUpx/epic-knights-1.20.1-forge-10.11.jar",
-      "sha1": "b76f56523dcde7ae30f4a3c299b1d104348b92eb",
-      "size": 2913733
-    },
-    {
-      "name": "epic-knights-addon-1.20.x-forge-2.6.jar",
-      "url": "https://cdn.modrinth.com/data/txMuoRai/versions/xnYQSIH7/epic-knights-addon-1.20.x-forge-2.6.jar",
-      "sha1": "c5d284743d3d59a7ca4cdfdf42e4a01afb10e146",
-      "size": 2012821
-    },
-    {
-      "name": "epic-knights-antique-legacy-1.20.x-forge-1.13.jar",
-      "url": "https://cdn.modrinth.com/data/xODj7fc3/versions/4DhbZFhg/epic-knights-antique-legacy-1.20.x-forge-1.13.jar",
-      "sha1": "de812ad140b67bbace4ef7be33e035c7e1beca89",
-      "size": 5434731
-    },
-    {
-      "name": "epic-knights-slavic-armory-1.20.x-forge-2.1.jar",
-      "url": "https://cdn.modrinth.com/data/tdA8M9rp/versions/Q5VtlZ47/epic-knights-slavic-armory-1.20.x-forge-2.1.jar",
-      "sha1": "e54539d7eee96e5441db89ac580bcb4fc3ae534a",
-      "size": 1007892
+      "name": "Explorify v1.6.5.mod.jar",
+      "url": "https://cdn.modrinth.com/data/HSfsxuTo/versions/CuBdAr31/Explorify%20v1.6.5.mod.jar",
+      "sha1": "5fb28be29200a41b034e423d87823eb19ad651cd",
+      "size": 767884
     },
     {
       "name": "FarmersDelight-1.20.1-1.3.2.jar",
@@ -454,12 +493,6 @@
       "size": 123034
     },
     {
-      "name": "finite_water-1.20.1-1.0.0.jar",
-      "url": "https://cdn.modrinth.com/data/8fkJAnZL/versions/c0hCvDfy/finite_water-1.20.1-1.0.0.jar",
-      "sha1": "9e694575f5328c9e2661a927f6a3df79b92fc74e",
-      "size": 6695
-    },
-    {
       "name": "flib-1.20.1-0.0.16.jar",
       "url": "https://cdn.modrinth.com/data/FAUSd09K/versions/CDihtEoy/flib-1.20.1-0.0.16.jar",
       "sha1": "3f1b66947cf152c88b4f104ac2ad45865d583b97",
@@ -472,16 +505,22 @@
       "size": 997501
     },
     {
+      "name": "fossil-forge-1.20.1-9.3.4.0.jar",
+      "url": "https://cdn.modrinth.com/data/IJY7IqPP/versions/ChiOT0xS/fossil-forge-1.20.1-9.3.4.0.jar",
+      "sha1": "4703df8bb0ef567350a865d94b902f5e3cbb12c5",
+      "size": 29642542
+    },
+    {
+      "name": "gravestone-forge-1.20.1-1.0.35.jar",
+      "url": "https://cdn.modrinth.com/data/RYtXKJPr/versions/q9kZE5Xo/gravestone-forge-1.20.1-1.0.35.jar",
+      "sha1": "9ec9da5da2a5884b6abff5f74a763a4f3e54fa38",
+      "size": 317181
+    },
+    {
       "name": "handcrafted-forge-1.20.1-3.0.6.jar",
       "url": "https://cdn.modrinth.com/data/pJmCFF0p/versions/N7wZwOFy/handcrafted-forge-1.20.1-3.0.6.jar",
       "sha1": "f1b9a009529134c736c59d6d192d53a4a25e5e5f",
       "size": 7111059
-    },
-    {
-      "name": "heralds_luna-2.5-forge-1.20.1.jar",
-      "url": "https://cdn.modrinth.com/data/9pJWWmNb/versions/Hikbo7gp/heralds_luna-2.5-forge-1.20.1.jar",
-      "sha1": "0c87084e6a467996f4653c3de613327c9b9b0eed",
-      "size": 32255503
     },
     {
       "name": "immersive_aircraft-1.4.1+1.20.1-forge.jar",
@@ -496,10 +535,40 @@
       "size": 2269048
     },
     {
+      "name": "infinity-2.7.2+1.20.1-forge.jar",
+      "url": "https://cdn.modrinth.com/data/KgKqTqPj/versions/63Tk8JI6/infinity-2.7.2%2B1.20.1-forge.jar",
+      "sha1": "9e88519f8a9beaf2e2b6795525cc6ee85fcc075b",
+      "size": 10462291
+    },
+    {
+      "name": "inventorypets-1.20.1-2.2.8.jar",
+      "url": "https://cdn.modrinth.com/data/hrbIt8wl/versions/1UnFxYFm/inventorypets-1.20.1-2.2.8.jar",
+      "sha1": "504c1aaa1cb2f60ef184b63646be2e93b1eab798",
+      "size": 7902641
+    },
+    {
       "name": "ironchest-1.20.1-14.4.4.jar",
       "url": "https://cdn.modrinth.com/data/P3iIrPH3/versions/YjbOtYwN/ironchest-1.20.1-14.4.4.jar",
       "sha1": "4b2dd0f581e40f8bd6f6e63b2d84c06dfde2c4eb",
       "size": 311290
+    },
+    {
+      "name": "irons_spellbooks-1.20.1-3.16.2.jar",
+      "url": "https://cdn.modrinth.com/data/s4OWxYQQ/versions/9v34JOKI/irons_spellbooks-1.20.1-3.16.2.jar",
+      "sha1": "d7ade8902fe7cf6d82a17dab13071f0eaac8d8b9",
+      "size": 15554022
+    },
+    {
+      "name": "irons_spellbooks_emc-0.1.0+forge-1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/u2PyIpPY/versions/FyAJY4zH/irons_spellbooks_emc-0.1.0%2Bforge-1.20.1.jar",
+      "sha1": "7295f346f6ba80ea6d2b2277412f4049d52cd6ea",
+      "size": 47478
+    },
+    {
+      "name": "irons_spells_dynamic_skilltree_1.1.0.jar",
+      "url": "https://cdn.modrinth.com/data/cdEXZLO4/versions/j2XQWLuk/irons_spells_dynamic_skilltree_1.1.0.jar",
+      "sha1": "de961262e4328fea6861f6ba94323037df2d44ab",
+      "size": 254720
     },
     {
       "name": "Item-Obliterator-NeoForge-MC1.20.1-2.3.1.jar",
@@ -520,6 +589,12 @@
       "size": 1385600
     },
     {
+      "name": "journeymap-1.20.1-5.10.3-forge.jar",
+      "url": "https://cdn.modrinth.com/data/lfHFW1mp/versions/r7FWVNCs/journeymap-1.20.1-5.10.3-forge.jar",
+      "sha1": "fdd97a782bdc6d0e28a851a9715abb190df47aa6",
+      "size": 7160406
+    },
+    {
       "name": "Kambrik-6.1.1+1.20.1-forge.jar",
       "url": "https://cdn.modrinth.com/data/zfbCkvdZ/versions/er56DwLJ/Kambrik-6.1.1%2B1.20.1-forge.jar",
       "sha1": "48cdc22a0f6698c9059f437538e5546f74900541",
@@ -538,6 +613,12 @@
       "size": 1658792
     },
     {
+      "name": "L_Enders_Cataclysm-3.31.jar",
+      "url": "https://cdn.modrinth.com/data/46KJle7n/versions/C3H0azzB/L_Enders_Cataclysm-3.31.jar",
+      "sha1": "4f1165cb39521292e826b471b4808bb89f0f4f3f",
+      "size": 73916104
+    },
+    {
       "name": "Lazr_s Lib-1.20-1.1.1.jar",
       "url": "https://cdn.modrinth.com/data/hOqZCnXu/versions/vyEgTAmT/Lazr%27s%20Lib-1.20-1.1.1.jar",
       "sha1": "2be2715b4ed23d943533e5bff0929ac6ba271759",
@@ -548,6 +629,12 @@
       "url": "https://cdn.modrinth.com/data/DOB2l4oJ/versions/E1ahHWwg/libraryferret-forge-1.20.1-4.0.0.jar",
       "sha1": "29f240c16ff1a1bc574d69162d379cc1c881e1ab",
       "size": 190536
+    },
+    {
+      "name": "lionfishapi-3.0.jar",
+      "url": "https://cdn.modrinth.com/data/FoVacERa/versions/CPftDBcY/lionfishapi-3.0.jar",
+      "sha1": "79d0404f87fa066480b18c844c1e0b1c5f5475f9",
+      "size": 101931
     },
     {
       "name": "lithostitched-forge-1.20.1-1.4.11.jar",
@@ -574,10 +661,22 @@
       "size": 1982881
     },
     {
+      "name": "Mekanism-1.20.1-10.4.16.80.jar",
+      "url": "https://cdn.modrinth.com/data/Ce6I4WUE/versions/uxe1WQp4/Mekanism-1.20.1-10.4.16.80.jar",
+      "sha1": "b7f12ae710888b01746507a0aa8cb375f5897158",
+      "size": 12558456
+    },
+    {
       "name": "miners_delight-1.20.1-1.4.5-backport.jar",
       "url": "https://cdn.modrinth.com/data/qMxbM4BQ/versions/p0INUam7/miners_delight-1.20.1-1.4.5-backport.jar",
       "sha1": "638438679800711939e7a8029ae3d5340f8c17bd",
       "size": 548776
+    },
+    {
+      "name": "mixin-booster-0.1.3+1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/bxn6Iwdo/versions/rOaAYvPZ/mixin-booster-0.1.3%2B1.20.1.jar",
+      "sha1": "101cbc74611f0fbde2d332c4385fcc33fce0b8ac",
+      "size": 1312078
     },
     {
       "name": "modernfix-forge-5.27.66_2Bmc1.20.1.jar",
@@ -604,16 +703,34 @@
       "size": 1005091
     },
     {
+      "name": "morehitboxes-forge-1.20.1-1.9.2.jar",
+      "url": "https://cdn.modrinth.com/data/BOVAW87Z/versions/dPJQUPu9/morehitboxes-forge-1.20.1-1.9.2.jar",
+      "sha1": "4faa402e86c444cf205deac816a501f06a9ecefb",
+      "size": 294405
+    },
+    {
+      "name": "MoreSwordsLegacy-Forge-1.20.1-2.0.6.jar",
+      "url": "https://cdn.modrinth.com/data/LZgCXXym/versions/Oex68tPa/MoreSwordsLegacy-Forge-1.20.1-2.0.6.jar",
+      "sha1": "205f5737514aa59ff45848caaa15b9953d21def9",
+      "size": 161176
+    },
+    {
       "name": "MouseTweaks-forge-mc1.20.1-2.25.1.jar",
       "url": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/7JVXOe3K/MouseTweaks-forge-mc1.20.1-2.25.1.jar",
       "sha1": "d751153e722a4e014691c83f39f5b07c6ec5333c",
       "size": 76237
     },
     {
-      "name": "musketmod-1.20.1-forge-1.5.4.jar",
-      "url": "https://cdn.modrinth.com/data/967vM4zw/versions/TMhHD4WK/musketmod-1.20.1-forge-1.5.4.jar",
-      "sha1": "44ed6aa820e86e9802ad917d4eddda5877982e5a",
-      "size": 448661
+      "name": "MysticalAgradditions-1.20.1-7.0.12.jar",
+      "url": "https://cdn.modrinth.com/data/pl0jGXIx/versions/48qKWNA7/MysticalAgradditions-1.20.1-7.0.12.jar",
+      "sha1": "b4fcc78796a6e1f637523298cf7b3fe7f1dd3ed9",
+      "size": 335056
+    },
+    {
+      "name": "MysticalAgriculture-1.20.1-7.0.24.jar",
+      "url": "https://cdn.modrinth.com/data/C95ReXie/versions/EEilTecF/MysticalAgriculture-1.20.1-7.0.24.jar",
+      "sha1": "e8839d207456a47ed6a576469901a087319b505f",
+      "size": 2372822
     },
     {
       "name": "NaturesCompass-1.20.1-1.12.0-forge.jar",
@@ -658,6 +775,24 @@
       "size": 2851119
     },
     {
+      "name": "Patchouli-1.20.1-85-FORGE.jar",
+      "url": "https://cdn.modrinth.com/data/nU0bVIaL/versions/94dtOLgZ/Patchouli-1.20.1-85-FORGE.jar",
+      "sha1": "d4614507d6e4c7cb464bba5eca891978272062ef",
+      "size": 642732
+    },
+    {
+      "name": "PatPat-1.2.4+1.20.1+forge.jar",
+      "url": "https://cdn.modrinth.com/data/dw7LChq9/versions/EOhXkjmC/PatPat-1.2.4%2B1.20.1%2Bforge.jar",
+      "sha1": "5940c0da71c1d17d9b2a5263a4e696a9b7456c7e",
+      "size": 1379702
+    },
+    {
+      "name": "Placebo-1.20.1-8.6.3.jar",
+      "url": "https://cdn.modrinth.com/data/tCkE8p2N/versions/6SkuAGoz/Placebo-1.20.1-8.6.3.jar",
+      "sha1": "e85f53de2e582a79ce25ff1df1e7b5b5fc08440f",
+      "size": 282474
+    },
+    {
       "name": "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
       "url": "https://cdn.modrinth.com/data/gedNE4y2/versions/xe2EVE6q/player-animation-lib-forge-1.0.2-rc1%2B1.20.jar",
       "sha1": "16808f94a41d45d8e986b4e4ea6b02ba57fa058a",
@@ -670,6 +805,24 @@
       "size": 299601
     },
     {
+      "name": "productivebees-1.20.1-12.6.0.jar",
+      "url": "https://cdn.modrinth.com/data/jH6iiqkd/versions/mywVOObd/productivebees-1.20.1-12.6.0.jar",
+      "sha1": "253f16ac0ed2222be5fcd06703d57e890881fd4d",
+      "size": 4956306
+    },
+    {
+      "name": "ProjectE-1.20.1-PE1.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4901/949/ProjectE-1.20.1-PE1.0.1.jar",
+      "sha1": "affd130b8a77e60dd7d7f7f3621d0182d82d13e1",
+      "size": 2257347
+    },
+    {
+      "name": "projectexpansion-1.20.1-1.1.3.jar",
+      "url": "https://cdn.modrinth.com/data/a7yNQPzW/versions/ldFKkUfe/projectexpansion-1.20.1-1.1.3.jar",
+      "sha1": "408a2c2cd2c8d8a595d3c8182a61bfdf8001ba00",
+      "size": 1049533
+    },
+    {
       "name": "PuzzlesLib-v8.1.33-1.20.1-Forge.jar",
       "url": "https://cdn.modrinth.com/data/QAGBst4M/versions/mIyVGf3d/PuzzlesLib-v8.1.33-1.20.1-Forge.jar",
       "sha1": "285b7c7616971338ccbe0022c9ea0f8ad3036aaf",
@@ -680,12 +833,6 @@
       "url": "https://cdn.modrinth.com/data/tu54PMAb/versions/7nBJQPCM/realmrpg_skeletons-1.1.0-forge-1.20.1.jar",
       "sha1": "b3e2385a5df9a24b12089b76f97a9e9337956255",
       "size": 652022
-    },
-    {
-      "name": "recruits-1.20.1-1.15.2.jar",
-      "url": "https://cdn.modrinth.com/data/WOg9lm4u/versions/2zXpVxK4/recruits-1.20.1-1.15.2.jar",
-      "sha1": "8d2ed3f0ab18c67a1d9394526bcae47b3ec162ab",
-      "size": 2811101
     },
     {
       "name": "relics-1.20.1-0.8.0.13.jar",
@@ -716,6 +863,12 @@
       "url": "https://cdn.modrinth.com/data/rjcsjwEU/versions/ELuYfNOb/saintsdragons-0.8.2%2Bforge-1.20.1-alpha.jar",
       "sha1": "bf93d2c5be8380bd30ed7791b4d9f1a5a04125b2",
       "size": 21907921
+    },
+    {
+      "name": "sculkhorde-1.20.1-0.12.6.jar",
+      "url": "https://cdn.modrinth.com/data/tBbdvEJc/versions/OP66572A/sculkhorde-1.20.1-0.12.6.jar",
+      "sha1": "2580d65f7540093b2c524941b6d663b8c4018218",
+      "size": 15540808
     },
     {
       "name": "SimpleStorageNetwork-1.20.1-1.13.2.jar",
@@ -766,12 +919,6 @@
       "size": 12855867
     },
     {
-      "name": "Structory_Towers_1.20.x_v1.0.7.jar",
-      "url": "https://cdn.modrinth.com/data/j3FONRYr/versions/fTl6NfPL/Structory_Towers_1.20.x_v1.0.7.jar",
-      "sha1": "fa147459b82e1c0a774c19b598a55a9ca0d7b0ef",
-      "size": 526234
-    },
-    {
       "name": "supplementaries-1.20-3.1.43-forge.jar",
       "url": "https://cdn.modrinth.com/data/fFEIiSDQ/versions/S0TIJ1hU/supplementaries-1.20-3.1.43-forge.jar",
       "sha1": "326d65a29981de28016e3828370d68a8f63e1798",
@@ -784,16 +931,16 @@
       "size": 25153131
     },
     {
-      "name": "Towns-and-Towers-1.12-Fabric+Forge.jar",
-      "url": "https://cdn.modrinth.com/data/DjLobEOy/versions/7ZwnSrVW/Towns-and-Towers-1.12-Fabric%2BForge.jar",
-      "sha1": "5a28ec56457cf1bf154e993cf73dba0428a7921b",
-      "size": 2864275
-    },
-    {
       "name": "travelersbackpack-forge-1.20.1-9.1.56.jar",
       "url": "https://cdn.modrinth.com/data/rlloIFEV/versions/YU3VeLg8/travelersbackpack-forge-1.20.1-9.1.56.jar",
       "sha1": "31a852198b6e692744f59bd03d714bd673235c91",
       "size": 1413418
+    },
+    {
+      "name": "twilightforest-1.20.1-4.3.2508-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5468/648/twilightforest-1.20.1-4.3.2508-universal.jar",
+      "sha1": "fa3b506a45d3e9c465551cd533fd50c899496e9f",
+      "size": 23332091
     },
     {
       "name": "VeggiesDelight-1.20.1-1.9.3.jar",
@@ -802,22 +949,22 @@
       "size": 598808
     },
     {
-      "name": "weaponmaster_ydm-forge-1.20.1-4.2.3.jar",
-      "url": "https://cdn.modrinth.com/data/qi1sj2da/versions/D7JWWIQX/weaponmaster_ydm-forge-1.20.1-4.2.3.jar",
-      "sha1": "9fe819dc110461f55909dabbed73e4fe3bdde158",
-      "size": 283977
-    },
-    {
       "name": "weather2-1.20.1-2.8.3.jar",
       "url": "https://cdn.modrinth.com/data/dv5SFk5T/versions/ZKVtwI5D/weather2-1.20.1-2.8.3.jar",
       "sha1": "4ec7a372945874dd734a20fa61574f08d2b6763a",
       "size": 6852245
     },
     {
-      "name": "workers-1.20.1-2.0.3.jar",
-      "url": "https://cdn.modrinth.com/data/Pqlv7VM3/versions/49csRXJc/workers-1.20.1-2.0.3.jar",
-      "sha1": "1f68527132995485145433b07cd459fb4b602d06",
-      "size": 1316715
+      "name": "wind_spellbooks-1.20.1-1.0.0.jar",
+      "url": "https://cdn.modrinth.com/data/nTApwmMc/versions/Rnn55z6s/wind_spellbooks-1.20.1-1.0.0.jar",
+      "sha1": "a219c1d13056784add75491e524ff747015d399f",
+      "size": 482113
+    },
+    {
+      "name": "witherstormmod-1.20.1-4.2.1-all.jar",
+      "url": "https://cdn.modrinth.com/data/kWjNGDUH/versions/nY68hRY1/witherstormmod-1.20.1-4.2.1-all.jar",
+      "sha1": "bd32ea3f44812b6b1744739633ea25d32197f4b8",
+      "size": 47342265
     },
     {
       "name": "worldedit-mod-7.2.15.jar",
