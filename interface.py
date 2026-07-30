@@ -348,6 +348,10 @@ class Cabecalho(tk.Canvas):
         self.bind("<Configure>", lambda e: self._desenhar())
         self._animar()
 
+    def definir_subtitulo(self, texto):
+        self.subtitulo = texto
+        self._desenhar()
+
     def _animar(self):
         self._brilho += 0.012 * self._direcao
         if self._brilho >= 1:

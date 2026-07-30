@@ -36,14 +36,19 @@ import interface as UI
 #                     "server_ip": "..."}
 # =====================================================================
 
-MANIFEST_URL = "https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPO/main/manifest.json"
+PACKS_URL = "https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPO/main/packs.json"
+MANIFEST_URL = ""          # usado apenas quando nao ha packs.json
 SERVER_NAME = "BroxasSMP"
 SERVER_IP = "enx-cirion-23.enx.host:10018"
 
 # O GitHub gera o arquivo configuracao.py na hora de compilar, com os valores
 # certos. Se ele existir, os valores acima sao substituidos.
 try:
-    from configuracao import MANIFEST_URL, SERVER_NAME, SERVER_IP  # noqa: F811
+    from configuracao import PACKS_URL, SERVER_NAME, SERVER_IP  # noqa: F811
+except Exception:
+    pass
+try:
+    from configuracao import MANIFEST_URL  # noqa: F811
 except Exception:
     pass
 
@@ -72,10 +77,11 @@ def save_json(path: Path, data):
 
 def load_external_config():
     """Permite trocar a URL sem recompilar o .exe."""
-    global MANIFEST_URL, SERVER_NAME, SERVER_IP
+    global MANIFEST_URL, PACKS_URL, SERVER_NAME, SERVER_IP
     base = Path(sys.executable).parent if getattr(sys, "frozen", False) else Path(__file__).parent
     cfg = load_json(base / "updater_config.json", None)
     if isinstance(cfg, dict):
+        PACKS_URL = cfg.get("packs_url", PACKS_URL)
         MANIFEST_URL = cfg.get("manifest_url", MANIFEST_URL)
         SERVER_NAME = cfg.get("server_name", SERVER_NAME)
         SERVER_IP = cfg.get("server_ip", SERVER_IP)
@@ -93,14 +99,51 @@ def folder_key(folder) -> str:
     return os.path.normcase(os.path.normpath(str(folder)))
 
 
-def get_folder_state(state: dict, folder) -> dict:
+def get_folder_state(state: dict, folder, pack_id="unico") -> dict:
+    """
+    O historico e guardado por pack E por pasta, para o app saber a versao
+    instalada de cada modpack separadamente.
+    """
+    chave = f"{pack_id}@{folder_key(folder)}"
     return state.setdefault("folders", {}).setdefault(
-        folder_key(folder), {"managed": [], "pack_version": None}
+        chave, {"managed": [], "pack_version": None}
     )
+
+
+def mods_de_qualquer_pack(state: dict, folder) -> set:
+    """
+    Todos os mods que o app ja instalou nesta pasta, de QUALQUER modpack.
+
+    Serve para trocar de modpack usando a mesma pasta: os mods que sobraram do
+    outro pack precisam sair, senao o jogo quebra por conflito. Mods que a
+    pessoa colocou na mao nunca entram nessa lista, entao nunca sao apagados.
+    """
+    fim = "@" + folder_key(folder)
+    nomes = set()
+    for chave, dados in (state.get("folders") or {}).items():
+        if chave.endswith(fim):
+            nomes.update(dados.get("managed") or [])
+    return nomes
 
 
 def fetch_manifest(url: str) -> dict:
     return json.loads(rede.ler_texto(url, tempo=30))
+
+
+def fetch_packs() -> list:
+    """
+    Le o indice de modpacks. Devolve uma lista de dicionarios.
+    Se o servidor ainda usar um manifest unico, devolve um pack so.
+    """
+    if PACKS_URL and "SEU_USUARIO" not in PACKS_URL:
+        dados = json.loads(rede.ler_texto(PACKS_URL, tempo=30))
+        packs = dados.get("packs") or []
+        if packs:
+            return packs
+    if MANIFEST_URL:
+        return [{"id": "unico", "nome": SERVER_NAME, "descricao": "",
+                 "ip": SERVER_IP, "manifest": MANIFEST_URL}]
+    raise RuntimeError("nenhum modpack configurado")
 
 
 def download(url: str, dest: Path, sha1=None, log=None):
@@ -114,7 +157,14 @@ def download(url: str, dest: Path, sha1=None, log=None):
 # Sincronizacao de mods
 # ---------------------------------------------------------------------
 
-def plan_sync(manifest: dict, game_dir: Path, folder_state: dict):
+def plan_sync(manifest: dict, game_dir: Path, folder_state: dict, ja_instalados=None):
+    """
+    Compara o que esta na pasta com o que o modpack pede.
+
+    'ja_instalados' e a lista de mods que o app colocou nessa pasta por
+    QUALQUER modpack. Passando isso, trocar de modpack na mesma pasta limpa o
+    que sobrou do pack anterior.
+    """
     mods_dir = game_dir / "mods"
     entries = manifest.get("mods", [])
     to_download, ok_count = [], 0
@@ -127,6 +177,8 @@ def plan_sync(manifest: dict, game_dir: Path, folder_state: dict):
         to_download.append(entry)
     wanted = {e["name"] for e in entries}
     managed = set(folder_state.get("managed", []))
+    if ja_instalados:
+        managed |= set(ja_instalados)
     to_remove = [n for n in sorted(managed) if n not in wanted and (mods_dir / n).exists()]
     return to_download, to_remove, ok_count
 
@@ -141,7 +193,9 @@ def do_sync(manifest, game_dir: Path, state, folder_state, log, set_progress):
     result = SyncResult()
     mods_dir = game_dir / "mods"
     mods_dir.mkdir(parents=True, exist_ok=True)
-    to_download, to_remove, ok_count = plan_sync(manifest, game_dir, folder_state)
+    de_outros_packs = mods_de_qualquer_pack(state, game_dir)
+    to_download, to_remove, ok_count = plan_sync(manifest, game_dir, folder_state,
+                                                de_outros_packs)
     result.kept = ok_count
     total, step = len(to_download) + len(to_remove), 0
 
@@ -173,6 +227,17 @@ def do_sync(manifest, game_dir: Path, state, folder_state, log, set_progress):
     presentes = {e["name"] for e in manifest.get("mods", []) if (mods_dir / e["name"]).exists()}
     folder_state["managed"] = sorted(presentes)
     folder_state["pack_version"] = manifest.get("pack_version", "?")
+
+    # Tira do historico dos OUTROS packs os arquivos que acabaram de sair da
+    # pasta, para o historico nao ficar cheio de nomes que nao existem mais.
+    apagados = set(result.removed)
+    if apagados:
+        fim = "@" + folder_key(game_dir)
+        for chave, dados in (state.get("folders") or {}).items():
+            if chave.endswith(fim) and dados is not folder_state:
+                restantes = [n for n in (dados.get("managed") or []) if n not in apagados]
+                dados["managed"] = restantes
+
     save_json(STATE_FILE, state)
     return result
 
@@ -198,6 +263,9 @@ class App(tk.Tk):
         self.forge_needed = False
         self.label_to_path = {}
         self.rotulo_para_launcher = {}
+        self.packs = []
+        self.pack_atual = None
+        self.rotulo_para_pack = {}
         self._pontinhos = 0
         self._log_aberto = False
 
@@ -211,7 +279,8 @@ class App(tk.Tk):
     # Montagem da tela
     # =================================================================
     def _build_ui(self):
-        UI.Cabecalho(self, SERVER_NAME, f"IP   {SERVER_IP}").pack(fill="x")
+        self.cabecalho = UI.Cabecalho(self, SERVER_NAME, f"IP   {SERVER_IP}")
+        self.cabecalho.pack(fill="x")
 
         # O rodape entra ANTES do conteudo: com o pack, quem tem expand=True
         # ocupa todo o espaco restante e empurraria o botao para fora da tela.
@@ -232,14 +301,32 @@ class App(tk.Tk):
         direita.pack(side="right", fill="y", padx=(16, 0))
         direita.pack_propagate(False)
 
+        self._montar_seletor_pack(esquerda)
         self._montar_configuracao(esquerda)
         self._montar_estado(esquerda)
         self._montar_log(esquerda)
         self._montar_noticias(direita)
 
+    def _montar_seletor_pack(self, pai):
+        cartao = UI.Cartao(pai, titulo="MODPACK")
+        cartao.pack(fill="x")
+        interno = tk.Frame(cartao, bg=UI.FUNDO_CARTAO)
+        interno.pack(fill="x", padx=14, pady=(10, 13))
+
+        self.pack_var = tk.StringVar(value="Carregando modpacks")
+        self.pack_box = ttk.Combobox(interno, textvariable=self.pack_var,
+                                     state="readonly", style="Broxas.TCombobox")
+        self.pack_box.pack(fill="x")
+        self.pack_box.bind("<<ComboboxSelected>>", lambda e: self.on_pack_change())
+
+        self.pack_info = tk.StringVar(value="")
+        tk.Label(interno, textvariable=self.pack_info, bg=UI.FUNDO_CARTAO,
+                 fg=UI.TEXTO_FRACO, font=(UI.FONTE, 8), anchor="w",
+                 justify="left", wraplength=470).pack(fill="x", pady=(6, 0))
+
     def _montar_configuracao(self, pai):
         cartao = UI.Cartao(pai, titulo="ONDE VOCE JOGA")
-        cartao.pack(fill="x")
+        cartao.pack(fill="x", pady=(12, 0))
 
         interno = tk.Frame(cartao, bg=UI.FUNDO_CARTAO)
         interno.pack(fill="x", padx=14, pady=(10, 13))
@@ -627,7 +714,21 @@ class App(tk.Tk):
 
         def trabalho():
             try:
-                manifest = fetch_manifest(MANIFEST_URL)
+                if not self.packs:
+                    self.packs = fetch_packs()
+                    self.log(f"{len(self.packs)} modpack(s) disponivel(is)")
+                    # A escolha e feita AQUI, nao no _aplicar_packs. O
+                    # _aplicar_packs so mexe na tela e roda depois, na thread
+                    # da interface; se a escolha dependesse dele, o app baixaria
+                    # sempre o primeiro pack da lista em vez do que a pessoa
+                    # escolheu na ultima vez.
+                    if self.pack_atual is None:
+                        self.pack_atual = self._escolher_pack(self.packs)
+                    self._no_principal(self._aplicar_packs, self.packs)
+                escolhido = self.pack_atual or self.packs[0]
+                self.pack_atual = escolhido
+                self.log(f"Modpack: {escolhido.get('nome', escolhido.get('id'))}")
+                manifest = fetch_manifest(escolhido["manifest"])
             except Exception as exc:
                 self._no_principal(self._verificacao_falhou, exc)
                 return
@@ -648,6 +749,76 @@ class App(tk.Tk):
             self._no_principal(self._aplicar_launchers, encontrados)
 
         threading.Thread(target=trabalho, daemon=True).start()
+
+    def _escolher_pack(self, packs):
+        """
+        Decide qual modpack usar: o que a pessoa escolheu na ultima vez, ou o
+        primeiro da lista. Nao mexe na tela, por isso pode ser chamado de
+        qualquer thread.
+        """
+        salvo = self.settings.get("pack_id")
+        if salvo:
+            for p in packs:
+                if p.get("id") == salvo:
+                    return p
+        return packs[0]
+
+    def _aplicar_packs(self, packs):
+        """Coloca a lista de modpacks na tela. So mexe na interface."""
+        self.rotulo_para_pack = {}
+        rotulos = []
+        for p in packs:
+            rotulo = f"{p.get('nome', p.get('id'))}   ({p.get('mods','?')} mods)"
+            self.rotulo_para_pack[rotulo] = p
+            rotulos.append(rotulo)
+        self.pack_box["values"] = rotulos
+
+        if self.pack_atual is None and packs:
+            self.pack_atual = self._escolher_pack(packs)
+
+        alvo = (self.pack_atual or {}).get("id")
+        for rotulo, p in self.rotulo_para_pack.items():
+            if p.get("id") == alvo:
+                self.pack_var.set(rotulo)
+                break
+        self._mostrar_info_pack()
+
+    def _mostrar_info_pack(self):
+        p = self.pack_atual or {}
+        try:
+            self.cabecalho.definir_subtitulo(f"{self.pack_nome()}   |   IP {self.pack_ip()}")
+        except Exception:
+            pass
+        partes = []
+        if p.get("descricao"):
+            partes.append(p["descricao"])
+        if p.get("ip"):
+            partes.append(f"servidor {p['ip']}")
+        if p.get("loader"):
+            partes.append(p["loader"])
+        self.pack_info.set("  |  ".join(partes))
+
+    def pack_id(self):
+        return (self.pack_atual or {}).get("id") or "unico"
+
+    def pack_ip(self):
+        return (self.pack_atual or {}).get("ip") or SERVER_IP
+
+    def pack_nome(self):
+        return (self.pack_atual or {}).get("nome") or SERVER_NAME
+
+    def on_pack_change(self):
+        novo = self.rotulo_para_pack.get(self.pack_var.get())
+        if not novo or novo is self.pack_atual:
+            return
+        self.pack_atual = novo
+        self.settings["pack_id"] = novo.get("id")
+        save_json(SETTINGS_FILE, self.settings)
+        self._mostrar_info_pack()
+        self.log(f"Trocando para o modpack: {novo.get('nome')}")
+        self.manifest = None
+        self.set_status("Carregando o modpack")
+        self.check_updates()
 
     def _verificacao_falhou(self, exc):
         self.set_status("Nao consegui verificar atualizacoes")
@@ -672,7 +843,7 @@ class App(tk.Tk):
             self.set_mode("error")
             return
 
-        fstate = get_folder_state(self.state_data, folder)
+        fstate = get_folder_state(self.state_data, folder, self.pack_id())
         nivel, msgs = analyze_folder(folder, self.manifest, fstate)
         if nivel == "perigo":
             self.warn_lbl.configure(fg=UI.VERMELHO_CLARO)
@@ -693,7 +864,8 @@ class App(tk.Tk):
                 self.log(f"Forge {mc}-{fv} nao encontrado, sera instalado", "aviso")
 
         try:
-            to_dl, to_rm, ok = plan_sync(self.manifest, Path(folder), fstate)
+            de_outros = mods_de_qualquer_pack(self.state_data, folder)
+            to_dl, to_rm, ok = plan_sync(self.manifest, Path(folder), fstate, de_outros)
         except Exception as exc:
             self.set_status("Erro ao comparar arquivos")
             self.log(f"ERRO: {exc}", "erro")
@@ -767,7 +939,7 @@ class App(tk.Tk):
                     self.barra.carregando(False)
 
                 self.set_status("Sincronizando os mods")
-                fstate = get_folder_state(self.state_data, folder)
+                fstate = get_folder_state(self.state_data, folder, self.pack_id())
                 self.log(f"Sincronizando em {folder}")
                 res = do_sync(self.manifest, Path(folder), self.state_data, fstate,
                               self.log, self.set_progress)
@@ -804,7 +976,8 @@ class App(tk.Tk):
         mc, fv, _ = parse_forge_info(self.manifest or {})
         try:
             return preparar_jogo.preparar(pasta, mc or "1.20.1", fv or "",
-                                          SERVER_NAME, SERVER_IP, log=self.log)
+                                          self.pack_nome(), self.pack_ip(),
+                                          log=self.log)
         except Exception as exc:
             self.log(f"  (nao consegui preparar o jogo: {exc})", "erro")
             return []
@@ -836,8 +1009,8 @@ class App(tk.Tk):
                 f"Launcher aberto!\n\n"
                 f"O perfil {loader} ({mc}) ja esta selecionado: basta apertar "
                 f"em Play.\n\n"
-                f"Dentro do jogo, va em Multijogador: o {SERVER_NAME} ja esta "
-                f"na lista.\n\n"
+                f"Dentro do jogo, va em Multijogador: o {self.pack_nome()} ja "
+                f"esta na lista.\n\n"
                 + (f"O que foi preparado:\n{resumo}" if resumo else ""))
         except Exception as exc:
             messagebox.showerror("Erro", f"Nao consegui abrir o launcher:\n{exc}")
