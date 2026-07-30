@@ -1,6 +1,6 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.0. Nao edite na mao.
+Gerado automaticamente na versao 2.0.18. Nao edite na mao.
 
 ## Guerra Medieval  (`packs/guerra/`)
 
