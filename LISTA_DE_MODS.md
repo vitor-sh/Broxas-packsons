@@ -1,6 +1,6 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.19. Nao edite na mao.
+Gerado automaticamente na versao 2.0.20. Nao edite na mao.
 
 ## Guerra Medieval  (`packs/guerra/`)
 
@@ -157,13 +157,14 @@ Ficam em `packs/guerra/mods_externos.json`. Nao ocupam espaco no repositorio.
 
 ## Magia e Tecnologia  (`packs/magia/`)
 
-165 mods | 602 MB | Forge 47.4.20
+168 mods | 603 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (32)
+### Guardados aqui no repositorio (35)
 
 Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 
 - armorplus-1.20.1-20.2.2.jar  (2.47 MB)
+- azurelib-neo-1.20.1-3.1.12.jar  (1.02 MB)
 - balm-forge-1.20.1-7.3.41-all.jar  (0.53 MB)
 - bettervillage-forge-1.20.1-3.3.1-all.jar  (2.49 MB)
 - camera-forge-1.20.1-1.0.20.jar  (0.29 MB)
@@ -183,6 +184,7 @@ Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 - grand-teleport-forge-1.20.1-forge-build300.jar  (1.10 MB)
 - infernalmobs-1.20.1.10.jar  (0.14 MB)
 - ironfurnaces-1.20.1-4.1.3.jar  (0.58 MB)
+- irons_lib-1.20.1-2.1.0.jar  (0.41 MB)
 - largemeals-1.20.1-1.3.0.jar  (0.07 MB)
 - naturalist-5.0pre5+forge-1.20.1.jar  (3.63 MB)
 - Neruina-2.1.2-forge+1.20.1.jar  (2.94 MB)
@@ -192,6 +194,7 @@ Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 - solcarrot-1.20.1-1.15.1.jar  (0.10 MB)
 - Structory_1.20.x_v1.3.5.jar  (1.23 MB)
 - TerraBlender-forge-1.20.1-3.0.1.10.jar  (0.10 MB)
+- thedragonlib-1.20.1-1.0.0.jar  (0.04 MB)
 - TreeChop-1.20.1-forge-0.19.0-fixed.jar  (0.49 MB)
 - voicechat-forge-1.20.1-2.6.21.jar  (4.69 MB)
 - waystones-forge-1.20.1-14.1.20.jar  (0.51 MB)

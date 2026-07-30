@@ -1,7 +1,7 @@
 {
   "pack_id": "magia",
   "pack_nome": "Magia e Tecnologia",
-  "pack_version": "2.0.19",
+  "pack_version": "2.0.20",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -97,6 +97,12 @@
       "size": 2586379
     },
     {
+      "name": "azurelib-neo-1.20.1-3.1.12.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/azurelib-neo-1.20.1-3.1.12.jar",
+      "sha1": "fa0dae4aae39ae046b52d6fe5e650e2b1e3012ee",
+      "size": 1066523
+    },
+    {
       "name": "balm-forge-1.20.1-7.3.41-all.jar",
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/balm-forge-1.20.1-7.3.41-all.jar",
       "sha1": "fde6edd5f3f2aa412a1ba5fccad20ea4348fdcf2",
@@ -181,6 +187,12 @@
       "size": 606244
     },
     {
+      "name": "irons_lib-1.20.1-2.1.0.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/irons_lib-1.20.1-2.1.0.jar",
+      "sha1": "c2fa494d679ac912f8fb52ed6f832c1f3817401c",
+      "size": 428969
+    },
+    {
       "name": "largemeals-1.20.1-1.3.0.jar",
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/largemeals-1.20.1-1.3.0.jar",
       "sha1": "7662138788a75832a0c6bad6b13b006cac383496",
@@ -203,6 +215,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/solcarrot-1.20.1-1.15.1.jar",
       "sha1": "f7fa1fd0c633b10f98d7f0f97766b95aac1a2dc0",
       "size": 104185
+    },
+    {
+      "name": "thedragonlib-1.20.1-1.0.0.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/thedragonlib-1.20.1-1.0.0.jar",
+      "sha1": "9c748379a133f6a40618643216facc63ef425578",
+      "size": 38506
     },
     {
       "name": "voicechat-forge-1.20.1-2.6.21.jar",
