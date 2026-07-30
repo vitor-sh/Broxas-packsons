@@ -1,6 +1,6 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.20. Nao edite na mao.
+Gerado automaticamente na versao 2.0.21. Nao edite na mao.
 
 ## Guerra Medieval  (`packs/guerra/`)
 
@@ -157,7 +157,7 @@ Ficam em `packs/guerra/mods_externos.json`. Nao ocupam espaco no repositorio.
 
 ## Magia e Tecnologia  (`packs/magia/`)
 
-168 mods | 603 MB | Forge 47.4.20
+167 mods | 602 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (35)
 
@@ -199,7 +199,7 @@ Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 - voicechat-forge-1.20.1-2.6.21.jar  (4.69 MB)
 - waystones-forge-1.20.1-14.1.20.jar  (0.51 MB)
 
-### Baixados por link oficial (133)
+### Baixados por link oficial (132)
 
 Ficam em `packs/magia/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -220,7 +220,6 @@ Ficam em `packs/magia/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Botania-1.20.1-454-FORGE.jar  (11.65 MB)
 - BrandonsCore-1.20.1-3.2.1.302-universal.jar  (1.30 MB)
 - carryon-forge-1.20.1-2.1.2.7.jar  (0.42 MB)
-- cataclysm_spellbooks-1.2.9-1.20.1-all.jar  (1.21 MB)
 - CerbonsAPI-Forge-1.20.1-1.1.0.jar  (0.23 MB)
 - chatnotify-forge-2.6.9_2B1.20.1.jar  (0.97 MB)
 - cloth-config-11.1.136-forge.jar  (1.13 MB)

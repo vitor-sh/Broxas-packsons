@@ -1,7 +1,7 @@
 {
   "pack_id": "magia",
   "pack_nome": "Magia e Tecnologia",
-  "pack_version": "2.0.20",
+  "pack_version": "2.0.21",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -335,12 +335,6 @@
       "url": "https://cdn.modrinth.com/data/joEfVgkn/versions/edGQD16r/carryon-forge-1.20.1-2.1.2.7.jar",
       "sha1": "9999714ca3dd2f2401f0396ca44f3b27c3784c4f",
       "size": 439457
-    },
-    {
-      "name": "cataclysm_spellbooks-1.2.9-1.20.1-all.jar",
-      "url": "https://cdn.modrinth.com/data/3FEg0A8D/versions/e7VE8bSy/cataclysm_spellbooks-1.2.9-1.20.1-all.jar",
-      "sha1": "57fbb161849fca19aa12632944b01ce12760c4c4",
-      "size": 1266452
     },
     {
       "name": "CerbonsAPI-Forge-1.20.1-1.1.0.jar",
