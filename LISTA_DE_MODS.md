@@ -1,6 +1,6 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.23. Nao edite na mao.
+Gerado automaticamente na versao 2.0.24. Nao edite na mao.
 
 ## Guerra Medieval  (`packs/guerra/`)
 
@@ -157,9 +157,9 @@ Ficam em `packs/guerra/mods_externos.json`. Nao ocupam espaco no repositorio.
 
 ## Magia e Tecnologia  (`packs/magia/`)
 
-167 mods | 593 MB | Forge 47.4.20
+169 mods | 608 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (36)
+### Guardados aqui no repositorio (38)
 
 Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -197,8 +197,10 @@ Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 - TerraBlender-forge-1.20.1-3.0.1.10.jar  (0.10 MB)
 - thedragonlib-1.20.1-1.0.0.jar  (0.04 MB)
 - TreeChop-1.20.1-forge-0.19.0-fixed.jar  (0.49 MB)
+- Vampirism-1.20.1-1.10.16.jar  (12.39 MB)
 - voicechat-forge-1.20.1-2.6.21.jar  (4.69 MB)
 - waystones-forge-1.20.1-14.1.20.jar  (0.51 MB)
+- Werewolves-1.20.1-2.0.2.7.jar  (2.20 MB)
 
 ### Baixados por link oficial (131)
 
