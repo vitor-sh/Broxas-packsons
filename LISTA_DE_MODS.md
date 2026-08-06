@@ -1,6 +1,6 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.25. Nao edite na mao.
+Gerado automaticamente na versao 2.0.26. Nao edite na mao.
 
 ## Guerra Medieval  (`packs/guerra/`)
 
@@ -157,9 +157,9 @@ Ficam em `packs/guerra/mods_externos.json`. Nao ocupam espaco no repositorio.
 
 ## Magia e Tecnologia  (`packs/magia/`)
 
-168 mods | 593 MB | Forge 47.4.20
+167 mods | 592 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (38)
+### Guardados aqui no repositorio (37)
 
 Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -182,7 +182,6 @@ Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 - geckolib-forge-1.20.1-4.8.4.jar  (0.99 MB)
 - GlitchCore-forge-1.20.1-0.0.1.1.jar  (0.08 MB)
 - goblintraders-forge-1.20.1-1.11.5.jar  (0.31 MB)
-- grand-teleport-forge-1.20.1-forge-build300.jar  (1.10 MB)
 - infernalmobs-1.20.1.10.jar  (0.14 MB)
 - ironfurnaces-1.20.1-4.1.3.jar  (0.58 MB)
 - irons_lib-1.20.1-2.1.0.jar  (0.41 MB)

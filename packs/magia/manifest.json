@@ -1,7 +1,7 @@
 {
   "pack_id": "magia",
   "pack_nome": "Magia e Tecnologia",
-  "pack_version": "2.0.25",
+  "pack_version": "2.0.26",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -185,12 +185,6 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/goblintraders-forge-1.20.1-1.11.5.jar",
       "sha1": "12bf1775fae7132c4f10ce3f61122bc0a2f171d6",
       "size": 328727
-    },
-    {
-      "name": "grand-teleport-forge-1.20.1-forge-build300.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/grand-teleport-forge-1.20.1-forge-build300.jar",
-      "sha1": "d72ac817bba002c830b8aa413a9ec8065c28eed3",
-      "size": 1157845
     },
     {
       "name": "infernalmobs-1.20.1.10.jar",
