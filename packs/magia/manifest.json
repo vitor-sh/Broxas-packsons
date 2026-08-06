@@ -1,7 +1,7 @@
 {
   "pack_id": "magia",
   "pack_nome": "Magia e Tecnologia",
-  "pack_version": "2.0.24",
+  "pack_version": "2.0.25",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -899,12 +899,6 @@
       "url": "https://cdn.modrinth.com/data/rjcsjwEU/versions/ELuYfNOb/saintsdragons-0.8.2%2Bforge-1.20.1-alpha.jar",
       "sha1": "bf93d2c5be8380bd30ed7791b4d9f1a5a04125b2",
       "size": 21907921
-    },
-    {
-      "name": "sculkhorde-1.20.1-0.12.6.jar",
-      "url": "https://cdn.modrinth.com/data/tBbdvEJc/versions/OP66572A/sculkhorde-1.20.1-0.12.6.jar",
-      "sha1": "2580d65f7540093b2c524941b6d663b8c4018218",
-      "size": 15540808
     },
     {
       "name": "SimpleStorageNetwork-1.20.1-1.13.2.jar",
