@@ -1,7 +1,7 @@
 {
   "pack_id": "magia",
   "pack_nome": "Magia e Tecnologia",
-  "pack_version": "2.0.26",
+  "pack_version": "2.0.27",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -155,6 +155,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/deathland_economy-2.0.0-forge-1.20.1.jar",
       "sha1": "b76b40a3958e913f4dd48cb7c31edd4047024d17",
       "size": 268512
+    },
+    {
+      "name": "emily-0.2.0.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/magia/mods/emily-0.2.0.jar",
+      "sha1": "f1a9d9d50155cfe706ad8e859a0554fa55389ae3",
+      "size": 28630
     },
     {
       "name": "framework-forge-1.20.1-0.8.0.jar",

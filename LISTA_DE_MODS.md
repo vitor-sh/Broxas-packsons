@@ -1,6 +1,6 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.26. Nao edite na mao.
+Gerado automaticamente na versao 2.0.27. Nao edite na mao.
 
 ## Guerra Medieval  (`packs/guerra/`)
 
@@ -157,9 +157,9 @@ Ficam em `packs/guerra/mods_externos.json`. Nao ocupam espaco no repositorio.
 
 ## Magia e Tecnologia  (`packs/magia/`)
 
-167 mods | 592 MB | Forge 47.4.20
+168 mods | 592 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (37)
+### Guardados aqui no repositorio (38)
 
 Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -175,6 +175,7 @@ Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 - Cuffed-1.20.1-1.3.14.jar  (0.83 MB)
 - deathland_economy-2.0.0-forge-1.20.1.jar  (0.26 MB)
 - Dimensional Doors-3.2.3.jar  (8.03 MB)
+- emily-0.2.0.jar  (0.03 MB)
 - FastLeafDecay-32.jar  (0.01 MB)
 - framework-forge-1.20.1-0.8.0.jar  (0.37 MB)
 - ftb-library-forge-2001.2.13.jar  (0.74 MB)

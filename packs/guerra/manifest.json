@@ -1,7 +1,7 @@
 {
   "pack_id": "guerra",
   "pack_nome": "Guerra Medieval",
-  "pack_version": "2.0.26",
+  "pack_version": "2.0.27",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
