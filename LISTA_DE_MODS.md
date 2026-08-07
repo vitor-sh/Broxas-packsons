@@ -1,12 +1,106 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.29. Nao edite na mao.
+Gerado automaticamente na versao 2.0.31. Nao edite na mao.
+
+## broxasRPG  (`packs/broxasrpg/`)
+
+80 mods | 176 MB | Forge 47.4.20
+
+### Guardados aqui no repositorio (16)
+
+Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
+
+- balm-forge-1.20.1-7.3.38-all.jar  (0.56 MB)
+- bloodbits-2.1.3-forge-1.20.1.jar  (1.33 MB)
+- cleanview-1.20.1-v1.jar  (0.01 MB)
+- configured-forge-1.20.1-2.2.3.jar  (0.40 MB)
+- Controlling-forge-1.20.1-12.0.2.jar  (0.11 MB)
+- ftb-library-forge-2001.2.12.jar  (0.74 MB)
+- ftb-quests-forge-2001.4.22.jar  (1.20 MB)
+- ftb-teams-forge-2001.3.2.jar  (0.24 MB)
+- legendarytabs-1.20.1-1.1.3.1.jar  (0.07 MB)
+- lootr_liason-1.2.jar  (0.04 MB)
+- Searchables-forge-1.20.1-1.0.3.jar  (0.07 MB)
+- ssrcamerafixes-1.2.4.jar  (0.04 MB)
+- StylishEffects-v8.0.3-1.20.1-Forge.jar  (0.12 MB)
+- superior_quests-forge-1201-0.1.1.jar  (0.15 MB)
+- tabular-0.6.jar  (0.10 MB)
+- trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
+
+### Baixados por link oficial (64)
+
+Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
+
+- AdvancedLootInfo-forge-1.20.1-1.12.0.jar  (0.63 MB)
+- appleskin-forge-mc1.20.1-2.5.1.jar  (0.05 MB)
+- architectury-9.2.14-forge.jar  (0.55 MB)
+- armorpointspp-forge-1.20-3.1.1.jar  (0.18 MB)
+- AttributeFix-Forge-1.20.1-21.0.5.jar  (0.02 MB)
+- battlemusic-1.20.1-1.1.1.jar  (108.27 MB)
+- bc_particle-0.0.6-forge-1.20.1.jar  (0.14 MB)
+- biomebeats-forge-1.20.1-2.1.jar  (4.89 MB)
+- BlockRunner-v8.0.4-1.20.1-Forge.jar  (0.07 MB)
+- Bookshelf-Forge-1.20.1-20.2.15.jar  (0.33 MB)
+- certain_questing_additions-forge-1.1.7%2Bmc1.20.1.jar  (1.09 MB)
+- chunksfadein-forge-3.0.22-1.20.jar  (0.57 MB)
+- cinematiccataclysm-1.0.0-1.20.1.jar  (0.67 MB)
+- clean_tooltips-1.0-forge-1.20.1.jar  (0.03 MB)
+- cloth-config-11.1.136-forge.jar  (1.13 MB)
+- connectiblechains-forge-1.20.1-1.2.3.jar  (0.30 MB)
+- crafting-on-a-stick-1.20.1-1.1.5.jar  (0.05 MB)
+- defaultoptions-forge-1.20.1-18.0.4.jar  (0.09 MB)
+- EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar  (0.06 MB)
+- EquipmentCompare-1.20.1-forge-1.3.7.jar  (0.03 MB)
+- ExtremeSoundMuffler-3.51-forge-1.20.1.jar  (0.26 MB)
+- EZActions-forge-1.20.1-2.0.1.6.jar  (0.49 MB)
+- fancymenu_forge_3.8.1_MC_1.20.1.jar  (4.27 MB)
+- fdlib-1.0.9-1.20.1.jar  (1.57 MB)
+- fwa%2B1.20.1-forge-1.2.31.jar  (0.37 MB)
+- fzzy_config-0.7.6+1.20.1+forge.jar  (2.26 MB)
+- guitween-3.3.7-1.20.1%2Bforge.jar  (0.13 MB)
+- Iceberg-1.20.1-forge-1.1.25.jar  (0.13 MB)
+- immersivelanterns-forge-1.0.6-1.20.1.jar  (0.35 MB)
+- ImmersiveUI-FORGE-0.3.0.jar  (0.38 MB)
+- ItemBorders-1.20.1-forge-1.2.2.jar  (0.02 MB)
+- Jade-1.20.1-Forge-11.13.2.jar  (0.53 MB)
+- JadeAddons-1.20.1-Forge-5.5.0.jar  (0.09 MB)
+- konkrete_forge_1.8.0_MC_1.20-1.20.1.jar  (0.60 MB)
+- kotlinforforge-4.12.0-all.jar  (7.10 MB)
+- lootr-forge-1.20-0.7.35.94.jar  (0.44 MB)
+- MaxHealthFix-Forge-1.20.1-12.0.4.jar  (0.01 MB)
+- melody_forge_1.0.3_MC_1.20.1-1.20.4.jar  (0.04 MB)
+- ModifierKeyFix-1.1.0.jar  (0.00 MB)
+- more_sounds-1.20.1-0.3.1-beta-forge.jar  (0.59 MB)
+- MouseTweaks-forge-mc1.20.1-2.25.1.jar  (0.07 MB)
+- MRU-1.0.4+1.20.1+forge.jar  (0.27 MB)
+- NaturesCompass-1.20.1-1.12.0-forge.jar  (0.22 MB)
+- notenoughcrashes-4.4.9+1.20.1-forge.jar  (0.13 MB)
+- OctoLib-FORGE-0.5.0.1+1.20.1.jar  (0.40 MB)
+- OneWardenForEachAncientCity-1.20-1.20.1-1.0.jar  (0.13 MB)
+- Placebo-1.20.1-8.6.3.jar  (0.27 MB)
+- Prism-1.20.1-forge-1.0.5.jar  (0.05 MB)
+- PuzzlesLib-v8.1.33-1.20.1-Forge.jar  (1.28 MB)
+- ShoulderSurfing-Forge-1.20.1-4.22.10.jar  (0.26 MB)
+- sodiumdynamiclights-forge-1.0.10-1.20.1.jar  (0.49 MB)
+- Sounds-2.2.1+1.20.1+forge.jar  (10.47 MB)
+- spiffyhud_forge_3.1.0_MC_1.20.1.jar  (0.79 MB)
+- spiffyxgnetum-1.0.jar  (0.01 MB)
+- Stellar View-1.20.1-0.5.2-Forge.jar  (0.55 MB)
+- ToastControl-1.20.1-8.0.3.jar  (0.03 MB)
+- tooltipoverhaul-forge-1.20.1-1.4.3.jar  (0.44 MB)
+- TravelersTitles-1.20-Forge-4.0.2.jar  (0.22 MB)
+- txnilib-forge-1.0.24-1.20.1.jar  (3.57 MB)
+- VisualWorkbench-v8.0.1-1.20.1-Forge.jar  (0.08 MB)
+- xaerominimap-forge-1.20.1-25.3.13.jar  (2.05 MB)
+- XaeroPlus-2.31.5+forge-1.20.1-WM1.40.16-MM25.3.13.jar  (8.15 MB)
+- xaeroworldmap-forge-1.20.1-1.40.16.jar  (1.33 MB)
+- YungsApi-1.20-Forge-4.0.6.jar  (0.35 MB)
 
 ## Guerra Medieval  (`packs/guerra/`)
 
-139 mods | 283 MB | Forge 47.4.20
+140 mods | 283 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (37)
+### Guardados aqui no repositorio (38)
 
 Ficam em `packs/guerra/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -21,6 +115,7 @@ Ficam em `packs/guerra/mods/`. Da para adicionar e remover pelo site do GitHub.
 - cosmeticarmorreworked-1.20.1-v1a.jar  (0.08 MB)
 - Cuffed-1.20.1-1.3.14.jar  (0.83 MB)
 - deathland_economy-2.0.0-forge-1.20.1.jar  (0.26 MB)
+- emily-0.5.0.jar  (0.09 MB)
 - FastLeafDecay-32.jar  (0.01 MB)
 - framework-forge-1.20.1-0.8.0.jar  (0.37 MB)
 - ftb-library-forge-2001.2.13.jar  (0.74 MB)
@@ -175,7 +270,7 @@ Ficam em `packs/magia/mods/`. Da para adicionar e remover pelo site do GitHub.
 - Cuffed-1.20.1-1.3.14.jar  (0.83 MB)
 - deathland_economy-2.0.0-forge-1.20.1.jar  (0.26 MB)
 - Dimensional Doors-3.2.3.jar  (8.03 MB)
-- emily-0.3.0.jar  (0.04 MB)
+- emily-0.5.0.jar  (0.09 MB)
 - FastLeafDecay-32.jar  (0.01 MB)
 - framework-forge-1.20.1-0.8.0.jar  (0.37 MB)
 - ftb-library-forge-2001.2.13.jar  (0.74 MB)
