@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.31",
+  "pack_version": "2.0.32",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -495,6 +495,54 @@
       "url": "https://cdn.modrinth.com/data/ordsPcFz/versions/Zsh14XeQ/kotlinforforge-4.12.0-all.jar",
       "sha1": "962fdb760409d6d71cbf079235f1ca94e3863a22",
       "size": 7442998
+    },
+    {
+      "name": "embeddium-0.3.31+mc1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/sk9rgfiA/versions/UTbfe5d1/embeddium-0.3.31%2Bmc1.20.1.jar",
+      "sha1": "bb2fa8f3e493af16af9160d049f96c614a1faf2f",
+      "size": 1320675
+    },
+    {
+      "name": "ferritecore-6.0.1-forge.jar",
+      "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/DG5Fn9Sz/ferritecore-6.0.1-forge.jar",
+      "sha1": "417fb6ce8f52abf40bd9d0390371790f9576f8ba",
+      "size": 123034
+    },
+    {
+      "name": "modernfix-forge-5.27.66+mc1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/ZxDvSMHV/modernfix-forge-5.27.66%2Bmc1.20.1.jar",
+      "sha1": "322fdb7aadc06b540cff69a2a0a513bf37050f0f",
+      "size": 1002234
+    },
+    {
+      "name": "Clumps-forge-1.20.1-12.0.0.4.jar",
+      "url": "https://cdn.modrinth.com/data/Wnxd13zP/versions/nAHGB5ls/Clumps-forge-1.20.1-12.0.0.4.jar",
+      "sha1": "8809c7aa6c71389e9c59abfe5def52c1cb8d4f1c",
+      "size": 20300
+    },
+    {
+      "name": "Icterine-forge-1.20.0-1-1.3.0.jar",
+      "url": "https://cdn.modrinth.com/data/7RvRWn6p/versions/81fZ7ynE/Icterine-forge-1.20.0-1-1.3.0.jar",
+      "sha1": "55fde23d7602924ba4772d441fb5a78d562be238",
+      "size": 38848
+    },
+    {
+      "name": "gnetum-2.5.0+1.20.1-forge.jar",
+      "url": "https://cdn.modrinth.com/data/7MoE34WK/versions/p5JeCmwz/gnetum-2.5.0%2B1.20.1-forge.jar",
+      "sha1": "bbee09bbcf6500497eead39c585046a737c1866e",
+      "size": 732296
+    },
+    {
+      "name": "PartiCull-forge-1.20.x-v2.0.jar",
+      "url": "https://cdn.modrinth.com/data/lXsuozds/versions/iXuC8Ura/PartiCull-forge-1.20.x-v2.0.jar",
+      "sha1": "4c461e486f99d6508c04dcd5b937e0b68136e030",
+      "size": 36049
+    },
+    {
+      "name": "particle_core-0.3.3+1.20.1+forge.jar",
+      "url": "https://cdn.modrinth.com/data/RSeLon5O/versions/cFafZfyr/particle_core-0.3.3%2B1.20.1%2Bforge.jar",
+      "sha1": "1da5744853d17979033d5ee3cd4251b8340ea7be",
+      "size": 773448
     }
   ]
 }

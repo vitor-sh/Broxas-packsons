@@ -1,10 +1,10 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.31. Nao edite na mao.
+Gerado automaticamente na versao 2.0.32. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-80 mods | 176 MB | Forge 47.4.20
+88 mods | 180 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (16)
 
@@ -27,7 +27,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - tabular-0.6.jar  (0.10 MB)
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 
-### Baixados por link oficial (64)
+### Baixados por link oficial (72)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -46,19 +46,24 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - cinematiccataclysm-1.0.0-1.20.1.jar  (0.67 MB)
 - clean_tooltips-1.0-forge-1.20.1.jar  (0.03 MB)
 - cloth-config-11.1.136-forge.jar  (1.13 MB)
+- Clumps-forge-1.20.1-12.0.0.4.jar  (0.02 MB)
 - connectiblechains-forge-1.20.1-1.2.3.jar  (0.30 MB)
 - crafting-on-a-stick-1.20.1-1.1.5.jar  (0.05 MB)
 - defaultoptions-forge-1.20.1-18.0.4.jar  (0.09 MB)
+- embeddium-0.3.31+mc1.20.1.jar  (1.26 MB)
 - EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar  (0.06 MB)
 - EquipmentCompare-1.20.1-forge-1.3.7.jar  (0.03 MB)
 - ExtremeSoundMuffler-3.51-forge-1.20.1.jar  (0.26 MB)
 - EZActions-forge-1.20.1-2.0.1.6.jar  (0.49 MB)
 - fancymenu_forge_3.8.1_MC_1.20.1.jar  (4.27 MB)
 - fdlib-1.0.9-1.20.1.jar  (1.57 MB)
+- ferritecore-6.0.1-forge.jar  (0.12 MB)
 - fwa%2B1.20.1-forge-1.2.31.jar  (0.37 MB)
 - fzzy_config-0.7.6+1.20.1+forge.jar  (2.26 MB)
+- gnetum-2.5.0+1.20.1-forge.jar  (0.70 MB)
 - guitween-3.3.7-1.20.1%2Bforge.jar  (0.13 MB)
 - Iceberg-1.20.1-forge-1.1.25.jar  (0.13 MB)
+- Icterine-forge-1.20.0-1-1.3.0.jar  (0.04 MB)
 - immersivelanterns-forge-1.0.6-1.20.1.jar  (0.35 MB)
 - ImmersiveUI-FORGE-0.3.0.jar  (0.38 MB)
 - ItemBorders-1.20.1-forge-1.2.2.jar  (0.02 MB)
@@ -69,6 +74,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - lootr-forge-1.20-0.7.35.94.jar  (0.44 MB)
 - MaxHealthFix-Forge-1.20.1-12.0.4.jar  (0.01 MB)
 - melody_forge_1.0.3_MC_1.20.1-1.20.4.jar  (0.04 MB)
+- modernfix-forge-5.27.66+mc1.20.1.jar  (0.96 MB)
 - ModifierKeyFix-1.1.0.jar  (0.00 MB)
 - more_sounds-1.20.1-0.3.1-beta-forge.jar  (0.59 MB)
 - MouseTweaks-forge-mc1.20.1-2.25.1.jar  (0.07 MB)
@@ -77,6 +83,8 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - notenoughcrashes-4.4.9+1.20.1-forge.jar  (0.13 MB)
 - OctoLib-FORGE-0.5.0.1+1.20.1.jar  (0.40 MB)
 - OneWardenForEachAncientCity-1.20-1.20.1-1.0.jar  (0.13 MB)
+- particle_core-0.3.3+1.20.1+forge.jar  (0.74 MB)
+- PartiCull-forge-1.20.x-v2.0.jar  (0.03 MB)
 - Placebo-1.20.1-8.6.3.jar  (0.27 MB)
 - Prism-1.20.1-forge-1.0.5.jar  (0.05 MB)
 - PuzzlesLib-v8.1.33-1.20.1-Forge.jar  (1.28 MB)
