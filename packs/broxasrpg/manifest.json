@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.33",
+  "pack_version": "2.0.34",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -753,6 +753,12 @@
       "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/pbFHEePW/moonlight-1.20-2.16.30-forge.jar",
       "sha1": "1a5dcb87e0391beee9b631a1c8126b7169b521c8",
       "size": 1389600
+    },
+    {
+      "name": "MoogsSoaringStructures-1.20-2.1.0.jar",
+      "url": "https://cdn.modrinth.com/data/RJCLIx7k/versions/BoUtV92U/MoogsSoaringStructures-1.20-2.1.0.jar",
+      "sha1": "cc368ba88f206997fba64a4765f0a8da38aae1d9",
+      "size": 3105016
     }
   ]
 }

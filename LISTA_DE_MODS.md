@@ -1,10 +1,10 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.33. Nao edite na mao.
+Gerado automaticamente na versao 2.0.34. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-123 mods | 695 MB | Forge 47.4.20
+124 mods | 698 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (20)
 
@@ -31,7 +31,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - twilightforest-1.20.1-4.3.2508-universal.jar  (22.25 MB)
 
-### Baixados por link oficial (103)
+### Baixados por link oficial (104)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -98,6 +98,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - melody_forge_1.0.3_MC_1.20.1-1.20.4.jar  (0.04 MB)
 - modernfix-forge-5.27.66+mc1.20.1.jar  (0.96 MB)
 - ModifierKeyFix-1.1.0.jar  (0.00 MB)
+- MoogsSoaringStructures-1.20-2.1.0.jar  (2.96 MB)
 - moonlight-1.20-2.16.30-forge.jar  (1.33 MB)
 - more_sounds-1.20.1-0.3.1-beta-forge.jar  (0.59 MB)
 - MouseTweaks-forge-mc1.20.1-2.25.1.jar  (0.07 MB)
