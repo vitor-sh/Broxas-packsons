@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.34",
+  "pack_version": "2.0.35",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -105,6 +105,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/lootr_liason-1.2.jar",
       "sha1": "1c8993ed99cd6916a978aa3c7fedd12654479945",
       "size": 39964
+    },
+    {
+      "name": "moogs_structure_lib-1.1.0-1.20-1.20.4-forge.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/moogs_structure_lib-1.1.0-1.20-1.20.4-forge.jar",
+      "sha1": "b7751ee5cc55e6a56bc4b7c1b79bb6e63727e8aa",
+      "size": 259848
     },
     {
       "name": "ssrcamerafixes-1.2.4.jar",
