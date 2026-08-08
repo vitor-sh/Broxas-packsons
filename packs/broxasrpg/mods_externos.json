@@ -431,6 +431,192 @@
       "url": "https://cdn.modrinth.com/data/RSeLon5O/versions/cFafZfyr/particle_core-0.3.3%2B1.20.1%2Bforge.jar",
       "sha1": "1da5744853d17979033d5ee3cd4251b8340ea7be",
       "size": 773448
+    },
+    {
+      "name": "Bonfires-1.20.1-1.2.20d-5d9820a.jar",
+      "url": "https://cdn.modrinth.com/data/amg8VIPH/versions/boLB5KV5/Bonfires-1.20.1-1.2.20d-5d9820a.jar",
+      "sha1": "f13e24deac18c905074d0674e28aefaafb4d94eb",
+      "size": 399073
+    },
+    {
+      "name": "Galosphere-1.20.1-1.4.1-Forge.jar",
+      "url": "https://cdn.modrinth.com/data/Kn7xyQ1v/versions/JCd7hBd9/Galosphere-1.20.1-1.4.1-Forge.jar",
+      "sha1": "0b21651dc768383bcd4b6cc417335b4c43d208b3",
+      "size": 34909449
+    },
+    {
+      "name": "L_Enders_Cataclysm-3.16.jar",
+      "url": "https://cdn.modrinth.com/data/46KJle7n/versions/NvvXful4/L_Enders_Cataclysm-3.16.jar",
+      "sha1": "25d84c486a817ba54362ea1f4b82b6d3802cc074",
+      "size": 127993805
+    },
+    {
+      "name": "Oh-The-Biomes-Weve-Gone-Forge-1.7.5.jar",
+      "url": "https://cdn.modrinth.com/data/NTi7d3Xc/versions/o5iLwahQ/Oh-The-Biomes-Weve-Gone-Forge-1.7.5.jar",
+      "sha1": "a0ffaf9086974ab6d63ade0e9d73e8446b4166a3",
+      "size": 19308698
+    },
+    {
+      "name": "RegionsUnexploredForge-0.5.6+1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/Tkikq67H/versions/XTrgsfIB/RegionsUnexploredForge-0.5.6%2B1.20.1.jar",
+      "sha1": "990b4b9492a8fd7cd150598e3e02a466efa913fb",
+      "size": 5726781
+    },
+    {
+      "name": "YungsBetterEndIsland-1.20-Forge-2.0.6.jar",
+      "url": "https://cdn.modrinth.com/data/2BwBOmBQ/versions/Izqhg3Va/YungsBetterEndIsland-1.20-Forge-2.0.6.jar",
+      "sha1": "4e7bf109981593061b8100bc8bf23e1c9bbcbb76",
+      "size": 387111
+    },
+    {
+      "name": "YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar",
+      "url": "https://cdn.modrinth.com/data/3dT9sgt4/versions/SN4iZ7wf/YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar",
+      "sha1": "d8e74ed19903752a97ed0e1d2b1a8bf378bc252f",
+      "size": 1033262
+    },
+    {
+      "name": "alexscaves-2.0.2.jar",
+      "url": "https://cdn.modrinth.com/data/U6GY0xp0/versions/lC8HHXOF/alexscaves-2.0.2.jar",
+      "sha1": "a1e5c7b7c7eadda4c8e954acbcbaf75a7b500d53",
+      "size": 74871657
+    },
+    {
+      "name": "alexsmobs-1.22.9.jar",
+      "url": "https://cdn.modrinth.com/data/2cMuAZAp/versions/XoIASRVU/alexsmobs-1.22.9.jar",
+      "sha1": "dbf93d2f1da19e16739e91e8ea0fc6f4bc2f228f",
+      "size": 26350793
+    },
+    {
+      "name": "alexsmobsinteraction-4.3-all.jar",
+      "url": "https://cdn.modrinth.com/data/cQPcBgTD/versions/8uhVK4Kx/alexsmobsinteraction-4.3-all.jar",
+      "sha1": "896ba73471bef500321882d34ac2b711a96960d3",
+      "size": 6306741
+    },
+    {
+      "name": "aquamirae-forge-1.20.1-6.4.0.jar",
+      "url": "https://cdn.modrinth.com/data/k23mNPhZ/versions/A6aIqoJZ/aquamirae-forge-1.20.1-6.4.0.jar",
+      "sha1": "f802327ab6c738ff3c29e4b39a28c224ee7b29fa",
+      "size": 19073985
+    },
+    {
+      "name": "artifacts-forge-9.5.19.jar",
+      "url": "https://cdn.modrinth.com/data/P0Mu4wcQ/versions/lrLPBSzq/artifacts-forge-9.5.19.jar",
+      "sha1": "91ab6fc2cc208550f7fc37c43e42eba81eff318e",
+      "size": 850974
+    },
+    {
+      "name": "blue_skies-1.20.1-1.3.31.jar",
+      "url": "https://cdn.modrinth.com/data/DOSy3C4M/versions/YGq4rvX4/blue_skies-1.20.1-1.3.31.jar",
+      "sha1": "9d86230565f9262e845da2065f138e470eaed44c",
+      "size": 83564111
+    },
+    {
+      "name": "call_of_yucutan-1.0.13-forge-1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/RV4ezinu/versions/s49dr29b/call_of_yucutan-1.0.13-forge-1.20.1.jar",
+      "sha1": "63e0e47cfc41dbd591affac52e7787b7122257dc",
+      "size": 3614819
+    },
+    {
+      "name": "endrem_forge-5.3.3-R-1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/ZJTGwAND/versions/SQS2aSUl/endrem_forge-5.3.3-R-1.20.1.jar",
+      "sha1": "b4df41de8439e834a493fe59842709ef33ecfa82",
+      "size": 889634
+    },
+    {
+      "name": "idas_forge-1.13.0%2B1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/Z8OZShAU/versions/mgwwWo3b/idas_forge-1.13.0%2B1.20.1.jar",
+      "sha1": "84386b55c1729e8fb62f91211d046fb6d7ef23d2",
+      "size": 14420114
+    },
+    {
+      "name": "mowziesmobs-1.8.2.jar",
+      "url": "https://cdn.modrinth.com/data/BFbX9xcm/versions/acYEfsJa/mowziesmobs-1.8.2.jar",
+      "sha1": "25ffcd175cc03650e38e60d3cb7b3e038d9d3345",
+      "size": 36033850
+    },
+    {
+      "name": "lionfishapi-2.7.jar",
+      "url": "https://cdn.modrinth.com/data/FoVacERa/versions/G3m5juql/lionfishapi-2.7.jar",
+      "sha1": "73d64e7acbea5934617172a5210c1d2a53443812",
+      "size": 122522
+    },
+    {
+      "name": "Corgilib-Forge-1.20.1-4.0.3.4.jar",
+      "url": "https://cdn.modrinth.com/data/ziOp6EO8/versions/QQhzscay/Corgilib-Forge-1.20.1-4.0.3.4.jar",
+      "sha1": "4b08e5f8f2580842eacd5388458a0b52411a9fb2",
+      "size": 360700
+    },
+    {
+      "name": "Oh-The-Trees-Youll-Grow-forge-1.20.1-1.6.0.jar",
+      "url": "https://cdn.modrinth.com/data/g8NOG5OR/versions/tolj6ec8/Oh-The-Trees-Youll-Grow-forge-1.20.1-1.6.0.jar",
+      "sha1": "fdb62f927153a827f5605474e25759e485480e46",
+      "size": 168345
+    },
+    {
+      "name": "citadel-2.6.3-1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/jJfV67b1/versions/lTAAe4sZ/citadel-2.6.3-1.20.1.jar",
+      "sha1": "fb0b1fa96ce28e4be77b38ad95d83c3da7ec8316",
+      "size": 3185275
+    },
+    {
+      "name": "Patchouli-1.20.1-84.1-FORGE.jar",
+      "url": "https://cdn.modrinth.com/data/nU0bVIaL/versions/8Qyw08ld/Patchouli-1.20.1-84.1-FORGE.jar",
+      "sha1": "e91d2e2f251375d647d592b670ea6f310c2554eb",
+      "size": 642711
+    },
+    {
+      "name": "obscure_api-18.jar",
+      "url": "https://cdn.modrinth.com/data/fU7jbFHc/versions/7sZmDObM/obscure_api-18.jar",
+      "sha1": "d395153341a9a732fc80463c475b202d78675e28",
+      "size": 1128392
+    },
+    {
+      "name": "curios-forge-5.14.1+1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/vvuO3ImH/versions/IPQlZkz1/curios-forge-5.14.1%2B1.20.1.jar",
+      "sha1": "452175b95ad3db6ff58bb8968f6bf7a9d1e0f480",
+      "size": 398066
+    },
+    {
+      "name": "structure_gel-1.20.1-2.16.2.jar",
+      "url": "https://cdn.modrinth.com/data/T8TGycIQ/versions/xavY0MZc/structure_gel-1.20.1-2.16.2.jar",
+      "sha1": "ec8c59d2a69eca3249a8da673f572b40b6d59895",
+      "size": 966028
+    },
+    {
+      "name": "Quark-4.0-462.jar",
+      "url": "https://cdn.modrinth.com/data/qnQsVE2z/versions/DijQLauD/Quark-4.0-462.jar",
+      "sha1": "9b0fb82995622a0070c00827c698c43b49d9d14b",
+      "size": 14935230
+    },
+    {
+      "name": "create-1.20.1-6.0.8.jar",
+      "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/8amzvn9x/create-1.20.1-6.0.8.jar",
+      "sha1": "b13d912b9247a38d66d11598c121442585a1c1e9",
+      "size": 19170905
+    },
+    {
+      "name": "supplementaries-1.20-3.1.43-forge.jar",
+      "url": "https://cdn.modrinth.com/data/fFEIiSDQ/versions/S0TIJ1hU/supplementaries-1.20-3.1.43-forge.jar",
+      "sha1": "326d65a29981de28016e3828370d68a8f63e1798",
+      "size": 13667742
+    },
+    {
+      "name": "Zeta-1.0-31.jar",
+      "url": "https://cdn.modrinth.com/data/MVARlG2f/versions/mSER3jBI/Zeta-1.0-31.jar",
+      "sha1": "8c4a8ef0444b53ff408d5b89126285031081d92f",
+      "size": 1006518
+    },
+    {
+      "name": "effortlessbuilding-1.20.1-3.10.jar",
+      "url": "https://cdn.modrinth.com/data/DYtfQEYj/versions/GCzIlABB/effortlessbuilding-1.20.1-3.10.jar",
+      "sha1": "f71f32238e9d08e71b95941d8f69740d245f2a6a",
+      "size": 2285317
+    },
+    {
+      "name": "moonlight-1.20-2.16.30-forge.jar",
+      "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/pbFHEePW/moonlight-1.20-2.16.30-forge.jar",
+      "sha1": "1a5dcb87e0391beee9b631a1c8126b7169b521c8",
+      "size": 1389600
     }
   ]
 }
