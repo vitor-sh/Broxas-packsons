@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.58. Nao edite na mao.
+Gerado automaticamente na versao 2.0.59. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-179 mods | 930 MB | Forge 47.4.20
+181 mods | 933 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (51)
+### Guardados aqui no repositorio (53)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -47,6 +47,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - ironfurnaces-1.20.1-4.1.6.jar  (0.58 MB)
 - jei-1.20.1-forge-15.20.0.130.jar  (1.34 MB)
 - jeioptimizer-1.20.1-1.0.4.jar  (0.03 MB)
+- kubejs-forge-2001.6.5-build.24.jar  (1.58 MB)
 - legendarytabs-1.20.1-1.1.3.1.jar  (0.07 MB)
 - lootjs-forge-1.20.1-2.13.1.jar  (0.23 MB)
 - lootr_liason-1.2.jar  (0.04 MB)
@@ -61,6 +62,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - travelersbackpack-forge-1.20.1-9.1.56.jar  (1.35 MB)
 - VisualWorkbench-v8.0.1-1.20.1-Forge.jar  (0.08 MB)
+- yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar  (1.05 MB)
 
 ### Baixados por link oficial (128)
 

@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.58",
+  "pack_version": "2.0.59",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -263,6 +263,12 @@
       "size": 29139
     },
     {
+      "name": "kubejs-forge-2001.6.5-build.24.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/kubejs-forge-2001.6.5-build.24.jar",
+      "sha1": "95594c74234c653fe93554d21a3728c32a1eff5f",
+      "size": 1658709
+    },
+    {
       "name": "legendarytabs-1.20.1-1.1.3.1.jar",
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/legendarytabs-1.20.1-1.1.3.1.jar",
       "sha1": "6ee59d553e038cd951592c328205e48ab26a960f",
@@ -321,6 +327,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/travelersbackpack-forge-1.20.1-9.1.56.jar",
       "sha1": "31a852198b6e692744f59bd03d714bd673235c91",
       "size": 1413418
+    },
+    {
+      "name": "yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/yet_another_config_lib_v3-3.6.6%2B1.20.1-forge.jar",
+      "sha1": "644731e321c53a35a0b3177a3cc6347fe38002f4",
+      "size": 1105891
     },
     {
       "name": "AdvancedLootInfo-forge-1.20.1-1.12.0.jar",
