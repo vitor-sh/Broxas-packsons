@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.61. Nao edite na mao.
+Gerado automaticamente na versao 2.0.62. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-177 mods | 883 MB | Forge 47.4.20
+178 mods | 885 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (54)
+### Guardados aqui no repositorio (55)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -25,6 +25,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - craftingtweaks-forge-1.20.1-18.2.9.jar  (0.22 MB)
 - CyclopsCore-1.20.1-1.22.1.jar  (0.88 MB)
 - dimdoors-5.4.3-1.20.1-forge.jar  (16.97 MB)
+- dragonlib-forge-1.20.1-beta-3.0.28.jar  (2.50 MB)
 - dungeons_enhanced-1.20.1-5.4.3.jar  (1.36 MB)
 - EvilCraft-1.20.1-1.3.0.jar  (2.64 MB)
 - ftb-library-forge-2001.2.12.jar  (0.74 MB)

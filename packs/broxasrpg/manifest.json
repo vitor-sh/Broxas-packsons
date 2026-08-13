@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.61",
+  "pack_version": "2.0.62",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -147,6 +147,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/dimdoors-5.4.3-1.20.1-forge.jar",
       "sha1": "5d1a994b94d4ac7613c7f11bec758d01a173a637",
       "size": 17794466
+    },
+    {
+      "name": "dragonlib-forge-1.20.1-beta-3.0.28.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/dragonlib-forge-1.20.1-beta-3.0.28.jar",
+      "sha1": "9d861191d34567e0eee7e8c9a924307772b2fe84",
+      "size": 2619695
     },
     {
       "name": "dungeons_enhanced-1.20.1-5.4.3.jar",
