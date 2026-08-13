@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.47",
+  "pack_version": "2.0.48",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -71,6 +71,24 @@
       "size": 418929
     },
     {
+      "name": "corpse-forge-1.20.1-1.0.23.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/corpse-forge-1.20.1-1.0.23.jar",
+      "sha1": "843b16ca88bc5c390bb22a2a84437e6bffdd43dd",
+      "size": 245644
+    },
+    {
+      "name": "craftingtweaks-forge-1.20.1-18.2.9.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/craftingtweaks-forge-1.20.1-18.2.9.jar",
+      "sha1": "8f7a85056a753ffb9e9f178d32ccbcce44a29e63",
+      "size": 230696
+    },
+    {
+      "name": "dimdoors-5.4.3-1.20.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/dimdoors-5.4.3-1.20.1-forge.jar",
+      "sha1": "5d1a994b94d4ac7613c7f11bec758d01a173a637",
+      "size": 17794466
+    },
+    {
       "name": "ftb-library-forge-2001.2.12.jar",
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/ftb-library-forge-2001.2.12.jar",
       "sha1": "7f36ec4af42ad1d69872c58022e93a9d1b9c82b7",
@@ -89,10 +107,34 @@
       "size": 1039046
     },
     {
+      "name": "immersive-portals-3.0.7-all.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/immersive-portals-3.0.7-all.jar",
+      "sha1": "b4a6d71ca7dc07a1da33e7272befabc6ce95057b",
+      "size": 2137648
+    },
+    {
+      "name": "immersive_aircraft-1.4.1+1.20.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/immersive_aircraft-1.4.1%2B1.20.1-forge.jar",
+      "sha1": "e0fcdfe54114d49b53b50514e5e2a2255a396f3f",
+      "size": 2435800
+    },
+    {
       "name": "integrated_api-1.7.4%2B1.20.1-forge.jar",
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/integrated_api-1.7.4%252B1.20.1-forge.jar",
       "sha1": "e54517185ac84c521f9bc202107fdefc56a4171d",
       "size": 704838
+    },
+    {
+      "name": "inventoryessentials-forge-1.20.1-8.2.18.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/inventoryessentials-forge-1.20.1-8.2.18.jar",
+      "sha1": "8842e4dcd9d0cbb78a2bc47c2846bfa769fd7a8b",
+      "size": 170012
+    },
+    {
+      "name": "inventorymanagement-1.20.1-Forge-1.0.7.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/inventorymanagement-1.20.1-Forge-1.0.7.jar",
+      "sha1": "65ce8f758f7f9a7407e4d7a4ec647d83adce3ad0",
+      "size": 195716
     },
     {
       "name": "inventorypets-1.20.1-2.2.8.jar",

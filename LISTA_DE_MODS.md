@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.47. Nao edite na mao.
+Gerado automaticamente na versao 2.0.48. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-153 mods | 859 MB | Forge 47.4.20
+160 mods | 881 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (21)
+### Guardados aqui no repositorio (28)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -16,10 +16,17 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - cleanview-1.20.1-v1.jar  (0.01 MB)
 - configured-forge-1.20.1-2.2.3.jar  (0.40 MB)
 - Controlling-forge-1.20.1-12.0.2.jar  (0.11 MB)
+- corpse-forge-1.20.1-1.0.23.jar  (0.23 MB)
+- craftingtweaks-forge-1.20.1-18.2.9.jar  (0.22 MB)
+- dimdoors-5.4.3-1.20.1-forge.jar  (16.97 MB)
 - ftb-library-forge-2001.2.12.jar  (0.74 MB)
 - ftb-teams-forge-2001.3.2.jar  (0.24 MB)
 - geckolib-forge-1.20.1-4.8.3.jar  (0.99 MB)
+- immersive-portals-3.0.7-all.jar  (2.04 MB)
+- immersive_aircraft-1.4.1+1.20.1-forge.jar  (2.32 MB)
 - integrated_api-1.7.4%2B1.20.1-forge.jar  (0.67 MB)
+- inventoryessentials-forge-1.20.1-8.2.18.jar  (0.16 MB)
+- inventorymanagement-1.20.1-Forge-1.0.7.jar  (0.19 MB)
 - inventorypets-1.20.1-2.2.8.jar  (7.54 MB)
 - legendarytabs-1.20.1-1.1.3.1.jar  (0.07 MB)
 - lootr_liason-1.2.jar  (0.04 MB)
