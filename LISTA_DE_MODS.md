@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.57. Nao edite na mao.
+Gerado automaticamente na versao 2.0.58. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-173 mods | 926 MB | Forge 47.4.20
+179 mods | 930 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (42)
+### Guardados aqui no repositorio (51)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -34,6 +34,10 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - iceandfire-2.1.13-1.20.1-beta-5.jar  (20.84 MB)
 - immersive-portals-3.0.7-all.jar  (2.04 MB)
 - immersive_aircraft-1.4.1+1.20.1-forge.jar  (2.32 MB)
+- immersive_armors-1.7.1+1.20.1-forge.jar  (1.21 MB)
+- immersive_optimization-forge-1.20.1-0.1.6.jar  (0.05 MB)
+- immersivelanterns-forge-1.0.6-1.20.1.jar  (0.35 MB)
+- ImmersiveUI-FORGE-0.3.0.jar  (0.38 MB)
 - Incendium_1.20.1_v5.3.1.jar  (4.16 MB)
 - integrated_api-1.7.4%2B1.20.1-forge.jar  (0.67 MB)
 - inventoryessentials-forge-1.20.1-8.2.18.jar  (0.16 MB)
@@ -41,19 +45,24 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - inventorypets-1.20.1-2.2.8.jar  (7.54 MB)
 - ironchest-1.20.1-14.4.4.jar  (0.30 MB)
 - ironfurnaces-1.20.1-4.1.6.jar  (0.58 MB)
+- jei-1.20.1-forge-15.20.0.130.jar  (1.34 MB)
+- jeioptimizer-1.20.1-1.0.4.jar  (0.03 MB)
 - legendarytabs-1.20.1-1.1.3.1.jar  (0.07 MB)
+- lootjs-forge-1.20.1-2.13.1.jar  (0.23 MB)
 - lootr_liason-1.2.jar  (0.04 MB)
 - moogs_structure_lib-1.1.0-1.20-1.20.4-forge.jar  (0.25 MB)
 - resourcefulconfig-forge-1.20.1-2.1.2.jar  (0.13 MB)
 - Searchables-forge-1.20.1-1.0.3.jar  (0.07 MB)
 - ssrcamerafixes-1.2.4.jar  (0.04 MB)
+- structurify-forge-2.0.28%2Bmc1.20.1.jar  (0.61 MB)
 - StylishEffects-v8.0.3-1.20.1-Forge.jar  (0.12 MB)
 - tabular-0.6.jar  (0.10 MB)
 - TerraBlender-forge-1.20.1-3.0.1.10.jar  (0.10 MB)
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - travelersbackpack-forge-1.20.1-9.1.56.jar  (1.35 MB)
+- VisualWorkbench-v8.0.1-1.20.1-Forge.jar  (0.08 MB)
 
-### Baixados por link oficial (131)
+### Baixados por link oficial (128)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -121,8 +130,6 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Iceberg-1.20.1-forge-1.1.25.jar  (0.13 MB)
 - Icterine-forge-1.20.0-1-1.3.0.jar  (0.04 MB)
 - idas_forge-1.13.0%2B1.20.1.jar  (13.75 MB)
-- immersivelanterns-forge-1.0.6-1.20.1.jar  (0.35 MB)
-- ImmersiveUI-FORGE-0.3.0.jar  (0.38 MB)
 - ItemBorders-1.20.1-forge-1.2.2.jar  (0.02 MB)
 - Jade-1.20.1-Forge-11.13.2.jar  (0.53 MB)
 - JadeAddons-1.20.1-Forge-5.5.0.jar  (0.09 MB)
@@ -179,7 +186,6 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - tooltipoverhaul-forge-1.20.1-1.4.3.jar  (0.44 MB)
 - TravelersTitles-1.20-Forge-4.0.2.jar  (0.22 MB)
 - txnilib-forge-1.0.24-1.20.1.jar  (3.57 MB)
-- VisualWorkbench-v8.0.1-1.20.1-Forge.jar  (0.08 MB)
 - witherstormmod-1.20.1-4.2.1-all.jar  (45.15 MB)
 - xaerominimap-forge-1.20.1-25.3.13.jar  (2.05 MB)
 - XaeroPlus-2.31.5+forge-1.20.1-WM1.40.16-MM25.3.13.jar  (8.15 MB)

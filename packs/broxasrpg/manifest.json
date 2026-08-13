@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.57",
+  "pack_version": "2.0.58",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -47,6 +47,12 @@
       "size": 2769789
     },
     {
+      "name": "ImmersiveUI-FORGE-0.3.0.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/ImmersiveUI-FORGE-0.3.0.jar",
+      "sha1": "b2b36a49f1b8daf8d8fc0521f532fb706649c09c",
+      "size": 401514
+    },
+    {
       "name": "Incendium_1.20.1_v5.3.1.jar",
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/Incendium_1.20.1_v5.3.1.jar",
       "sha1": "1590eca06e935f7003587c8c67401589d4bcc34b",
@@ -69,6 +75,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/TerraBlender-forge-1.20.1-3.0.1.10.jar",
       "sha1": "3bd99fb59e8b06b04e78b5153790c1e08b2be5dc",
       "size": 107532
+    },
+    {
+      "name": "VisualWorkbench-v8.0.1-1.20.1-Forge.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/VisualWorkbench-v8.0.1-1.20.1-Forge.jar",
+      "sha1": "563804910a7ebb1082c1eedca363b16e2c572459",
+      "size": 82557
     },
     {
       "name": "ad_astra-forge-1.20.1-1.15.20.jar",
@@ -185,6 +197,24 @@
       "size": 2435800
     },
     {
+      "name": "immersive_armors-1.7.1+1.20.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/immersive_armors-1.7.1%2B1.20.1-forge.jar",
+      "sha1": "5311ad33c339bbed4f1c66830a9f19d285d4cad3",
+      "size": 1264289
+    },
+    {
+      "name": "immersive_optimization-forge-1.20.1-0.1.6.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/immersive_optimization-forge-1.20.1-0.1.6.jar",
+      "sha1": "ec8fcbf02234751ed64e658e8bad4995cfcd0b11",
+      "size": 55148
+    },
+    {
+      "name": "immersivelanterns-forge-1.0.6-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/immersivelanterns-forge-1.0.6-1.20.1.jar",
+      "sha1": "9d24f9e23742f962864aefc96d817f12b6382a5e",
+      "size": 367298
+    },
+    {
       "name": "integrated_api-1.7.4%2B1.20.1-forge.jar",
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/integrated_api-1.7.4%252B1.20.1-forge.jar",
       "sha1": "e54517185ac84c521f9bc202107fdefc56a4171d",
@@ -221,10 +251,28 @@
       "size": 609038
     },
     {
+      "name": "jei-1.20.1-forge-15.20.0.130.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/jei-1.20.1-forge-15.20.0.130.jar",
+      "sha1": "1c51bf6df51ffbb1c5efe23780a7a3d053421f34",
+      "size": 1409705
+    },
+    {
+      "name": "jeioptimizer-1.20.1-1.0.4.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/jeioptimizer-1.20.1-1.0.4.jar",
+      "sha1": "77a1f33ca872f1677f2cdfacd056ce61823087b3",
+      "size": 29139
+    },
+    {
       "name": "legendarytabs-1.20.1-1.1.3.1.jar",
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/legendarytabs-1.20.1-1.1.3.1.jar",
       "sha1": "6ee59d553e038cd951592c328205e48ab26a960f",
       "size": 78134
+    },
+    {
+      "name": "lootjs-forge-1.20.1-2.13.1.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/lootjs-forge-1.20.1-2.13.1.jar",
+      "sha1": "804deb0bd34d69cad873170642b9d7e47fa0d6ad",
+      "size": 242267
     },
     {
       "name": "lootr_liason-1.2.jar",
@@ -249,6 +297,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/ssrcamerafixes-1.2.4.jar",
       "sha1": "8b38c8fd2e7c78c1cb95f0bd55968baf711e1fb3",
       "size": 40633
+    },
+    {
+      "name": "structurify-forge-2.0.28%2Bmc1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/structurify-forge-2.0.28%252Bmc1.20.1.jar",
+      "sha1": "134d36f6cbee1ddabe2c3340a82630ad56c6d0fd",
+      "size": 637703
     },
     {
       "name": "tabular-0.6.jar",
@@ -309,12 +363,6 @@
       "url": "https://cdn.modrinth.com/data/5IIKsxiL/versions/drxm9tKI/ExtremeSoundMuffler-3.51-forge-1.20.1.jar",
       "sha1": "025499c74e1e9305fa931b44c3832f43b1925ec7",
       "size": 270331
-    },
-    {
-      "name": "ImmersiveUI-FORGE-0.3.0.jar",
-      "url": "https://cdn.modrinth.com/data/9wv7LuMc/versions/YbO8SNFq/ImmersiveUI-FORGE-0.3.0.jar",
-      "sha1": "b2b36a49f1b8daf8d8fc0521f532fb706649c09c",
-      "size": 401514
     },
     {
       "name": "ItemBorders-1.20.1-forge-1.2.2.jar",
@@ -393,12 +441,6 @@
       "url": "https://cdn.modrinth.com/data/JtifUr64/versions/oUSK4sOQ/TravelersTitles-1.20-Forge-4.0.2.jar",
       "sha1": "64a435eaa6e08fff5af2c720c3b6a40fe292f2f7",
       "size": 228191
-    },
-    {
-      "name": "VisualWorkbench-v8.0.1-1.20.1-Forge.jar",
-      "url": "https://cdn.modrinth.com/data/kfqD1JRw/versions/qaWEHDC3/VisualWorkbench-v8.0.1-1.20.1-Forge.jar",
-      "sha1": "563804910a7ebb1082c1eedca363b16e2c572459",
-      "size": 82557
     },
     {
       "name": "XaeroPlus-2.31.5+forge-1.20.1-WM1.40.16-MM25.3.13.jar",
@@ -489,12 +531,6 @@
       "url": "https://cdn.modrinth.com/data/6aRXFBGk/versions/YSmiKqM7/guitween-3.3.7-1.20.1%2Bforge.jar",
       "sha1": "e1c247a7d5f6f2bd7743d97d37f0d7830f9bd444",
       "size": 134748
-    },
-    {
-      "name": "immersivelanterns-forge-1.0.6-1.20.1.jar",
-      "url": "https://cdn.modrinth.com/data/vskzdsyT/versions/bKAfmaXM/immersivelanterns-forge-1.0.6-1.20.1.jar",
-      "sha1": "9d24f9e23742f962864aefc96d817f12b6382a5e",
-      "size": 367298
     },
     {
       "name": "lootr-forge-1.20-0.7.35.94.jar",
