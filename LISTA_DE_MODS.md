@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.52. Nao edite na mao.
+Gerado automaticamente na versao 2.0.53. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-171 mods | 926 MB | Forge 47.4.20
+173 mods | 927 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (39)
+### Guardados aqui no repositorio (42)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -16,12 +16,14 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - BasicEndOres-forge-1.20.1-4.1.0.jar  (0.58 MB)
 - BasicNetherOres-forge-1.20.1-9.1.1.jar  (0.57 MB)
 - bloodbits-2.1.3-forge-1.20.1.jar  (1.33 MB)
+- botarium-forge-1.20.1-2.3.4.jar  (0.15 MB)
 - caelus-forge-3.2.0+1.20.1.jar  (0.04 MB)
 - cleanview-1.20.1-v1.jar  (0.01 MB)
 - configured-forge-1.20.1-2.2.3.jar  (0.40 MB)
 - Controlling-forge-1.20.1-12.0.2.jar  (0.11 MB)
 - corpse-forge-1.20.1-1.0.23.jar  (0.23 MB)
 - craftingtweaks-forge-1.20.1-18.2.9.jar  (0.22 MB)
+- CyclopsCore-1.20.1-1.22.1.jar  (0.88 MB)
 - dimdoors-5.4.3-1.20.1-forge.jar  (16.97 MB)
 - dungeons_enhanced-1.20.1-5.4.3.jar  (1.36 MB)
 - EvilCraft-1.20.1-1.3.0.jar  (2.64 MB)
@@ -42,6 +44,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - legendarytabs-1.20.1-1.1.3.1.jar  (0.07 MB)
 - lootr_liason-1.2.jar  (0.04 MB)
 - moogs_structure_lib-1.1.0-1.20-1.20.4-forge.jar  (0.25 MB)
+- resourcefullib-forge-1.20.1-2.1.29.jar  (0.41 MB)
 - Searchables-forge-1.20.1-1.0.3.jar  (0.07 MB)
 - ssrcamerafixes-1.2.4.jar  (0.04 MB)
 - StylishEffects-v8.0.3-1.20.1-Forge.jar  (0.12 MB)
@@ -50,7 +53,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - travelersbackpack-forge-1.20.1-9.1.56.jar  (1.35 MB)
 
-### Baixados por link oficial (132)
+### Baixados por link oficial (131)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -160,7 +163,6 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Quark-4.0-462.jar  (14.24 MB)
 - Rats-1.20.1-8.1.3.jar  (8.05 MB)
 - RegionsUnexploredForge-0.5.6+1.20.1.jar  (5.46 MB)
-- resourcefullib-forge-1.20.1-2.1.29.jar  (0.41 MB)
 - sanitydim-mc1.20-1.1.0.jar  (5.77 MB)
 - ShoulderSurfing-Forge-1.20.1-4.22.10.jar  (0.26 MB)
 - sodiumdynamiclights-forge-1.0.10-1.20.1.jar  (0.49 MB)

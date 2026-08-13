@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.52",
+  "pack_version": "2.0.53",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -33,6 +33,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/Controlling-forge-1.20.1-12.0.2.jar",
       "sha1": "f6d3cdd3ec68c5590cf5b2e89c38dbf031824bfd",
       "size": 115280
+    },
+    {
+      "name": "CyclopsCore-1.20.1-1.22.1.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/CyclopsCore-1.20.1-1.22.1.jar",
+      "sha1": "3e3787f9979dc8c63690e5d0267ea68b364191fb",
+      "size": 922869
     },
     {
       "name": "EvilCraft-1.20.1-1.3.0.jar",
@@ -87,6 +93,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/bloodbits-2.1.3-forge-1.20.1.jar",
       "sha1": "ea961a50206c3ef95e668c19535df3a9e7371b57",
       "size": 1398538
+    },
+    {
+      "name": "botarium-forge-1.20.1-2.3.4.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/botarium-forge-1.20.1-2.3.4.jar",
+      "sha1": "a6928cb03b7c5f81900d3d3c8e8c8f6a89a51a5b",
+      "size": 157633
     },
     {
       "name": "caelus-forge-3.2.0+1.20.1.jar",
@@ -225,6 +237,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/moogs_structure_lib-1.1.0-1.20-1.20.4-forge.jar",
       "sha1": "b7751ee5cc55e6a56bc4b7c1b79bb6e63727e8aa",
       "size": 259848
+    },
+    {
+      "name": "resourcefullib-forge-1.20.1-2.1.29.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/resourcefullib-forge-1.20.1-2.1.29.jar",
+      "sha1": "6fc590a7c56a720fec57e290cbb0a106efbb3ffa",
+      "size": 432753
     },
     {
       "name": "ssrcamerafixes-1.2.4.jar",
@@ -1017,12 +1035,6 @@
       "url": "https://cdn.modrinth.com/data/ziOp6EO8/versions/HXTB2EAy/Corgilib-Forge-1.20.1-4.0.3.5.jar",
       "sha1": "ef71df3c9a3d22432d63957a8db00645353bfe36",
       "size": 318765
-    },
-    {
-      "name": "resourcefullib-forge-1.20.1-2.1.29.jar",
-      "url": "https://cdn.modrinth.com/data/G1hIVOrD/versions/OhsHaCcW/resourcefullib-forge-1.20.1-2.1.29.jar",
-      "sha1": "6fc590a7c56a720fec57e290cbb0a106efbb3ffa",
-      "size": 432753
     },
     {
       "name": "Terralith_1.20.x_v2.5.4.jar",
