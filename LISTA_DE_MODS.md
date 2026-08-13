@@ -1,6 +1,6 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.55. Nao edite na mao.
+Gerado automaticamente na versao 2.0.56. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
