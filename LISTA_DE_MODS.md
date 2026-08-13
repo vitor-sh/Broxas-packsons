@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.45. Nao edite na mao.
+Gerado automaticamente na versao 2.0.46. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-155 mods | 883 MB | Forge 47.4.20
+154 mods | 882 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (23)
+### Guardados aqui no repositorio (22)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -17,7 +17,6 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - configured-forge-1.20.1-2.2.3.jar  (0.40 MB)
 - Controlling-forge-1.20.1-12.0.2.jar  (0.11 MB)
 - ftb-library-forge-2001.2.12.jar  (0.74 MB)
-- ftb-quests-forge-2001.4.22.jar  (1.20 MB)
 - ftb-teams-forge-2001.3.2.jar  (0.24 MB)
 - geckolib-forge-1.20.1-4.8.3.jar  (0.99 MB)
 - integrated_api-1.7.4%2B1.20.1-forge.jar  (0.67 MB)

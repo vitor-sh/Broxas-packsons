@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.45",
+  "pack_version": "2.0.46",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -75,12 +75,6 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/ftb-library-forge-2001.2.12.jar",
       "sha1": "7f36ec4af42ad1d69872c58022e93a9d1b9c82b7",
       "size": 780523
-    },
-    {
-      "name": "ftb-quests-forge-2001.4.22.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/ftb-quests-forge-2001.4.22.jar",
-      "sha1": "70f3bd771ab3b5921ce1ff5f14166fab694ca1aa",
-      "size": 1255469
     },
     {
       "name": "ftb-teams-forge-2001.3.2.jar",
