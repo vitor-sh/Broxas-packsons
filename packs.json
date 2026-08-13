@@ -1,6 +1,6 @@
 {
   "servidor": "BroxasSMP",
-  "versao": "2.0.44",
+  "versao": "2.0.45",
   "packs": [
     {
       "id": "broxasrpg",
@@ -9,7 +9,7 @@
       "ip": "enx-cirion-23.enx.host:10018",
       "minecraft": "1.20.1",
       "loader": "Forge 47.4.20",
-      "mods": 156,
+      "mods": 155,
       "manifest": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/manifest.json"
     },
     {

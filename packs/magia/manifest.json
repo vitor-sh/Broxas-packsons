@@ -1,7 +1,7 @@
 {
   "pack_id": "magia",
   "pack_nome": "Magia e Tecnologia",
-  "pack_version": "2.0.44",
+  "pack_version": "2.0.45",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",

@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.44. Nao edite na mao.
+Gerado automaticamente na versao 2.0.45. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-156 mods | 883 MB | Forge 47.4.20
+155 mods | 883 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (24)
+### Guardados aqui no repositorio (23)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -28,7 +28,6 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - Searchables-forge-1.20.1-1.0.3.jar  (0.07 MB)
 - ssrcamerafixes-1.2.4.jar  (0.04 MB)
 - StylishEffects-v8.0.3-1.20.1-Forge.jar  (0.12 MB)
-- superior_quests-forge-1201-0.1.1.jar  (0.15 MB)
 - tabular-0.6.jar  (0.10 MB)
 - TerraBlender-forge-1.20.1-3.0.1.10.jar  (0.10 MB)
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)

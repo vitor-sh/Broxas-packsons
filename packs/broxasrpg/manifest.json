@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.44",
+  "pack_version": "2.0.45",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -129,12 +129,6 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/ssrcamerafixes-1.2.4.jar",
       "sha1": "8b38c8fd2e7c78c1cb95f0bd55968baf711e1fb3",
       "size": 40633
-    },
-    {
-      "name": "superior_quests-forge-1201-0.1.1.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/superior_quests-forge-1201-0.1.1.jar",
-      "sha1": "db8b5cffd9db3474c5230f15c02301f9e56c4a5c",
-      "size": 157305
     },
     {
       "name": "tabular-0.6.jar",
