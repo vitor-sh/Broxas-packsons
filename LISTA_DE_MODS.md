@@ -1,10 +1,10 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.41. Nao edite na mao.
+Gerado automaticamente na versao 2.0.42. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-147 mods | 864 MB | Forge 47.4.20
+152 mods | 870 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (22)
 
@@ -33,7 +33,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - twilightforest-1.20.1-4.3.2508-universal.jar  (22.25 MB)
 
-### Baixados por link oficial (125)
+### Baixados por link oficial (130)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -58,6 +58,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Bonfires-1.20.1-1.2.20d-5d9820a.jar  (0.38 MB)
 - Bookshelf-Forge-1.20.1-20.2.15.jar  (0.33 MB)
 - born_in_chaos_%5BForge%5D1.20.1_1.7.4.jar  (11.29 MB)
+- BrandonsCore-1.20.1-3.2.1.302-universal.jar  (1.30 MB)
 - call_of_yucutan-1.0.13-forge-1.20.1.jar  (3.45 MB)
 - canary-mc1.20.1-0.3.3.jar  (0.57 MB)
 - certain_questing_additions-forge-1.1.7%2Bmc1.20.1.jar  (1.09 MB)
@@ -70,6 +71,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - connectiblechains-forge-1.20.1-1.2.3.jar  (0.30 MB)
 - copycats-3.0.7+mc.1.20.1-forge.jar  (1.90 MB)
 - Corgilib-Forge-1.20.1-4.0.3.4.jar  (0.34 MB)
+- Corgilib-Forge-1.20.1-4.0.3.5.jar  (0.30 MB)
 - crafting-on-a-stick-1.20.1-1.1.5.jar  (0.05 MB)
 - create-1.20.1-6.0.8.jar  (18.28 MB)
 - createaddition-1.20.1-1.3.3.jar  (1.50 MB)
@@ -93,6 +95,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - fwa%2B1.20.1-forge-1.2.31.jar  (0.37 MB)
 - fzzy_config-0.7.6+1.20.1+forge.jar  (2.26 MB)
 - Galosphere-1.20.1-1.4.1-Forge.jar  (33.29 MB)
+- geckolib-forge-1.20.1-4.8.4.jar  (0.99 MB)
 - gnetum-2.5.0+1.20.1-forge.jar  (0.70 MB)
 - guitween-3.3.7-1.20.1%2Bforge.jar  (0.13 MB)
 - Iceberg-1.20.1-forge-1.1.25.jar  (0.13 MB)
@@ -138,6 +141,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Quark-4.0-462.jar  (14.24 MB)
 - Rats-1.20.1-8.1.3.jar  (8.05 MB)
 - RegionsUnexploredForge-0.5.6+1.20.1.jar  (5.46 MB)
+- resourcefullib-forge-1.20.1-2.1.29.jar  (0.41 MB)
 - sanitydim-mc1.20-1.1.0.jar  (5.77 MB)
 - ShoulderSurfing-Forge-1.20.1-4.22.10.jar  (0.26 MB)
 - sodiumdynamiclights-forge-1.0.10-1.20.1.jar  (0.49 MB)
@@ -149,6 +153,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Stellar View-1.20.1-0.5.2-Forge.jar  (0.55 MB)
 - structure_gel-1.20.1-2.16.2.jar  (0.92 MB)
 - supplementaries-1.20-3.1.43-forge.jar  (13.03 MB)
+- Terralith_1.20.x_v2.5.4.jar  (3.01 MB)
 - ToastControl-1.20.1-8.0.3.jar  (0.03 MB)
 - tooltipoverhaul-forge-1.20.1-1.4.3.jar  (0.44 MB)
 - TravelersTitles-1.20-Forge-4.0.2.jar  (0.22 MB)

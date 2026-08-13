@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.41",
+  "pack_version": "2.0.42",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -897,6 +897,36 @@
       "url": "https://cdn.modrinth.com/data/UT2M39wf/versions/z7s54cjL/copycats-3.0.7%2Bmc.1.20.1-forge.jar",
       "sha1": "5d0f497695fc2ee4ef89f1898458882b9d2d3aad",
       "size": 1996097
+    },
+    {
+      "name": "BrandonsCore-1.20.1-3.2.1.302-universal.jar",
+      "url": "https://cdn.modrinth.com/data/iFDWVIFV/versions/qFTHdrDH/BrandonsCore-1.20.1-3.2.1.302-universal.jar",
+      "sha1": "1378ba5f84267c18f945c52d787ac86e40d6c241",
+      "size": 1358270
+    },
+    {
+      "name": "geckolib-forge-1.20.1-4.8.4.jar",
+      "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/aC5KMoNg/geckolib-forge-1.20.1-4.8.4.jar",
+      "sha1": "50e1407869ef0e909e3bdda9328b8bd7db03fdc0",
+      "size": 1038209
+    },
+    {
+      "name": "Corgilib-Forge-1.20.1-4.0.3.5.jar",
+      "url": "https://cdn.modrinth.com/data/ziOp6EO8/versions/HXTB2EAy/Corgilib-Forge-1.20.1-4.0.3.5.jar",
+      "sha1": "ef71df3c9a3d22432d63957a8db00645353bfe36",
+      "size": 318765
+    },
+    {
+      "name": "resourcefullib-forge-1.20.1-2.1.29.jar",
+      "url": "https://cdn.modrinth.com/data/G1hIVOrD/versions/OhsHaCcW/resourcefullib-forge-1.20.1-2.1.29.jar",
+      "sha1": "6fc590a7c56a720fec57e290cbb0a106efbb3ffa",
+      "size": 432753
+    },
+    {
+      "name": "Terralith_1.20.x_v2.5.4.jar",
+      "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/WeYhEb5d/Terralith_1.20.x_v2.5.4.jar",
+      "sha1": "79e1409b8db4ce86df9d6d6730f09c4bd8860a30",
+      "size": 3156901
     }
   ]
 }
