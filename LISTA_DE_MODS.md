@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.46. Nao edite na mao.
+Gerado automaticamente na versao 2.0.47. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-154 mods | 882 MB | Forge 47.4.20
+153 mods | 859 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (22)
+### Guardados aqui no repositorio (21)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -31,7 +31,6 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - TerraBlender-forge-1.20.1-3.0.1.10.jar  (0.10 MB)
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - travelersbackpack-forge-1.20.1-9.1.56.jar  (1.35 MB)
-- twilightforest-1.20.1-4.3.2508-universal.jar  (22.25 MB)
 
 ### Baixados por link oficial (132)
 

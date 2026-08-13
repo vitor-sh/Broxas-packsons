@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.46",
+  "pack_version": "2.0.47",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -141,12 +141,6 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/travelersbackpack-forge-1.20.1-9.1.56.jar",
       "sha1": "31a852198b6e692744f59bd03d714bd673235c91",
       "size": 1413418
-    },
-    {
-      "name": "twilightforest-1.20.1-4.3.2508-universal.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/twilightforest-1.20.1-4.3.2508-universal.jar",
-      "sha1": "fa3b506a45d3e9c465551cd533fd50c899496e9f",
-      "size": 23332091
     },
     {
       "name": "AdvancedLootInfo-forge-1.20.1-1.12.0.jar",
