@@ -1,10 +1,10 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.42. Nao edite na mao.
+Gerado automaticamente na versao 2.0.43. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-152 mods | 870 MB | Forge 47.4.20
+154 mods | 874 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (22)
 
@@ -33,7 +33,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - twilightforest-1.20.1-4.3.2508-universal.jar  (22.25 MB)
 
-### Baixados por link oficial (130)
+### Baixados por link oficial (132)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -68,6 +68,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - clean_tooltips-1.0-forge-1.20.1.jar  (0.03 MB)
 - cloth-config-11.1.136-forge.jar  (1.13 MB)
 - Clumps-forge-1.20.1-12.0.0.4.jar  (0.02 MB)
+- CodeChickenLib-1.20.1-4.4.0.528-universal.jar  (1.41 MB)
 - connectiblechains-forge-1.20.1-1.2.3.jar  (0.30 MB)
 - copycats-3.0.7+mc.1.20.1-forge.jar  (1.90 MB)
 - Corgilib-Forge-1.20.1-4.0.3.4.jar  (0.34 MB)
@@ -126,6 +127,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - notenoughcrashes-4.4.9+1.20.1-forge.jar  (0.13 MB)
 - obscure_api-18.jar  (1.08 MB)
 - OctoLib-FORGE-0.5.0.1+1.20.1.jar  (0.40 MB)
+- oculus-mc1.20.1-1.8.0.jar  (2.72 MB)
 - Oh-The-Biomes-Weve-Gone-Forge-1.7.5.jar  (18.41 MB)
 - Oh-The-Trees-Youll-Grow-forge-1.20.1-1.6.0.jar  (0.16 MB)
 - OneWardenForEachAncientCity-1.20-1.20.1-1.0.jar  (0.13 MB)

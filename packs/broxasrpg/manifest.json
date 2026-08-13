@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.42",
+  "pack_version": "2.0.43",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -927,6 +927,18 @@
       "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/WeYhEb5d/Terralith_1.20.x_v2.5.4.jar",
       "sha1": "79e1409b8db4ce86df9d6d6730f09c4bd8860a30",
       "size": 3156901
+    },
+    {
+      "name": "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+      "url": "https://cdn.modrinth.com/data/2gq0ALnz/versions/5zfJEMhM/CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+      "sha1": "66c614b047414e3cfcd69ff7f001b7033c5813c6",
+      "size": 1473536
+    },
+    {
+      "name": "oculus-mc1.20.1-1.8.0.jar",
+      "url": "https://cdn.modrinth.com/data/GchcoXML/versions/iQ1SwGc3/oculus-mc1.20.1-1.8.0.jar",
+      "sha1": "984f774e71790deaec674c7587bd24e0711871b2",
+      "size": 2851119
     }
   ]
 }
