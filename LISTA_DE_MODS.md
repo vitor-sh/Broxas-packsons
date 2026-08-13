@@ -1,15 +1,17 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.49. Nao edite na mao.
+Gerado automaticamente na versao 2.0.50. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-161 mods | 902 MB | Forge 47.4.20
+168 mods | 921 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (29)
+### Guardados aqui no repositorio (36)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
+- ad_astra-forge-1.20.1-1.15.20.jar  (7.16 MB)
+- ad_astra_more_structures-1.20.1-forge.jar  (0.54 MB)
 - balm-forge-1.20.1-7.3.38-all.jar  (0.56 MB)
 - bloodbits-2.1.3-forge-1.20.1.jar  (1.33 MB)
 - caelus-forge-3.2.0+1.20.1.jar  (0.04 MB)
@@ -19,9 +21,12 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - corpse-forge-1.20.1-1.0.23.jar  (0.23 MB)
 - craftingtweaks-forge-1.20.1-18.2.9.jar  (0.22 MB)
 - dimdoors-5.4.3-1.20.1-forge.jar  (16.97 MB)
+- dungeons_enhanced-1.20.1-5.4.3.jar  (1.36 MB)
+- EvilCraft-1.20.1-1.3.0.jar  (2.64 MB)
 - ftb-library-forge-2001.2.12.jar  (0.74 MB)
 - ftb-teams-forge-2001.3.2.jar  (0.24 MB)
 - geckolib-forge-1.20.1-4.8.3.jar  (0.99 MB)
+- good_nights_sleep-1.20.1-1.3.1.jar  (6.22 MB)
 - iceandfire-2.1.13-1.20.1-beta-5.jar  (20.84 MB)
 - immersive-portals-3.0.7-all.jar  (2.04 MB)
 - immersive_aircraft-1.4.1+1.20.1-forge.jar  (2.32 MB)
@@ -29,6 +34,8 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - inventoryessentials-forge-1.20.1-8.2.18.jar  (0.16 MB)
 - inventorymanagement-1.20.1-Forge-1.0.7.jar  (0.19 MB)
 - inventorypets-1.20.1-2.2.8.jar  (7.54 MB)
+- ironchest-1.20.1-14.4.4.jar  (0.30 MB)
+- ironfurnaces-1.20.1-4.1.6.jar  (0.58 MB)
 - legendarytabs-1.20.1-1.1.3.1.jar  (0.07 MB)
 - lootr_liason-1.2.jar  (0.04 MB)
 - moogs_structure_lib-1.1.0-1.20-1.20.4-forge.jar  (0.25 MB)
