@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.35",
+  "pack_version": "2.0.36",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -765,6 +765,12 @@
       "url": "https://cdn.modrinth.com/data/RJCLIx7k/versions/BoUtV92U/MoogsSoaringStructures-1.20-2.1.0.jar",
       "sha1": "cc368ba88f206997fba64a4765f0a8da38aae1d9",
       "size": 3105016
+    },
+    {
+      "name": "bettercombat-forge-1.9.0+1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/5sy6g3kz/versions/rnhiaw3t/bettercombat-forge-1.9.0%2B1.20.1.jar",
+      "sha1": "ea7e7247132cb3acacadd96b2b6b635c4cc63a74",
+      "size": 1054339
     }
   ]
 }
