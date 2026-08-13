@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.59",
+  "pack_version": "2.0.60",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -297,6 +297,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/resourcefulconfig-forge-1.20.1-2.1.2.jar",
       "sha1": "46825dc0adc36c4b19591bb99f7d856bc2953749",
       "size": 136630
+    },
+    {
+      "name": "rhino-forge-2001.2.3-build.10.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/rhino-forge-2001.2.3-build.10.jar",
+      "sha1": "c83c9b719a6bab33fbd2b3f2f680eb3adbfc1aa1",
+      "size": 1798244
     },
     {
       "name": "ssrcamerafixes-1.2.4.jar",
