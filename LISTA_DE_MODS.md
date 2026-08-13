@@ -1,10 +1,10 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.37. Nao edite na mao.
+Gerado automaticamente na versao 2.0.38. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-127 mods | 699 MB | Forge 47.4.20
+129 mods | 701 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (21)
 
@@ -32,7 +32,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - twilightforest-1.20.1-4.3.2508-universal.jar  (22.25 MB)
 
-### Baixados por link oficial (106)
+### Baixados por link oficial (108)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -55,6 +55,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Bonfires-1.20.1-1.2.20d-5d9820a.jar  (0.38 MB)
 - Bookshelf-Forge-1.20.1-20.2.15.jar  (0.33 MB)
 - call_of_yucutan-1.0.13-forge-1.20.1.jar  (3.45 MB)
+- canary-mc1.20.1-0.3.3.jar  (0.57 MB)
 - certain_questing_additions-forge-1.1.7%2Bmc1.20.1.jar  (1.09 MB)
 - chunksfadein-forge-3.0.22-1.20.jar  (0.57 MB)
 - cinematiccataclysm-1.0.0-1.20.1.jar  (0.67 MB)
@@ -72,6 +73,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - embeddium-0.3.31+mc1.20.1.jar  (1.26 MB)
 - EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar  (0.06 MB)
 - endrem_forge-5.3.3-R-1.20.1.jar  (0.85 MB)
+- entityculling-forge-1.10.5-mc1.20.1.jar  (1.52 MB)
 - EquipmentCompare-1.20.1-forge-1.3.7.jar  (0.03 MB)
 - ExtremeSoundMuffler-3.51-forge-1.20.1.jar  (0.26 MB)
 - EZActions-forge-1.20.1-2.0.1.6.jar  (0.49 MB)

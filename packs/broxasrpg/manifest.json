@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.37",
+  "pack_version": "2.0.38",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -777,6 +777,18 @@
       "url": "https://cdn.modrinth.com/data/gedNE4y2/versions/xe2EVE6q/player-animation-lib-forge-1.0.2-rc1%2B1.20.jar",
       "sha1": "16808f94a41d45d8e986b4e4ea6b02ba57fa058a",
       "size": 181437
+    },
+    {
+      "name": "canary-mc1.20.1-0.3.3.jar",
+      "url": "https://cdn.modrinth.com/data/qa2H4BS9/versions/lauzXB0n/canary-mc1.20.1-0.3.3.jar",
+      "sha1": "898abd9e337ef1c677ce93f5589497a09c7e9850",
+      "size": 594191
+    },
+    {
+      "name": "entityculling-forge-1.10.5-mc1.20.1.jar",
+      "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/MloBcsQQ/entityculling-forge-1.10.5-mc1.20.1.jar",
+      "sha1": "b818f6d792b79f4ec116c89704e70292bd6f72b5",
+      "size": 1590221
     }
   ]
 }
