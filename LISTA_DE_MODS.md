@@ -1,10 +1,10 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.60. Nao edite na mao.
+Gerado automaticamente na versao 2.0.61. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-182 mods | 934 MB | Forge 47.4.20
+177 mods | 883 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (54)
 
@@ -65,7 +65,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - VisualWorkbench-v8.0.1-1.20.1-Forge.jar  (0.08 MB)
 - yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar  (1.05 MB)
 
-### Baixados por link oficial (128)
+### Baixados por link oficial (123)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -101,12 +101,9 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Clumps-forge-1.20.1-12.0.0.4.jar  (0.02 MB)
 - CodeChickenLib-1.20.1-4.4.0.528-universal.jar  (1.41 MB)
 - connectiblechains-forge-1.20.1-1.2.3.jar  (0.30 MB)
-- copycats-3.0.7+mc.1.20.1-forge.jar  (1.90 MB)
 - Corgilib-Forge-1.20.1-4.0.3.4.jar  (0.34 MB)
 - Corgilib-Forge-1.20.1-4.0.3.5.jar  (0.30 MB)
 - crafting-on-a-stick-1.20.1-1.1.5.jar  (0.05 MB)
-- create-1.20.1-6.0.8.jar  (18.28 MB)
-- createaddition-1.20.1-1.3.3.jar  (1.50 MB)
 - curios-forge-5.14.1+1.20.1.jar  (0.38 MB)
 - defaultoptions-forge-1.20.1-18.0.4.jar  (0.09 MB)
 - derenderpatcher-1.20.1-1.3.0-forge.jar  (0.07 MB)
@@ -132,7 +129,6 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - guitween-3.3.7-1.20.1%2Bforge.jar  (0.13 MB)
 - Iceberg-1.20.1-forge-1.1.25.jar  (0.13 MB)
 - Icterine-forge-1.20.0-1-1.3.0.jar  (0.04 MB)
-- idas_forge-1.13.0%2B1.20.1.jar  (13.75 MB)
 - ItemBorders-1.20.1-forge-1.2.2.jar  (0.02 MB)
 - Jade-1.20.1-Forge-11.13.2.jar  (0.53 MB)
 - JadeAddons-1.20.1-Forge-5.5.0.jar  (0.09 MB)
@@ -180,7 +176,6 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Sounds-2.2.1+1.20.1+forge.jar  (10.47 MB)
 - spiffyhud_forge_3.1.0_MC_1.20.1.jar  (0.79 MB)
 - spiffyxgnetum-1.0.jar  (0.01 MB)
-- Steam_Rails-1.7.2+forge-mc1.20.1.jar  (16.04 MB)
 - Stellar View-1.20.1-0.5.2-Forge.jar  (0.55 MB)
 - structure_gel-1.20.1-2.16.2.jar  (0.92 MB)
 - supplementaries-1.20-3.1.43-forge.jar  (13.03 MB)

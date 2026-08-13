@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.60",
+  "pack_version": "2.0.61",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -839,12 +839,6 @@
       "size": 889634
     },
     {
-      "name": "idas_forge-1.13.0%2B1.20.1.jar",
-      "url": "https://cdn.modrinth.com/data/Z8OZShAU/versions/mgwwWo3b/idas_forge-1.13.0%2B1.20.1.jar",
-      "sha1": "84386b55c1729e8fb62f91211d046fb6d7ef23d2",
-      "size": 14420114
-    },
-    {
       "name": "mowziesmobs-1.8.2.jar",
       "url": "https://cdn.modrinth.com/data/BFbX9xcm/versions/acYEfsJa/mowziesmobs-1.8.2.jar",
       "sha1": "25ffcd175cc03650e38e60d3cb7b3e038d9d3345",
@@ -903,12 +897,6 @@
       "url": "https://cdn.modrinth.com/data/qnQsVE2z/versions/DijQLauD/Quark-4.0-462.jar",
       "sha1": "9b0fb82995622a0070c00827c698c43b49d9d14b",
       "size": 14935230
-    },
-    {
-      "name": "create-1.20.1-6.0.8.jar",
-      "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/8amzvn9x/create-1.20.1-6.0.8.jar",
-      "sha1": "b13d912b9247a38d66d11598c121442585a1c1e9",
-      "size": 19170905
     },
     {
       "name": "supplementaries-1.20-3.1.43-forge.jar",
@@ -1047,24 +1035,6 @@
       "url": "https://cdn.modrinth.com/data/BNhriTkm/versions/p0jmMeaS/derenderpatcher-1.20.1-1.3.0-forge.jar",
       "sha1": "b041b65157e7eaedc08d54b9905fea8b6e430100",
       "size": 75598
-    },
-    {
-      "name": "Steam_Rails-1.7.2+forge-mc1.20.1.jar",
-      "url": "https://cdn.modrinth.com/data/ZzjhlDgM/versions/I6GhUCyk/Steam_Rails-1.7.2%2Bforge-mc1.20.1.jar",
-      "sha1": "15d317afd2459368b19c23f2bdfefdeb87708bdd",
-      "size": 16819720
-    },
-    {
-      "name": "createaddition-1.20.1-1.3.3.jar",
-      "url": "https://cdn.modrinth.com/data/kU1G12Nn/versions/9LgyB6Yb/createaddition-1.20.1-1.3.3.jar",
-      "sha1": "c7d464c451fdc2979bc29a67d7eec2a30858af12",
-      "size": 1577313
-    },
-    {
-      "name": "copycats-3.0.7+mc.1.20.1-forge.jar",
-      "url": "https://cdn.modrinth.com/data/UT2M39wf/versions/z7s54cjL/copycats-3.0.7%2Bmc.1.20.1-forge.jar",
-      "sha1": "5d0f497695fc2ee4ef89f1898458882b9d2d3aad",
-      "size": 1996097
     },
     {
       "name": "BrandonsCore-1.20.1-3.2.1.302-universal.jar",
