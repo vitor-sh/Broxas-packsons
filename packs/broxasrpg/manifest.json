@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.56",
+  "pack_version": "2.0.57",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -435,12 +435,6 @@
       "url": "https://cdn.modrinth.com/data/QQ6fyLzC/versions/WHNmizux/biomebeats-forge-1.20.1-2.1.jar",
       "sha1": "e63a7772cbdc83af52933e0f62cfc8526b65c6d5",
       "size": 5128210
-    },
-    {
-      "name": "certain_questing_additions-forge-1.1.7%2Bmc1.20.1.jar",
-      "url": "https://cdn.modrinth.com/data/5BPpCYUe/versions/R5tVNwqs/certain_questing_additions-forge-1.1.7%2Bmc1.20.1.jar",
-      "sha1": "cc8ea7eb1f797a9198077ba6e97fc2db48c30461",
-      "size": 1141295
     },
     {
       "name": "chunksfadein-forge-3.0.22-1.20.jar",

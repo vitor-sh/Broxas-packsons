@@ -1,10 +1,10 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.56. Nao edite na mao.
+Gerado automaticamente na versao 2.0.57. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-174 mods | 928 MB | Forge 47.4.20
+173 mods | 926 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (42)
 
@@ -53,7 +53,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - travelersbackpack-forge-1.20.1-9.1.56.jar  (1.35 MB)
 
-### Baixados por link oficial (132)
+### Baixados por link oficial (131)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -81,7 +81,6 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - BrandonsCore-1.20.1-3.2.1.302-universal.jar  (1.30 MB)
 - call_of_yucutan-1.0.13-forge-1.20.1.jar  (3.45 MB)
 - canary-mc1.20.1-0.3.3.jar  (0.57 MB)
-- certain_questing_additions-forge-1.1.7%2Bmc1.20.1.jar  (1.09 MB)
 - chunksfadein-forge-3.0.22-1.20.jar  (0.57 MB)
 - cinematiccataclysm-1.0.0-1.20.1.jar  (0.67 MB)
 - citadel-2.6.3-1.20.1.jar  (3.04 MB)
