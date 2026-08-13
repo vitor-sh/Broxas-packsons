@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.53",
+  "pack_version": "2.0.54",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -237,12 +237,6 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/moogs_structure_lib-1.1.0-1.20-1.20.4-forge.jar",
       "sha1": "b7751ee5cc55e6a56bc4b7c1b79bb6e63727e8aa",
       "size": 259848
-    },
-    {
-      "name": "resourcefullib-forge-1.20.1-2.1.29.jar",
-      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/resourcefullib-forge-1.20.1-2.1.29.jar",
-      "sha1": "6fc590a7c56a720fec57e290cbb0a106efbb3ffa",
-      "size": 432753
     },
     {
       "name": "ssrcamerafixes-1.2.4.jar",
@@ -1035,6 +1029,12 @@
       "url": "https://cdn.modrinth.com/data/ziOp6EO8/versions/HXTB2EAy/Corgilib-Forge-1.20.1-4.0.3.5.jar",
       "sha1": "ef71df3c9a3d22432d63957a8db00645353bfe36",
       "size": 318765
+    },
+    {
+      "name": "resourcefullib-forge-1.20.1-2.1.29.jar",
+      "url": "https://cdn.modrinth.com/data/G1hIVOrD/versions/OhsHaCcW/resourcefullib-forge-1.20.1-2.1.29.jar",
+      "sha1": "6fc590a7c56a720fec57e290cbb0a106efbb3ffa",
+      "size": 432753
     },
     {
       "name": "Terralith_1.20.x_v2.5.4.jar",

@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.53. Nao edite na mao.
+Gerado automaticamente na versao 2.0.54. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
 173 mods | 927 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (42)
+### Guardados aqui no repositorio (41)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -44,7 +44,6 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - legendarytabs-1.20.1-1.1.3.1.jar  (0.07 MB)
 - lootr_liason-1.2.jar  (0.04 MB)
 - moogs_structure_lib-1.1.0-1.20-1.20.4-forge.jar  (0.25 MB)
-- resourcefullib-forge-1.20.1-2.1.29.jar  (0.41 MB)
 - Searchables-forge-1.20.1-1.0.3.jar  (0.07 MB)
 - ssrcamerafixes-1.2.4.jar  (0.04 MB)
 - StylishEffects-v8.0.3-1.20.1-Forge.jar  (0.12 MB)
@@ -53,7 +52,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - travelersbackpack-forge-1.20.1-9.1.56.jar  (1.35 MB)
 
-### Baixados por link oficial (131)
+### Baixados por link oficial (132)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -163,6 +162,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Quark-4.0-462.jar  (14.24 MB)
 - Rats-1.20.1-8.1.3.jar  (8.05 MB)
 - RegionsUnexploredForge-0.5.6+1.20.1.jar  (5.46 MB)
+- resourcefullib-forge-1.20.1-2.1.29.jar  (0.41 MB)
 - sanitydim-mc1.20-1.1.0.jar  (5.77 MB)
 - ShoulderSurfing-Forge-1.20.1-4.22.10.jar  (0.26 MB)
 - sodiumdynamiclights-forge-1.0.10-1.20.1.jar  (0.49 MB)
