@@ -1,10 +1,10 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.39. Nao edite na mao.
+Gerado automaticamente na versao 2.0.40. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-138 mods | 730 MB | Forge 47.4.20
+141 mods | 794 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (22)
 
@@ -33,7 +33,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - twilightforest-1.20.1-4.3.2508-universal.jar  (22.25 MB)
 
-### Baixados por link oficial (116)
+### Baixados por link oficial (119)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -57,6 +57,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - blue_skies-1.20.1-1.3.31.jar  (79.69 MB)
 - Bonfires-1.20.1-1.2.20d-5d9820a.jar  (0.38 MB)
 - Bookshelf-Forge-1.20.1-20.2.15.jar  (0.33 MB)
+- born_in_chaos_%5BForge%5D1.20.1_1.7.4.jar  (11.29 MB)
 - call_of_yucutan-1.0.13-forge-1.20.1.jar  (3.45 MB)
 - canary-mc1.20.1-0.3.3.jar  (0.57 MB)
 - certain_questing_additions-forge-1.1.7%2Bmc1.20.1.jar  (1.09 MB)
@@ -128,6 +129,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - Placebo-1.20.1-8.6.3.jar  (0.27 MB)
 - player-animation-lib-forge-1.0.2-rc1+1.20.jar  (0.17 MB)
 - Prism-1.20.1-forge-1.0.5.jar  (0.05 MB)
+- projectile_damage-forge-3.2.2+1.20.1.jar  (0.24 MB)
 - PuzzlesLib-v8.1.33-1.20.1-Forge.jar  (1.28 MB)
 - Quark-4.0-462.jar  (14.24 MB)
 - Rats-1.20.1-8.1.3.jar  (8.05 MB)
@@ -135,6 +137,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - sanitydim-mc1.20-1.1.0.jar  (5.77 MB)
 - ShoulderSurfing-Forge-1.20.1-4.22.10.jar  (0.26 MB)
 - sodiumdynamiclights-forge-1.0.10-1.20.1.jar  (0.49 MB)
+- soulslike-weaponry-1.3.1-1.20.1-forge.jar  (51.80 MB)
 - Sounds-2.2.1+1.20.1+forge.jar  (10.47 MB)
 - spiffyhud_forge_3.1.0_MC_1.20.1.jar  (0.79 MB)
 - spiffyxgnetum-1.0.jar  (0.01 MB)
