@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.54. Nao edite na mao.
+Gerado automaticamente na versao 2.0.55. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-173 mods | 927 MB | Forge 47.4.20
+174 mods | 928 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (41)
+### Guardados aqui no repositorio (42)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -44,6 +44,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - legendarytabs-1.20.1-1.1.3.1.jar  (0.07 MB)
 - lootr_liason-1.2.jar  (0.04 MB)
 - moogs_structure_lib-1.1.0-1.20-1.20.4-forge.jar  (0.25 MB)
+- resourcefulconfig-forge-1.20.1-2.1.2.jar  (0.13 MB)
 - Searchables-forge-1.20.1-1.0.3.jar  (0.07 MB)
 - ssrcamerafixes-1.2.4.jar  (0.04 MB)
 - StylishEffects-v8.0.3-1.20.1-Forge.jar  (0.12 MB)
