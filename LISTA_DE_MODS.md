@@ -1,12 +1,12 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.48. Nao edite na mao.
+Gerado automaticamente na versao 2.0.49. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-160 mods | 881 MB | Forge 47.4.20
+161 mods | 902 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (28)
+### Guardados aqui no repositorio (29)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
@@ -22,6 +22,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - ftb-library-forge-2001.2.12.jar  (0.74 MB)
 - ftb-teams-forge-2001.3.2.jar  (0.24 MB)
 - geckolib-forge-1.20.1-4.8.3.jar  (0.99 MB)
+- iceandfire-2.1.13-1.20.1-beta-5.jar  (20.84 MB)
 - immersive-portals-3.0.7-all.jar  (2.04 MB)
 - immersive_aircraft-1.4.1+1.20.1-forge.jar  (2.32 MB)
 - integrated_api-1.7.4%2B1.20.1-forge.jar  (0.67 MB)

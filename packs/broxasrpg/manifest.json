@@ -1,7 +1,7 @@
 {
   "pack_id": "broxasrpg",
   "pack_nome": "broxasRPG",
-  "pack_version": "2.0.48",
+  "pack_version": "2.0.49",
   "servidor": "enx-cirion-23.enx.host:10018",
   "minecraft": "1.20.1",
   "loader": "Forge 47.4.20",
@@ -105,6 +105,12 @@
       "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/geckolib-forge-1.20.1-4.8.3.jar",
       "sha1": "5428765c6c2e2135da6ee01f2f0478fa0db6aee7",
       "size": 1039046
+    },
+    {
+      "name": "iceandfire-2.1.13-1.20.1-beta-5.jar",
+      "url": "https://raw.githubusercontent.com/vitor-sh/Broxas-packsons/main/packs/broxasrpg/mods/iceandfire-2.1.13-1.20.1-beta-5.jar",
+      "sha1": "7e828cbb046ca3d622e92c68f956bd1c0155dc6f",
+      "size": 21854126
     },
     {
       "name": "immersive-portals-3.0.7-all.jar",
