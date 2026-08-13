@@ -1,18 +1,20 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.50. Nao edite na mao.
+Gerado automaticamente na versao 2.0.51. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-168 mods | 921 MB | Forge 47.4.20
+171 mods | 926 MB | Forge 47.4.20
 
-### Guardados aqui no repositorio (36)
+### Guardados aqui no repositorio (39)
 
 Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHub.
 
 - ad_astra-forge-1.20.1-1.15.20.jar  (7.16 MB)
 - ad_astra_more_structures-1.20.1-forge.jar  (0.54 MB)
 - balm-forge-1.20.1-7.3.38-all.jar  (0.56 MB)
+- BasicEndOres-forge-1.20.1-4.1.0.jar  (0.58 MB)
+- BasicNetherOres-forge-1.20.1-9.1.1.jar  (0.57 MB)
 - bloodbits-2.1.3-forge-1.20.1.jar  (1.33 MB)
 - caelus-forge-3.2.0+1.20.1.jar  (0.04 MB)
 - cleanview-1.20.1-v1.jar  (0.01 MB)
@@ -30,6 +32,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - iceandfire-2.1.13-1.20.1-beta-5.jar  (20.84 MB)
 - immersive-portals-3.0.7-all.jar  (2.04 MB)
 - immersive_aircraft-1.4.1+1.20.1-forge.jar  (2.32 MB)
+- Incendium_1.20.1_v5.3.1.jar  (4.16 MB)
 - integrated_api-1.7.4%2B1.20.1-forge.jar  (0.67 MB)
 - inventoryessentials-forge-1.20.1-8.2.18.jar  (0.16 MB)
 - inventorymanagement-1.20.1-Forge-1.0.7.jar  (0.19 MB)
