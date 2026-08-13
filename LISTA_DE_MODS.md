@@ -1,10 +1,10 @@
 # Lista de mods dos packs
 
-Gerado automaticamente na versao 2.0.36. Nao edite na mao.
+Gerado automaticamente na versao 2.0.37. Nao edite na mao.
 
 ## broxasRPG  (`packs/broxasrpg/`)
 
-126 mods | 699 MB | Forge 47.4.20
+127 mods | 699 MB | Forge 47.4.20
 
 ### Guardados aqui no repositorio (21)
 
@@ -32,7 +32,7 @@ Ficam em `packs/broxasrpg/mods/`. Da para adicionar e remover pelo site do GitHu
 - trashslot-forge-1.20.1-15.1.4.jar  (0.11 MB)
 - twilightforest-1.20.1-4.3.2508-universal.jar  (22.25 MB)
 
-### Baixados por link oficial (105)
+### Baixados por link oficial (106)
 
 Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 
@@ -117,6 +117,7 @@ Ficam em `packs/broxasrpg/mods_externos.json`. Nao ocupam espaco no repositorio.
 - PartiCull-forge-1.20.x-v2.0.jar  (0.03 MB)
 - Patchouli-1.20.1-84.1-FORGE.jar  (0.61 MB)
 - Placebo-1.20.1-8.6.3.jar  (0.27 MB)
+- player-animation-lib-forge-1.0.2-rc1+1.20.jar  (0.17 MB)
 - Prism-1.20.1-forge-1.0.5.jar  (0.05 MB)
 - PuzzlesLib-v8.1.33-1.20.1-Forge.jar  (1.28 MB)
 - Quark-4.0-462.jar  (14.24 MB)
